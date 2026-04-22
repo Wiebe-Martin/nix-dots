@@ -96,6 +96,20 @@
     programs.fzf = {
         enable = true;
         enableZshIntegration = true;
+        colors = {
+            "bg" = "#32302f";
+            "bg+" = "#3c3836";
+            "fg" = "#bdae93";
+            "fg+" = "#ebdbb2";
+            "prompt" = "#fabd2f";
+            "info" = "#fabd2f";
+            "spinner" = "#8ec07c";
+            "pointer" = "#8ec07c";
+            "marker" = "#8ec07c";
+            "hl" = "#83a598";
+            "header" = "#83a598";
+            "hl+" = "#83a598";
+        };
     };
 
     programs.starship = {
