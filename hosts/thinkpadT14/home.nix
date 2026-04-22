@@ -12,10 +12,15 @@
 
     imports = [
         ../../home/common.nix
+
+        ../../home/qutebrowser/qutebrowser.nix
+        ../../home/dms/dms.nix
+        ../../home/mango/mango.nix
+        ../../home/kitty/kitty.nix
     ];
 
     # Host specific home packages
     home.packages = with pkgs; [
-
+        localsend
     ];
 }

@@ -4,6 +4,7 @@
     imports = [
         ./core/keymaps.nix
         ./core/options.nix
+
         ./plugins/treesitter.nix
         ./plugins/oil.nix
         ./plugins/indent-blankline.nix
@@ -16,6 +17,8 @@
         ./plugins/lsp.nix
         ./plugins/conform.nix
         ./plugins/misc.nix
+        ./plugins/dap.nix
+
         ./colorshemes/gruvbox.nix
     ];
 

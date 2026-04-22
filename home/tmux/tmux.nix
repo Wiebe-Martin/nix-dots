@@ -1,5 +1,17 @@
 { config, pkgs, ... }:
 
+let
+    gruvbox-tmux = pkgs.tmuxPlugins.mkTmuxPlugin {
+        pluginName = "gruvbox";
+        version = "1.0";
+        src = pkgs.fetchFromGitLab {
+            owner = "motaz-shokry";
+            repo = "gruvbox-tmux";
+            rev = "da6b7556937476ec93ac059f46d483139f9cf233";
+            sha256 = "KSDf7UBzByPIbjyEdGdnbKmlqYwmur3bwcKM2nqgcpE=";
+        };
+    };
+in
 {
     programs.tmux = {
         enable = true;
@@ -37,6 +49,12 @@
             }
             tmuxPlugins.yank
             tmuxPlugins.resurrect
+            {
+                plugin = gruvbox-tmux;
+                extraConfig = ''
+                    set -g @gruvbox-tmux_transparent 1
+                '';
+            }
         ];
 
         extraConfig = ''
