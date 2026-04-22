@@ -18,6 +18,7 @@
         ./plugins/conform.nix
         ./plugins/misc.nix
         ./plugins/dap.nix
+        ./plugins/gitsigns.nix
 
         ./colorshemes/gruvbox.nix
     ];
