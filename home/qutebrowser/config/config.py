@@ -30,6 +30,9 @@ c.url.searchengines = {
     "!gw": "https://wiki.gentoo.org/index.php?title=Special%3ASearch&search={}&go=Go",
     "!gpkg": "https://packages.gentoo.org/packages/search?q={}",
     "!gurpkg": "https://gpo.zugaina.org/Search?search={}",
+    "!np": "https://search.nixos.org/packages?channel=unstable&query={}",
+    "!no": "https://search.nixos.org/options?channel=unstable&query={}",
+    "!nw": "https://wiki.nixos.org/wiki/{}",
 }
 
 c.completion.open_categories = [

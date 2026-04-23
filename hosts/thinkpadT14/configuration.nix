@@ -21,6 +21,17 @@
         };
     };
 
+    xdg = {
+        portal = {
+            enable = true;
+            xdgOpenUsePortal = true;
+        };
+
+        mime = {
+            enable = true;
+        };
+    };
+
     networking.hostName = "thinkpadt14"; # Define your hostname.
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
