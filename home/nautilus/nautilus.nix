@@ -1,5 +1,0 @@
-{
-    programms.nautilus = {
-        enable = true;
-    };
-}

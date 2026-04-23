@@ -20,12 +20,12 @@
         ../../home/mango/mango.nix
         ../../home/kitty/kitty.nix
 
-        ../../home/nautilus/nautilus.nix
     ];
 
     # Host specific home packages
     home.packages = with pkgs; [
         localsend
         xdg-utils
+        nautilus
     ];
 }
