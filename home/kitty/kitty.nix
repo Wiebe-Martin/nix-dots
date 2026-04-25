@@ -13,6 +13,8 @@
             enable_audio_bell no
 
             include dank-theme.conf
+
+            cursor #928374
         '';
     };
 }

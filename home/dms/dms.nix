@@ -14,6 +14,8 @@
     programs.dank-material-shell = {
         enable = true;
 
+        enableSystemMonitoring = true;
+
         settings = {
             fontFamily = "CaskaydiaCove Nerd Font";
             monoFontFamily = "CaskaydiaCove Nerd Font Mono";
@@ -29,6 +31,8 @@
             registryThemeVariants = {
                 gruvboxMaterial = "hard";
             };
+
+            useAutoLocation = true;
 
             showWorkspaceIndex = true;
 
@@ -56,12 +60,13 @@
                     ];
                     rightWidgets = [
                         "systemTray"
-                        "notificationButton"
+                        "memUsage"
                     ]
                     ++ lib.optionals config.my.host.isLaptop [
                         "battery"
                     ]
                     ++ [
+                        "notificationButton"
                         {
                             id = "controlCenterButton";
                             enabled = true;

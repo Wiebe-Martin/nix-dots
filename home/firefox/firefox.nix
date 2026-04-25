@@ -48,6 +48,12 @@
                         installation_mode = "force_installed";
                         updates_disabled = true;
                     };
+
+                    "{d3f8e52b-140d-41e8-ae4a-a9710ab6a886}" = {
+                        install_url = moz "gruvbox-true-dark";
+                        installation_mode = "force_installed";
+                        updates_disabled = true;
+                    };
                 };
         };
     };

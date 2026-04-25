@@ -3,6 +3,9 @@
 {
     imports = [
         ./hardware-configuration.nix
+
+        ../../modules/pipewire.nix
+        ../../modules/smb.nix
     ];
 
     # Bootloader.
@@ -42,6 +45,9 @@
         LC_TIME = "de_DE.UTF-8";
     };
 
+    programs.mangowc.enable = true;
+
+    services.xserver.enable = true;
     services.xserver.xkb = {
         layout = "us";
         variant = "";
@@ -74,11 +80,11 @@
         git
     ];
 
-    services.pipewire = {
-        enable = true;
-        alsa.enable = true;
-        alsa.support32Bit = true;
-        pulse.enable = true;
+    services.displayManager = {
+        defaultSession = "";
+        ly = {
+            enable = true;
+        };
     };
 
     services.power-profiles-daemon.enable = true;

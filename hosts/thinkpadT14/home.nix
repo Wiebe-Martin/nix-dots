@@ -27,5 +27,13 @@
         localsend
         xdg-utils
         nautilus
+        fastfetch
     ];
+
+    home.pointerCursor = {
+        name = "everforest-cursors";
+        package = pkgs.everforest-cursors;
+        size = 16;
+        gtk.enable = true;
+    };
 }
