@@ -31,6 +31,7 @@
         fractal
 
         fastfetch
+        btop
 
         xdg-utils
     ];
