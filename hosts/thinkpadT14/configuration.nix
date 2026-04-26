@@ -4,8 +4,14 @@
     imports = [
         ./hardware-configuration.nix
 
-        ../../modules/pipewire.nix
-        ../../modules/smb.nix
+        ../../modules/windowmanager/mango.nix
+
+        ../../modules/shell/zsh.nix
+
+        ../../modules/audio/pipewire.nix
+
+        ../../modules/misc/smb.nix
+        ../../modules/misc/zram.nix
     ];
 
     # Bootloader.
@@ -45,16 +51,11 @@
         LC_TIME = "de_DE.UTF-8";
     };
 
-    programs.mangowc.enable = true;
-
     services.xserver.enable = true;
     services.xserver.xkb = {
         layout = "us";
         variant = "";
     };
-
-    programs.zsh.enable = true;
-    users.defaultUserShell = pkgs.zsh;
 
     users.users.martin = {
         isNormalUser = true;
@@ -64,7 +65,6 @@
             "wheel"
         ];
         home = "/home/martin";
-        packages = with pkgs; [ ];
     };
 
     environment.pathsToLink = [

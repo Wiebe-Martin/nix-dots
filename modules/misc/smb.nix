@@ -2,8 +2,8 @@
 
 {
     environment.systemPackages = [ pkgs.cifs-utils ];
-    fileSystems."~/Tank" = {
-        device = "192.168.178.8/Data";
+    fileSystems."/home/martin/Tank" = {
+        device = "//192.168.178.8/Data";
         fsType = "cifs";
         options =
             let

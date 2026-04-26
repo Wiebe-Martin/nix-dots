@@ -97,8 +97,8 @@
         enable = true;
         enableZshIntegration = true;
         colors = {
-            "bg" = "#32302f";
-            "bg+" = "#3c3836";
+            # "bg" = "#32302f";
+            # "bg+" = "#3c3836";
             "fg" = "#bdae93";
             "fg+" = "#ebdbb2";
             "prompt" = "#fabd2f";

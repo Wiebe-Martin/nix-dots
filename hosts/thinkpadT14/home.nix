@@ -13,21 +13,24 @@
     imports = [
         ../../home/common.nix
 
-        ../../home/qutebrowser/qutebrowser.nix
-        ../../home/firefox/firefox.nix
-
-        ../../home/dms/dms.nix
         ../../home/mango/mango.nix
+        ../../home/dms/dms.nix
+
         ../../home/kitty/kitty.nix
 
+        ../../home/qutebrowser/qutebrowser.nix
+        ../../home/firefox/firefox.nix
     ];
 
     # Host specific home packages
     home.packages = with pkgs; [
         localsend
-        xdg-utils
         nautilus
+        fractal
+
         fastfetch
+
+        xdg-utils
     ];
 
     home.pointerCursor = {
