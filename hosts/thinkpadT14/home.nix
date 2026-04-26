@@ -14,6 +14,8 @@
         ../../home/common.nix
 
         ../../home/mango/mango.nix
+        ../../home/hyprland/hyprland.nix
+
         ../../home/dms/dms.nix
 
         ../../home/kitty/kitty.nix

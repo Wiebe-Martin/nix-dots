@@ -5,6 +5,7 @@
         ./hardware-configuration.nix
 
         ../../modules/windowmanager/mango.nix
+        ../../modules/windowmanager/hyprland.nix
 
         ../../modules/shell/zsh.nix
 
