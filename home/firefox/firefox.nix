@@ -1,10 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
     programs.firefox = {
         enable = true;
 
         languagePacks = [ "en-US" ];
+
+        configPath = "${config.xdg.configHome}/mozilla/firefox";
 
         policies = {
             # Updates & Background Services

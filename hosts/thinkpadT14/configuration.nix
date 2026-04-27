@@ -10,6 +10,7 @@
         ../../modules/shell/zsh.nix
 
         ../../modules/net/networkmanager.nix
+        ../../modules/net/tailscale.nix
 
         ../../modules/audio/pipewire.nix
 
@@ -34,8 +35,6 @@
     };
 
     networking.hostName = "thinkpadt14"; # Define your hostname.
-
-    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
     time.timeZone = "Europe/Berlin";
 
