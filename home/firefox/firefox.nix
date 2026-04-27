@@ -15,7 +15,6 @@
             DisableFirefoxStudies = true;
             DisableFirefoxAccounts = true;
             DisableFirefoxScreenshots = true;
-            DisableMasterPasswordCreation = true;
             DisableProfileImport = true;
             DisableProfileRefresh = true;
             DisableSetDesktopBackground = true;
@@ -31,8 +30,6 @@
             # UI and Behavior
             DisplayMenuBar = "never";
             DontCheckDefaultBrowser = true;
-            HardwareAcceleration = false;
-            OfferToSaveLogins = false;
             DefaultDownloadDirectory = "~/Downloads";
 
             # Extensions
