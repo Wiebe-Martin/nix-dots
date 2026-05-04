@@ -3,6 +3,7 @@
         enable = true;
         settings = {
             theme = "gruvbox";
+
         };
     };
 }
