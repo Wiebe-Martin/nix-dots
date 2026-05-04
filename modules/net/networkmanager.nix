@@ -3,8 +3,6 @@
 {
     networking.networkmanager.enable = true;
 
-    networking.wireless.enable = true;
-
     environment.systemPackages = with pkgs; [
         networkmanagerapplet
     ];

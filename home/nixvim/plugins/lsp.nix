@@ -6,6 +6,10 @@
                 enable = true;
             };
 
+            jdtls = {
+                enable = true;
+            };
+
             pylsp = {
                 enable = true;
                 settings = {

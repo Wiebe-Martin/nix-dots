@@ -12,6 +12,8 @@
 
             enable_audio_bell no
 
+            window_margin_width 5
+
             include dank-theme.conf
 
             cursor #928374

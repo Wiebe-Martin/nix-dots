@@ -20,6 +20,8 @@
 
         ../../home/kitty/kitty.nix
 
+        ../../home/opencode/opecode.nix
+
         ../../home/qutebrowser/qutebrowser.nix
         ../../home/firefox/firefox.nix
     ];
@@ -34,7 +36,15 @@
         btop
 
         xdg-utils
+
+        jdk
+
+        ffmpeg
     ];
+
+    home.sessionVariables = {
+        EDITOR = "nvim";
+    };
 
     home.pointerCursor = {
         name = "everforest-cursors";

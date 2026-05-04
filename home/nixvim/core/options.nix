@@ -41,6 +41,11 @@
         completeopt = "menuone,noselect"; # Set completeopt to have a better completion experience (default: 'menu,preview')
         inccommand = "split";
 
+        spelllang = [
+            "en"
+            "de"
+        ];
+        spell = true;
     };
 
     autoCmd = [
@@ -70,6 +75,4 @@
         };
     };
 
-    # t.spelllang = { "en", "de" }
-    # t.spell = true
 }

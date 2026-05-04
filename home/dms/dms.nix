@@ -9,12 +9,17 @@
 {
     imports = [
         inputs.dms.homeModules.dank-material-shell
+        inputs.dms-plugin-registry.modules.default
     ];
 
     programs.dank-material-shell = {
         enable = true;
 
         enableSystemMonitoring = true;
+
+        plugins = {
+            tailscale.enable = true;
+        };
 
         settings = {
             fontFamily = "CaskaydiaCove Nerd Font";
@@ -67,6 +72,7 @@
                     ]
                     ++ [
                         "notificationButton"
+                        "tailscale"
                         {
                             id = "controlCenterButton";
                             enabled = true;

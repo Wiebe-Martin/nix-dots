@@ -14,6 +14,10 @@
             url = "github:AvengeMedia/DankMaterialShell/stable";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        dms-plugin-registry = {
+            url = "github:AvengeMedia/dms-plugin-registry";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
         nixvim = {
             url = "github:nix-community/nixvim";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -40,7 +44,7 @@
                             extraSpecialArgs = {
                                 inherit inputs;
                             };
-                            backupFileExtension = "bakup";
+                            backupFileExtension = "backup";
                             users.martin = {
                                 imports = [
                                     ./hosts/thinkpadT14/home.nix
