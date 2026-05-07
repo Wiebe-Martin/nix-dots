@@ -20,7 +20,7 @@
 
         ../../home/kitty/kitty.nix
 
-        ../../home/opencode/opecode.nix
+        ../../home/opencode/opencode.nix
 
         ../../home/qutebrowser/qutebrowser.nix
         ../../home/firefox/firefox.nix
@@ -31,9 +31,11 @@
         localsend
         nautilus
         fractal
+        proton-vpn
 
         fastfetch
         btop
+        sqlit-tui
 
         xdg-utils
 
@@ -44,6 +46,7 @@
 
     home.sessionVariables = {
         EDITOR = "nvim";
+        XDG_CONFIG_HOME = "/home/martin/.config";
     };
 
     home.pointerCursor = {

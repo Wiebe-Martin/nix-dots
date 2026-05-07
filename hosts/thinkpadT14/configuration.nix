@@ -82,6 +82,8 @@
         git
     ];
 
+    services.gnome.gnome-keyring.enable = true;
+
     services.displayManager = {
         defaultSession = "";
         ly = {

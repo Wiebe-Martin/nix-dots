@@ -24,6 +24,7 @@
                     "lsp"
                     "path"
                     "snippets"
+                    "buffer"
                     # "lazydev"
                     # "spell"
                 ];
