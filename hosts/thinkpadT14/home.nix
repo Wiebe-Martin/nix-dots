@@ -21,6 +21,7 @@
         ../../home/kitty/kitty.nix
 
         ../../home/opencode/opencode.nix
+        ../../home/btop/btop.nix
 
         ../../home/qutebrowser/qutebrowser.nix
         ../../home/firefox/firefox.nix
@@ -46,6 +47,7 @@
 
     home.sessionVariables = {
         EDITOR = "nvim";
+        TERMINAL = "kitty";
         XDG_CONFIG_HOME = "/home/martin/.config";
     };
 
