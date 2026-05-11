@@ -17,6 +17,7 @@
         ../../home/hyprland/hyprland.nix
 
         ../../home/dms/dms.nix
+        ../../home/noctalia-shell/noctalia.nix
 
         ../../home/kitty/kitty.nix
 
@@ -39,8 +40,10 @@
         sqlit-tui
 
         xdg-utils
+        brightnessctl
 
         jdk
+        unzip
 
         ffmpeg
     ];
