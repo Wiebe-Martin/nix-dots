@@ -16,6 +16,13 @@
                 documentation = {
                     auto_show = false;
                     auto_show_delay_ms = 500;
+                    window = {
+                        border = "single";
+                    };
+                };
+                menu = {
+                    winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None";
+                    border = "single";
                 };
             };
 
@@ -74,6 +81,9 @@
             # Shows a signature help window while you type arguments for a function
             signature = {
                 enabled = true;
+                window = {
+                    border = "single";
+                };
             };
         };
     };

@@ -484,6 +484,17 @@
             };
         }
         {
+            key = "<leader>sr";
+            action.__raw = ''
+                function()
+                    Snacks.picker.registers()
+                end
+            '';
+            options = {
+                desc = "Registers";
+            };
+        }
+        {
             key = "<leader>uC";
             action.__raw = ''
                 function()

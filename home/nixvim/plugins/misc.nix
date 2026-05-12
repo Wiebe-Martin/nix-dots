@@ -7,6 +7,24 @@
         colorizer.enable = true;
         rainbow-delimiters.enable = true;
         typst-preview.enable = true;
+        noice = {
+            enable = true;
+            settings = {
+                cmdline.enabled = true;
+                presets = {
+                    # bottom_search = true;
+                    command_palette = true;
+                    long_message_to_split = true;
+                    inc_rename = false;
+                    lsp_doc_border = false;
+                };
+                lsp.override = {
+                    "cmp.entry.get_documentation" = false;
+                    "vim.lsp.util.convert_input_to_markdown_lines" = false;
+                    "vim.lsp.util.stylize_markdown" = false;
+                };
+            };
+        };
         undotree = {
             enable = true;
             keymaps = [

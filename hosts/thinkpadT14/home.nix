@@ -17,7 +17,7 @@
         ../../home/hyprland/hyprland.nix
 
         ../../home/dms/dms.nix
-        ../../home/noctalia-shell/noctalia.nix
+        # ../../home/noctalia-shell/noctalia.nix
 
         ../../home/kitty/kitty.nix
 

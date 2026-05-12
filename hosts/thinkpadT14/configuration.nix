@@ -4,6 +4,8 @@
     imports = [
         ./hardware-configuration.nix
 
+        ../common.nix
+
         ../../modules/windowmanager/mango.nix
         ../../modules/windowmanager/hyprland.nix
 

@@ -12,6 +12,13 @@
         inputs.dms-plugin-registry.modules.default
     ];
 
+    home.sessionVariables = {
+        DESKTOP_SHELL_COMMAND = "dms run";
+        APP_LAUNCHER = "dms ipc call spotlight toggle";
+        LOCK_SCREEN = "dms ipc call lock lock";
+        POWER_MENU = "dms ipc call powermenu toggle";
+    };
+
     programs.dank-material-shell = {
         enable = true;
 
