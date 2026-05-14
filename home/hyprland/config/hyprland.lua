@@ -1,0 +1,8 @@
+require("hyprland/animations")
+require("hyprland/appearance")
+require("hyprland/autostart")
+require("hyprland/env")
+require("hyprland/input")
+require("hyprland/keybind")
+require("hyprland/monitor")
+require("hyprland/rules")

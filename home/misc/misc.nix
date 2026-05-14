@@ -1,7 +1,6 @@
-{ inputs, system, ... }:
+{ inputs, pkgs, ... }:
 
 {
     home.packages = [
-        inputs.splashboard.packages.${system}.default
     ];
 }

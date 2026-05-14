@@ -26,7 +26,7 @@
             url = "github:noctalia-dev/noctalia-shell/v5";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        splashboard.url = "github:unhappychoice/splashboard";
+        hyprland.url = "github:hyprwm/Hyprland/v0.55.1";
     };
     outputs =
         inputs@{
@@ -35,14 +35,11 @@
             home-manager,
             ...
         }:
-        let
-            system = "x86_64-linux";
-        in
         {
             nixosConfigurations."thinkpadt14" = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
                 specialArgs = {
                     inherit inputs;
-                    inherit system;
                 };
                 modules = [
                     ./hosts/thinkpadT14/configuration.nix

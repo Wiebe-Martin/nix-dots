@@ -1,0 +1,8 @@
+{
+  "workspace": {
+    "library": ["/home/martin/nix-dots/home/hyprland/config"]
+  },
+  "diagnostics": {
+    "globals": ["hl"]
+  }
+}
