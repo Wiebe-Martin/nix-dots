@@ -18,6 +18,8 @@
 
         ../../modules/misc/smb.nix
         ../../modules/misc/zram.nix
+
+        ../../modules/virtualization/virtmanager.nix
     ];
 
     # Bootloader.
@@ -27,8 +29,11 @@
 
     hardware = {
         graphics = {
+            package = pkgs.mesa;
+
             enable = true;
             enable32Bit = true;
+            package32 = pkgs.pkgsi686Linux.mesa;
         };
 
         bluetooth = {

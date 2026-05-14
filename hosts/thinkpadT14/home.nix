@@ -14,7 +14,7 @@
         ../../home/common.nix
 
         ../../home/mango/mango.nix
-        ../../home/hyprland/hyprland.nix
+        # ../../home/hyprland/hyprland.nix
 
         ../../home/dms/dms.nix
         # ../../home/noctalia-shell/noctalia.nix
