@@ -63,5 +63,30 @@
                     }
                 ];
             };
+            nixosConfigurations."eva02" = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                modules = [
+                    ./hosts/eva02/configuration.nix
+
+                    home-manager.nixosModules.home-manager
+                    {
+                        home-manager = {
+                            useGlobalPkgs = true;
+                            useUserPackages = true;
+                            extraSpecialArgs = {
+                                inherit inputs;
+                            };
+                            backupFileExtension = "backup";
+                            users.martin = {
+                                imports = [
+                                    ./hosts/eva02/home.nix
+                                    ./home/options.nix
+                                    ./hosts/eva02/options.nix
+                                ];
+                            };
+                        };
+                    }
+                ];
+            };
         };
 }
