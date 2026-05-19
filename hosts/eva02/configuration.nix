@@ -9,6 +9,8 @@
         # Include the results of the hardware scan.
         ./hardware-configuration.nix
 
+        ../common.nix
+
         ../../modules/system/systemd-boot.nix
         ../../modules/system/locals.nix
 
