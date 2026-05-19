@@ -45,6 +45,13 @@
         packages = with pkgs; [ ];
     };
 
+    services.displayManager = {
+        defaultSession = "";
+        ly = {
+            enable = true;
+        };
+    };
+
     nixpkgs.config.allowUnfree = true;
 
     environment.systemPackages = with pkgs; [
