@@ -1,12 +1,7 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
     imports = [
-        # Include the results of the hardware scan.
         ./hardware-configuration.nix
 
         ../common.nix
@@ -27,11 +22,6 @@
 
     networking.hostName = "eva02";
 
-    environment.pathsToLink = [
-        "/share/applications"
-        "/share/xdg-desktop-portal"
-    ];
-
     services.xserver.xkb = {
         layout = "eu";
         variant = "";
@@ -44,7 +34,6 @@
             "networkmanager"
             "wheel"
         ];
-        packages = with pkgs; [ ];
     };
 
     services.displayManager = {
@@ -64,11 +53,19 @@
 
     services.openssh.enable = true;
 
+    networking.firewall = {
+        enable = true;
+        allowedTCPPorts = [
+            80
+            443
+            53317
+        ];
+    };
+
     nix.settings.experimental-features = [
         "nix-command"
         "flakes"
     ];
 
-    system.stateVersion = "25.11"; # Did you read the comment?
-
+    system.stateVersion = "25.11";
 }

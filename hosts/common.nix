@@ -13,4 +13,9 @@
         clean.extraArgs = "--keep-since 4d --keep 3";
         flake = "/home/martin/nix-dots";
     };
+
+    environment.pathsToLink = [
+        "/share/applications"
+        "/share/xdg-desktop-portal"
+    ];
 }

@@ -58,11 +58,6 @@
         home = "/home/martin";
     };
 
-    environment.pathsToLink = [
-        "/share/applications"
-        "/share/xdg-desktop-portal"
-    ];
-
     nixpkgs.config.allowUnfree = true;
 
     environment.systemPackages = with pkgs; [
