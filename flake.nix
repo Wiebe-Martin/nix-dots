@@ -26,7 +26,6 @@
             url = "github:noctalia-dev/noctalia-shell/v5";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        hyprland.url = "github:hyprwm/Hyprland/v0.55.1";
     };
     outputs =
         inputs@{

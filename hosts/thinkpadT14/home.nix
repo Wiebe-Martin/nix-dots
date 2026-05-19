@@ -36,6 +36,7 @@
         nautilus
         fractal
         proton-vpn
+        freerdp
         qbz
 
         fastfetch

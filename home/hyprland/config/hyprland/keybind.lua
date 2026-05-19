@@ -41,10 +41,10 @@ hl.bind(mainMod .. " + k", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + j", hl.dsp.window.move({ direction = "down" }))
 
 -- 6. Resize windows
-hl.bind(mainMod .. " + ALT + H", hl.dsp.window.resize({ -20, 0 }))
-hl.bind(mainMod .. " + ALT + L", hl.dsp.window.resize({ 20, 0 }))
-hl.bind(mainMod .. " + ALT + K", hl.dsp.window.resize({ 0, -20 }))
-hl.bind(mainMod .. " + ALT + J", hl.dsp.window.resize({ 0, 20 }))
+hl.bind(mainMod .. " + ALT + H", hl.dsp.window.resize({ x = -20, y = 0 }))
+hl.bind(mainMod .. " + ALT + L", hl.dsp.window.resize({ x = 20, y = 0 }))
+hl.bind(mainMod .. " + ALT + K", hl.dsp.window.resize({ x = 0, y = -20 }))
+hl.bind(mainMod .. " + ALT + J", hl.dsp.window.resize({ x = 0, y = 20 }))
 
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })

@@ -6,6 +6,10 @@
         autosuggestion.enable = true;
         enableCompletion = true;
 
+        shellAliases = {
+            cat = "bat";
+        };
+
         plugins = with pkgs; [
             {
                 name = "zsh-users/zsh-syntax-highlighting";
@@ -49,14 +53,14 @@
             }
         ];
 
-        oh-my-zsh = {
-            enable = true;
+        # oh-my-zsh = {
+        #     enable = true;
 
-            plugins = [
-                "command-not-found"
-                "git"
-            ];
-        };
+        #     plugins = [
+        #         "command-not-found"
+        #         "git"
+        #     ];
+        # };
 
         history = {
             size = 5000;
@@ -93,6 +97,10 @@
 
     home.file.".local/bin".source = ../scripts;
 
+    home.sessionVariables = {
+        MANPAGER = "bat -plman";
+    };
+
     programs.fzf = {
         enable = true;
         enableZshIntegration = true;
@@ -116,6 +124,8 @@
         enable = true;
         enableZshIntegration = true;
     };
+
+    programs.bat.enable = true;
 
     programs.zoxide.enable = true;
 }

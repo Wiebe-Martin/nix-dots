@@ -19,16 +19,16 @@ hl.window_rule({
     no_focus = true,
 })
 
-hl.window_rule({
-    name = "protonvpn-app",
-    match = {
-        namespace = "^protonvpn-app$",
-    },
-
-    float = true,
-    center = true,
-    size = { "(monitor_w*0.5)", "(monitor_h*0.5)" },
-})
+-- hl.window_rule({
+--     name = "protonvpn-app",
+--     match = {
+--         namespace = "^(protonvpn-app)$",
+--     },
+--
+--     float = true,
+--     center = true,
+--     size = { "(monitor_w*0.5)", "(monitor_h*0.5)" },
+-- })
 
 hl.layer_rule({
     name = "no-anim-overlay",

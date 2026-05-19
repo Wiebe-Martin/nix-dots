@@ -1,3 +1,7 @@
+local primary = "rgb(a8b665)"
+local outline = "rgb(a89984)"
+local error = "rgb(e96962)"
+
 hl.config({
     general = {
         gaps_in = 5,
@@ -6,8 +10,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
-            inactive_border = "rgba(595959aa)",
+            active_border = primary,
+            inactive_border = outline,
         },
 
         resize_on_border = false,
@@ -45,8 +49,27 @@ hl.config({
 })
 
 hl.config({
+    group = {
+        col = {
+            border_active = primary,
+            border_inactive = outline,
+            border_locked_active = error,
+            border_locked_inactive = outline,
+        },
+
+        groupbar = {
+            col = {
+                active = primary,
+                inactive = outline,
+                locked_active = error,
+                locked_inactive = outline,
+            },
+        },
+    },
+})
+
+hl.config({
     dwindle = {
-        pseudotile = true,
         preserve_split = true, -- You probably want this
     },
 })
