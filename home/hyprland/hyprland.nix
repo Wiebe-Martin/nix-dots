@@ -15,5 +15,7 @@ in
         recursive = true;
     };
 
-    home.file.".config/hypr/monior.lua".source = ./overrides/${host}/monitor.lua;
+    xdg.configFile."hypr/Hyprland/monitor.lua" = {
+        source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/home/hyprland/overrides/${host}/monitor.lua";
+    };
 }
