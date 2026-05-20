@@ -31,6 +31,7 @@
         nautilus
         fractal
         proton-vpn
+        heroic
 
         fastfetch
         btop

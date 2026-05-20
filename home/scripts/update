@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REMOTE="origin"
+BRANCH="main"
+
+# Ensure we're in a git repo (adjust if needed)
+REPO_DIR="$NH_FLAKE"
+cd "$REPO_DIR"
+
+echo "==> Fetching remote updates..."
+git fetch "$REMOTE" "$BRANCH"
+
+LOCAL="$(git rev-parse HEAD)"
+REMOTE_HEAD="$(git rev-parse "$REMOTE/$BRANCH")"
+
+if [ "$LOCAL" != "$REMOTE_HEAD" ]; then
+    echo "❌ Remote has new commits."
+    echo "   You must pull before switching."
+    echo ""
+    echo "Run:"
+    echo "  git pull --rebase"
+    echo "  nh os switch"
+    exit 1
+fi
+
+echo "==> Repository is up to date."
+
+UPDATE_FLAG="${1:-}"
+
+if [[ "$UPDATE_FLAG" == "--upgrade" ]]; then
+    echo "==> Running: nh os switch -u"
+    nh os switch -u
+else
+    echo "==> Running: nh os switch"
+    nh os switch
+fi
+
+echo "==> Switch succeeded."
+
+if ! git diff --quiet || ! git diff --cached --quiet; then
+    echo "==> Changes detected after switch, committing..."
+
+    git add -A
+
+    git commit -m "nixos: switch $(date -Iseconds)"
+
+    echo "==> Pushing changes..."
+    git push "$REMOTE" "$BRANCH"
+else
+    echo "==> No changes to commit."
+fi
+
+echo "✔ Done."

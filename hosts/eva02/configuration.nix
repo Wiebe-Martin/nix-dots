@@ -20,6 +20,12 @@
 
         ../../modules/misc/smb.nix
     ];
+    hardware = {
+        bluetooth = {
+            enable = true;
+            powerOnBoot = true;
+        };
+    };
 
     networking.hostName = "eva02";
 
