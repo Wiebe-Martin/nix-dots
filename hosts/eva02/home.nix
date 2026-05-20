@@ -23,6 +23,8 @@
 
         ../../home/qutebrowser/qutebrowser.nix
         ../../home/firefox/firefox.nix
+
+        ../../home/git/git.nix
     ];
 
     # Host specific home packages
