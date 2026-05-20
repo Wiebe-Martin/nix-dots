@@ -28,8 +28,6 @@
         ../../home/firefox/firefox.nix
 
         ../../home/misc/misc.nix
-
-        ../../home/git/git.nix
     ];
 
     # Host specific home packages
