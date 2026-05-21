@@ -48,6 +48,30 @@
 
             showWorkspaceIndex = true;
 
+            matugenTemplateGtk = true;
+            matugenTemplateNiri = false;
+            matugenTemplateHyprland = false;
+            matugenTemplateMangowc = true;
+            matugenTemplateQt5ct = true;
+            matugenTemplateQt6ct = true;
+            matugenTemplateFirefox = false;
+            matugenTemplatePywalfox = false;
+            matugenTemplateZenBrowser = false;
+            matugenTemplateVesktop = false;
+            matugenTemplateVencord = false;
+            matugenTemplateEquibop = false;
+            matugenTemplateGhostty = false;
+            matugenTemplateKitty = false;
+            matugenTemplateFoot = false;
+            matugenTemplateAlacritty = false;
+            matugenTemplateNeovim = false;
+            matugenTemplateWezterm = false;
+            matugenTemplateDgop = false;
+            matugenTemplateKcolorscheme = false;
+            matugenTemplateVscode = false;
+            matugenTemplateEmacs = false;
+            matugenTemplateZed = false;
+
             cornerRadius = 0;
 
             barConfigs = [
