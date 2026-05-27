@@ -3,7 +3,7 @@ for i = 1, 5 do
     hl.workspace_rule({ workspace = tostring(i), monitor = "DP-1" })
 end
 
-for i = 6, 10 do
-    local key = i % 10
-    hl.workspace_rule({ workspace = tostring(key), monitor = "HDMI-A-1" })
+for i = 6, 9 do
+    hl.workspace_rule({ workspace = tostring(i), monitor = "HDMI-A-1" })
 end
+hl.workspace_rule({ workspace = tostring(0), monitor = "HDMI-A-1" })
