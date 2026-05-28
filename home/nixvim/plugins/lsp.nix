@@ -14,6 +14,10 @@
                 enable = true;
             };
 
+            gopls = {
+                enable = true;
+            };
+
             pylsp = {
                 enable = true;
                 settings = {
