@@ -33,5 +33,6 @@ settings:
     https://mangowc.vercel.app: access-paste
     https://mariadb.com: access-paste
     https://rosepinetheme.com: access-paste
+    https://templ.guide: access-paste
   content.notifications.enabled:
     https://jellyfin.wiebe-martin.duckdns.org: true

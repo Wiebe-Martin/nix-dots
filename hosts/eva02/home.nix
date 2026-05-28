@@ -25,6 +25,8 @@
         ../../home/firefox/firefox.nix
 
         ../../home/git/git.nix
+
+        ../../home/go/go.nix
     ];
 
     # Host specific home packages
