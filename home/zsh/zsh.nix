@@ -21,26 +21,26 @@
                 };
                 file = "zsh-syntax-highlighting.zsh";
             }
-            {
-                name = "zsh-users/zsh-completions";
-                src = fetchFromGitHub {
-                    owner = "zsh-users";
-                    repo = "zsh-completions";
-                    tag = "0.36.0";
-                    sha256 = "XCSC7DyhfnxzKjtbdsu7/pyw8eoVLPdthEoFZ8rBAyo=";
-                };
-                file = "zsh-completions.plugin.zsh";
-            }
-            {
-                name = "zsh-users/zsh-autosuggestions";
-                src = fetchFromGitHub {
-                    owner = "zsh-users";
-                    repo = "zsh-autosuggestions";
-                    tag = "v0.7.1";
-                    sha256 = "vpTyYq9ZgfgdDsWzjxVAE7FZH4MALMNZIFyEOBLm5Qo=";
-                };
-                file = "zsh-autosuggestions.zsh";
-            }
+            # {
+            #     name = "zsh-users/zsh-completions";
+            #     src = fetchFromGitHub {
+            #         owner = "zsh-users";
+            #         repo = "zsh-completions";
+            #         tag = "0.36.0";
+            #         sha256 = "XCSC7DyhfnxzKjtbdsu7/pyw8eoVLPdthEoFZ8rBAyo=";
+            #     };
+            #     file = "zsh-completions.plugin.zsh";
+            # }
+            # {
+            #     name = "zsh-users/zsh-autosuggestions";
+            #     src = fetchFromGitHub {
+            #         owner = "zsh-users";
+            #         repo = "zsh-autosuggestions";
+            #         tag = "v0.7.1";
+            #         sha256 = "vpTyYq9ZgfgdDsWzjxVAE7FZH4MALMNZIFyEOBLm5Qo=";
+            #     };
+            #     file = "zsh-autosuggestions.zsh";
+            # }
             {
                 name = "Aloxaf/fzf-tab";
                 src = fetchFromGitHub {
@@ -53,14 +53,14 @@
             }
         ];
 
-        # oh-my-zsh = {
-        #     enable = true;
+        oh-my-zsh = {
+            enable = true;
 
-        #     plugins = [
-        #         "command-not-found"
-        #         "git"
-        #     ];
-        # };
+            plugins = [
+                "command-not-found"
+                "git"
+            ];
+        };
 
         history = {
             size = 5000;
