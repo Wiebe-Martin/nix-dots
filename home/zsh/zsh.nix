@@ -56,7 +56,7 @@
         oh-my-zsh = {
             enable = true;
 
-            theme = "spaceship";
+            theme = "robbyrussell";
 
             plugins = [
                 "command-not-found"
