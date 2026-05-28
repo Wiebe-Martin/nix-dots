@@ -56,6 +56,8 @@
         oh-my-zsh = {
             enable = true;
 
+            theme = "spaceship";
+
             plugins = [
                 "command-not-found"
                 "git"
