@@ -4,6 +4,33 @@ set -euo pipefail
 REMOTE="origin"
 BRANCH="main"
 
+show_help() {
+    cat <<EOF
+Usage: $(basename "$0") [OPTION]
+
+Safely switch NixOS configurations using nh, ensuring the git
+repository is up to date before switching.
+
+Options:
+  --upgrade    Run 'nh os switch -u'
+  -h, --help   Show this help message and exit
+
+Environment:
+  NH_FLAKE     Path to the Nix flake repository
+
+Examples:
+  $(basename "$0")
+  $(basename "$0") --upgrade
+EOF
+}
+
+case "${1:-}" in
+-h | --help)
+    show_help
+    exit 0
+    ;;
+esac
+
 # Ensure we're in a git repo (adjust if needed)
 REPO_DIR="$NH_FLAKE"
 cd "$REPO_DIR"
@@ -20,7 +47,6 @@ if [ "$LOCAL" != "$REMOTE_HEAD" ]; then
     echo ""
     echo "Run:"
     echo "  git pull --rebase"
-    echo "  nh os switch"
     exit 1
 fi
 
@@ -39,14 +65,36 @@ fi
 echo "==> Switch succeeded."
 
 if ! git diff --quiet || ! git diff --cached --quiet; then
-    echo "==> Changes detected after switch, committing..."
+    echo "==> Changes detected after switch."
+    echo ""
 
-    git add -A
+    echo "==> Changed files:"
+    git status --short
 
-    git commit -m "nixos: switch $(date -Iseconds)"
+    echo ""
+    read -rp "Show full diff? [y/N] " SHOW_DIFF
 
-    echo "==> Pushing changes..."
-    git push "$REMOTE" "$BRANCH"
+    if [[ "$SHOW_DIFF" =~ ^[Yy]$ ]]; then
+        git diff
+        echo ""
+    fi
+
+    read -rp "Commit and push these changes? [y/N] " CONFIRM
+
+    if [[ "$CONFIRM" =~ ^[Yy]$ ]]; then
+        echo "==> Staging changes..."
+        git add -A
+
+        echo "==> Creating commit..."
+        git commit -m "nixos: switch $(date -Iseconds)"
+
+        echo "==> Pushing changes..."
+        git push "$REMOTE" "$BRANCH"
+
+        echo "✔ Changes pushed."
+    else
+        echo "==> Skipping commit and push."
+    fi
 else
     echo "==> No changes to commit."
 fi
