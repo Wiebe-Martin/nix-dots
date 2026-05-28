@@ -14,7 +14,11 @@
                 enable = true;
             };
 
+            # Go
             gopls = {
+                enable = true;
+            };
+            templ = {
                 enable = true;
             };
 
