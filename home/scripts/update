@@ -56,10 +56,10 @@ UPDATE_FLAG="${1:-}"
 
 if [[ "$UPDATE_FLAG" == "--upgrade" ]]; then
     echo "==> Running: nh os switch -u"
-    nh os switch -u
+    nh os switch --update --impure
 else
     echo "==> Running: nh os switch"
-    nh os switch
+    nh os switch --impure
 fi
 
 echo "==> Switch succeeded."
@@ -72,12 +72,6 @@ if ! git diff --quiet || ! git diff --cached --quiet; then
     git status --short
 
     echo ""
-    read -rp "Show full diff? [y/N] " SHOW_DIFF
-
-    if [[ "$SHOW_DIFF" =~ ^[Yy]$ ]]; then
-        git diff
-        echo ""
-    fi
 
     read -rp "Commit and push these changes? [y/N] " CONFIRM
 
