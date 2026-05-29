@@ -2,8 +2,8 @@
 
 {
     home.packages = with pkgs; [
-        go
         gcc
+        air
     ];
 
     programs.go = {
