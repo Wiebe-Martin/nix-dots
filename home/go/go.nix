@@ -4,7 +4,13 @@
     home.packages = with pkgs; [
         go
         gcc
-        air
-        templ
     ];
+
+    programs.go = {
+        enable = true;
+
+        packages = {
+
+        };
+    };
 }
