@@ -142,7 +142,6 @@
         extraOptions = [
             "--group-directories-first"
             "--header"
-            "--long"
         ];
     };
 }
