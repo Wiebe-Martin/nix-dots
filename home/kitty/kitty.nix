@@ -7,7 +7,7 @@
             size = 14;
         };
 
-        themeFile = "GruvboxMaterialDarkHard";
+        themeFile = "gruvbox-dark";
 
         extraConfig = ''
             background_opacity 0.8
