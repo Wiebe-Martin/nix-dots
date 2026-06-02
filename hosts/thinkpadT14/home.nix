@@ -67,4 +67,12 @@
         size = 16;
         gtk.enable = true;
     };
+
+    xdg.mimeApps = {
+        enable = true;
+
+        defaultApplications = {
+            "application/pdf" = [ "org.pwmt.zathura.desktop" ];
+        };
+    };
 }

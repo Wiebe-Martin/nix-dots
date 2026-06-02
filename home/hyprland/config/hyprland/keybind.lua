@@ -1,7 +1,7 @@
 local mainMod = "SUPER"
 
 local terminal = "kitty --single-instance"
-local fileManager = "lauch-yazi"
+local fileManager = "nautilus"
 local browser = "qutebrowser"
 
 local menu = os.getenv("APP_LAUNCHER")
