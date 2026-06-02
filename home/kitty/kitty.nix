@@ -7,16 +7,14 @@
             size = 14;
         };
 
+        themeFile = "GruvboxMaterialDarkHard";
+
         extraConfig = ''
             background_opacity 0.8
 
             enable_audio_bell no
 
             window_margin_width 5
-
-            include dank-theme.conf
-
-            cursor #928374
         '';
     };
 }

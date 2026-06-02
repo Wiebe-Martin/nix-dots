@@ -136,7 +136,7 @@
 
     programs.eza = {
         enable = true;
-        icons = true;
+        icons = "auto";
         enableZshIntegration = true;
         git = true;
         extraOptions = [
