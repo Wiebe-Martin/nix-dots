@@ -1,4 +1,6 @@
 {
+    plugins.mini-icons.enable = true;
+
     plugins.oil = {
         enable = true;
 
