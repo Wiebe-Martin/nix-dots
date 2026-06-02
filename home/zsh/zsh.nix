@@ -138,5 +138,11 @@
         enable = true;
         icons = true;
         enableZshIntegration = true;
+        git = true;
+        extraOptions = [
+            "--group-directories-first"
+            "--header"
+            "--long"
+        ];
     };
 }
