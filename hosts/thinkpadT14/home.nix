@@ -20,6 +20,7 @@
         # ../../home/noctalia-shell/noctalia.nix
 
         ../../home/kitty/kitty.nix
+        ../../home/zathura/zathura.nix
 
         ../../home/opencode/opencode.nix
         ../../home/btop/btop.nix
