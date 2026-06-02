@@ -42,6 +42,8 @@
         fastfetch
         btop
         sqlit-tui
+        lazygit
+        lazydocker
 
         xdg-utils
         brightnessctl
