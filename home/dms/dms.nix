@@ -43,6 +43,7 @@
             registryThemeVariants = {
                 gruvboxMaterial = "hard";
             };
+            iconTheme = "Yaru-olive-dark";
 
             useAutoLocation = true;
 
