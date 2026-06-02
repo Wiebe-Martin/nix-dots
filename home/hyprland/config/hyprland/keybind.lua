@@ -1,6 +1,6 @@
 local mainMod = "SUPER"
 
-local terminal = "kitty"
+local terminal = "kitty --single-instance"
 local fileManager = "lauch-yazi"
 local browser = "qutebrowser"
 
