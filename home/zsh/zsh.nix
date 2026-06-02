@@ -8,6 +8,9 @@
 
         shellAliases = {
             cat = "bat";
+            n = "nvim";
+            nv = "nvim";
+            nvi = "nvim";
         };
 
         plugins = with pkgs; [
@@ -130,4 +133,10 @@
     programs.bat.enable = true;
 
     programs.zoxide.enable = true;
+
+    programs.eza = {
+        enable = true;
+        icons = true;
+        enableZshIntegration = true;
+    };
 }
