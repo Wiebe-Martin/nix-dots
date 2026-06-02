@@ -49,6 +49,8 @@
         xdg-utils
         brightnessctl
 
+        yaru-theme
+
         jdk
         unzip
 
