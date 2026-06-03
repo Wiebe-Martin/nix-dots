@@ -25,6 +25,8 @@
         ../../modules/virtualization/virtmanager.nix
     ];
 
+    boot.kernelPackages = pkgs.linuxPackages_latest;
+
     hardware = {
         graphics = {
             package = pkgs.mesa;
