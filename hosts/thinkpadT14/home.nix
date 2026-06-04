@@ -39,6 +39,7 @@
         proton-vpn
         freerdp
         qbz
+        rpi-imager
 
         fastfetch
         btop
