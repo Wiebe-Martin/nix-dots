@@ -48,6 +48,7 @@
         lazydocker
 
         xdg-utils
+        libxau
         brightnessctl
 
         yaru-theme
