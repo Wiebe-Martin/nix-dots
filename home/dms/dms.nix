@@ -102,8 +102,7 @@
                         "memUsage"
                     ]
                     ++ lib.optionals config.my.host.isLaptop [
-                        # "battery"
-                        "tlpControl"
+                        "battery"
                     ]
                     ++ [
                         "notificationButton"
