@@ -43,6 +43,9 @@
 
         xdg-utils
 
+        yaru-theme
+        adw-gtk3
+
         jdk
 
         ffmpeg

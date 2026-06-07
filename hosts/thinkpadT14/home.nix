@@ -52,6 +52,7 @@
         brightnessctl
 
         yaru-theme
+        adw-gtk3
 
         jdk
         unzip
