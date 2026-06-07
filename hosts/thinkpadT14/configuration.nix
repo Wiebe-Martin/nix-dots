@@ -76,6 +76,10 @@
         defaultSession = "";
         ly = {
             enable = true;
+            settings = {
+                animation = "dur_file";
+                dur_file_path = "/home/martin/nix-dots/walls/blackhole-smooth-240x67.dur";
+            };
         };
     };
 
