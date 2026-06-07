@@ -26,6 +26,8 @@
 
         plugins = {
             tailscale.enable = true;
+            tlpControl.enable = true;
+            tlpPowerProfile.enable = true;
         };
 
         settings = {
