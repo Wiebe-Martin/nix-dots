@@ -11,6 +11,7 @@
         ./plugins/snacks.nix
         ./plugins/lualine.nix
         ./plugins/tmux.nix
+        ./plugins/treesitter-context.nix
         ./plugins/blink.nix
         ./plugins/tmux.nix
         ./plugins/harpoon.nix
