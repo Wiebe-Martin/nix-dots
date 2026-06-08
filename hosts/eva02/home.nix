@@ -51,6 +51,10 @@
         ffmpeg
     ];
 
+    programs.steam = {
+        enable = true;
+    };
+
     home.sessionVariables = {
         EDITOR = "nvim";
         XDG_CONFIG_HOME = "/home/martin/.config";
