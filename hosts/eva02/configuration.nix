@@ -44,7 +44,7 @@
     };
 
     services.displayManager = {
-        defaultSession = "";
+        defaultSession = "hyprland";
         ly = {
             enable = true;
         };
@@ -59,6 +59,10 @@
     ];
 
     services.openssh.enable = true;
+
+    programs.steam = {
+        enable = true;
+    };
 
     networking.firewall = {
         enable = true;
