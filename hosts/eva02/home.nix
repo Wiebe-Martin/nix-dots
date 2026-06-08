@@ -53,6 +53,7 @@
 
     home.sessionVariables = {
         EDITOR = "nvim";
+        TERMINAL = "kitty";
         XDG_CONFIG_HOME = "/home/martin/.config";
     };
 
