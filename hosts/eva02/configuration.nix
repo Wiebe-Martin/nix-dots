@@ -25,6 +25,11 @@
             enable = true;
             powerOnBoot = true;
         };
+
+        graphics = {
+            enable = true;
+            enable32Bit = true;
+        };
     };
 
     networking.hostName = "eva02";
