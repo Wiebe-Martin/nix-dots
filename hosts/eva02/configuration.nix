@@ -69,6 +69,13 @@
         enable = true;
     };
     programs.gamemode.enable = true;
+    programs = {
+        gamescope = {
+            enable = true;
+            # capSysNice = true;
+        };
+        steam.gamescopeSession.enable = true;
+    };
 
     networking.firewall = {
         enable = true;
