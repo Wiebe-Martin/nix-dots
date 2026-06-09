@@ -35,3 +35,14 @@ hl.layer_rule({
     match = { namespace = "^dms$" },
     no_anim = true,
 })
+
+hl.config({
+    general = {
+        allow_tearing = true,
+    },
+})
+
+hl.window_rule({
+    match = { class = "cs2" },
+    immediate = true,
+})
