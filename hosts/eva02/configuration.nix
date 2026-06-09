@@ -68,6 +68,7 @@
     programs.steam = {
         enable = true;
     };
+    programs.gamemode.enable = true;
 
     networking.firewall = {
         enable = true;
