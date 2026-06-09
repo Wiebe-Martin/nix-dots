@@ -11,6 +11,8 @@
     home.stateVersion = "25.11";
 
     imports = [
+        ./home-extra.nix
+
         ../../home/common.nix
 
         ../../home/hyprland/hyprland.nix
