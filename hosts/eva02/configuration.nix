@@ -7,7 +7,7 @@
 
         ../common.nix
 
-        ../../modules/system/systemd-boot.nix
+        ../../modules/system/grub.nix
         ../../modules/system/locals.nix
 
         ../../modules/audio/pipewire.nix

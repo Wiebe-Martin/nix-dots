@@ -13,9 +13,9 @@
         options = [ "subvol=/@home" ];
     };
 
-    fileSystems."/games" = {
-        device = "/dev/disk/by-label/games";
-        fsType = "btrfs";
-        # options = [ "" ];
-    };
+    # fileSystems."/games" = {
+    #     device = "/dev/disk/by-label/games";
+    #     fsType = "btrfs";
+    #     # options = [ "" ];
+    # };
 }
