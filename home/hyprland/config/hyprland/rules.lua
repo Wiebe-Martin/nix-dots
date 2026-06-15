@@ -40,6 +40,9 @@ hl.config({
     general = {
         allow_tearing = true,
     },
+    misc = {
+        initial_workspace_tracking = 0,
+    },
 })
 
 hl.window_rule({

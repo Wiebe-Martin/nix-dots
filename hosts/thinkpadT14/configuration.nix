@@ -73,7 +73,7 @@
     services.gnome.gnome-keyring.enable = true;
 
     services.displayManager = {
-        defaultSession = "";
+        defaultSession = "hyprland";
         ly = {
             enable = true;
             settings = {

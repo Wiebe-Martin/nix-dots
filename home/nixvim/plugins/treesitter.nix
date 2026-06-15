@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
     plugins.treesitter = {
         enable = true;
 
-        grammerPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammers; [
+        grammarPackages = with config.plugins.treesitter.package.builtGrammars; [
             lua
             python
             javascript

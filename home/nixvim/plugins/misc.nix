@@ -27,7 +27,7 @@
         };
         undotree = {
             enable = true;
-            keymaps = [
+            settings.keymaps = [
                 {
                     mode = "n";
                     key = "<leader>ut";
