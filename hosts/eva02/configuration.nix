@@ -8,6 +8,7 @@
         ../common.nix
 
         # ../../modules/system/grub.nix
+        ../../modules/system/lanzaboote.nix
         ../../modules/system/locals.nix
 
         ../../modules/audio/pipewire.nix
