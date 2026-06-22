@@ -38,6 +38,7 @@
         fractal
         proton-vpn
         heroic
+        jellyfin-desktop
 
         fastfetch
         btop
