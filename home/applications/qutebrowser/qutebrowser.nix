@@ -6,7 +6,7 @@
     ];
 
     xdg.configFile."qutebrowser" = {
-        source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/home/qutebrowser/config";
+        source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/home/applications/qutebrowser/config";
         recursive = true;
     };
 }
