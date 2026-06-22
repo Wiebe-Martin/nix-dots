@@ -15,20 +15,20 @@
 
         ../../home/common.nix
 
-        ../../home/hyprland/hyprland.nix
+        ../../home/applications/hyprland/hyprland.nix
 
-        ../../home/dms/dms.nix
+        ../../home/applications/dms/dms.nix
 
-        ../../home/kitty/kitty.nix
+        ../../home/applications/kitty/kitty.nix
 
-        ../../home/opencode/opencode.nix
+        ../../home/applications/opencode/opencode.nix
 
-        ../../home/qutebrowser/qutebrowser.nix
-        ../../home/firefox/firefox.nix
+        ../../home/applications/qutebrowser/qutebrowser.nix
+        ../../home/applications/firefox/firefox.nix
 
-        ../../home/git/git.nix
+        ../../home/applications/git/git.nix
 
-        ../../home/go/go.nix
+        ../../home/applications/go/go.nix
     ];
 
     # Host specific home packages
