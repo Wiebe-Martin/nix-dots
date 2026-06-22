@@ -22,11 +22,11 @@ in
         recursive = true;
     };
 
-    home.file."nix-dots/home/hyprland/config/hyprland/monitor.lua" = {
+    home.file."nix-dots/home/applications/hyprland/config/hyprland/monitor.lua" = {
         source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/home/applications/hyprland/overrides/${host}/monitor.lua";
     };
 
-    home.file."nix-dots/home/hyprland/config/hyprland/workspaces.lua" = {
+    home.file."nix-dots/home/applications/hyprland/config/hyprland/workspaces.lua" = {
         source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/home/applications/hyprland/overrides/${host}/workspaces.lua";
     };
 }
