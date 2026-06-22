@@ -315,5 +315,13 @@ in
             action = "<cmd>nohlsearch<CR>";
             options = opts;
         }
+
+        # Tmux Sessionizer
+        {
+            mode = "n";
+            key = "<C-f>";
+            action = "<cmd>silent !tmux neww tmux-sessionizer<CR>";
+            options = opts;
+        }
     ];
 }
