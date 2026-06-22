@@ -7,12 +7,12 @@
 
 {
     imports = [
-        ./zsh/zsh.nix
-        ./tmux/tmux.nix
-        ./nixvim/nvim.nix
-        ./git/git.nix
-        ./git/gh.nix
-        ./tmux-sessionizer/tmux-sessionizer.nix
+        ./applications/zsh/zsh.nix
+        ./applications/tmux/tmux.nix
+        ./applications/nixvim/nvim.nix
+        ./applications/git/git.nix
+        ./applications/git/gh.nix
+        ./applications/tmux-sessionizer/tmux-sessionizer.nix
     ];
 
     home.packages = with pkgs; [

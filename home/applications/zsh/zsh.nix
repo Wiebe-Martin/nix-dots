@@ -100,7 +100,7 @@
         '';
     };
 
-    home.file.".local/bin".source = ../../scripts;
+    home.file.".local/bin".source = ../../../scripts;
 
     home.sessionVariables = {
         MANPAGER = "bat -plman";
