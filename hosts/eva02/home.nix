@@ -39,6 +39,7 @@
         proton-vpn
         heroic
         jellyfin-desktop
+        mpv
 
         fastfetch
         btop
