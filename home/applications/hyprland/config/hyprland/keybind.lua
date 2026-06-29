@@ -35,10 +35,10 @@ for i = 1, 10 do
 end
 
 -- 5. Move windows
-hl.bind(mainMod .. " + h", hl.dsp.window.move({ direction = "left" }))
-hl.bind(mainMod .. " + l", hl.dsp.window.move({ direction = "right" }))
-hl.bind(mainMod .. " + k", hl.dsp.window.move({ direction = "up" }))
-hl.bind(mainMod .. " + j", hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod .. " + SHIFT + h", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + l", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + k", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + j", hl.dsp.window.move({ direction = "down" }))
 
 -- 6. Resize windows
 hl.bind(mainMod .. " + ALT + H", hl.dsp.window.resize({ x = -20, y = 0 }))
