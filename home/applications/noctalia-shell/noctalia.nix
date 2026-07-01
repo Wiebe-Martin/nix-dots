@@ -8,7 +8,24 @@
         POWER_MENU = "noctalia msg panel-toggle session";
     };
 
-    home.packages = [
-        inputs.noctalia.packages.${pkgs.system}.default
+    imports = [
+        inputs.noctalia.homeModules.default
     ];
+
+    programs.noctalia = {
+        enable = true;
+
+        settings = {
+            # theme = {
+            #     mode = "dark";
+            #     source = "builtin";
+            #     builtin = "Catppuccin";
+            # };
+
+            wallpaper = {
+                enabled = true;
+                default.path = "/home/martin/nix-dots/walls/glt_gruvbox.png";
+            };
+        };
+    };
 }
