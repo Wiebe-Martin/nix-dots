@@ -6,7 +6,6 @@
         todo-comments.enable = true;
         colorizer.enable = true;
         rainbow-delimiters.enable = true;
-        typst-preview.enable = true;
         noice = {
             enable = true;
             settings = {

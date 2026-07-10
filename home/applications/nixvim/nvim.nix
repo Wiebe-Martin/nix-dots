@@ -10,7 +10,7 @@
         inputs.nixvim.homeModules.nixvim
     ];
 
-    programs.nixvim = import ./nixvim.nix { inherit pkgs config; };
+    programs.nixvim = import ./nixvim.nix { inherit pkgs config inputs; };
 
     home.packages = with pkgs; [
         ripgrep

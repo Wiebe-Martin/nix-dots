@@ -2,6 +2,8 @@
 
 {
     environment.systemPackages = [ pkgs.cifs-utils ];
+    # NOTE: /etc/nixos/smb-secrets must be mode 600 and owned by root.
+    # Consider moving it to a secrets manager like sops-nix or agenix.
     fileSystems."/home/martin/Tank" = {
         device = "//192.168.178.8/Data";
         fsType = "cifs";

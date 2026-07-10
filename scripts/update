@@ -4,6 +4,10 @@ set -euo pipefail
 REMOTE="origin"
 BRANCH="main"
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_DIR="${NH_FLAKE:-"$SCRIPT_DIR/.."}"
+REPO_DIR="$(cd "$REPO_DIR" && pwd)"
+
 show_help() {
     cat <<EOF
 Usage: $(basename "$0") [OPTION]
@@ -16,7 +20,7 @@ Options:
   -h, --help   Show this help message and exit
 
 Environment:
-  NH_FLAKE     Path to the Nix flake repository
+  NH_FLAKE     Path to the Nix flake repository (defaults to the repo containing this script)
 
 Examples:
   $(basename "$0")
@@ -31,8 +35,6 @@ case "${1:-}" in
     ;;
 esac
 
-# Ensure we're in a git repo (adjust if needed)
-REPO_DIR="$NH_FLAKE"
 cd "$REPO_DIR"
 
 echo "==> Fetching remote updates..."
@@ -56,10 +58,10 @@ UPDATE_FLAG="${1:-}"
 
 if [[ "$UPDATE_FLAG" == "--upgrade" ]]; then
     echo "==> Running: nh os switch -u"
-    nh os switch --update --impure
+    nh os switch --update
 else
     echo "==> Running: nh os switch"
-    nh os switch --impure
+    nh os switch
 fi
 
 echo "==> Switch succeeded."
