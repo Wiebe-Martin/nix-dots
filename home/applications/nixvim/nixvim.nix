@@ -25,5 +25,5 @@
 
     enable = true;
 
-    nixpkgs.source = inputs.nixpkgs;
+    nixpkgs.useGlobalPackages = true;
 }

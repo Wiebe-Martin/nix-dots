@@ -34,7 +34,17 @@
             home-manager,
             ...
         }:
+        let
+            forAllSystems = nixpkgs.lib.genAttrs [ "x86_64-linux" ];
+        in
         {
+            pkgs = forAllSystems (system:
+                import nixpkgs {
+                    inherit system;
+                    config.allowUnfree = true;
+                }
+            );
+
             nixosConfigurations."thinkpadt14" = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 specialArgs = {
