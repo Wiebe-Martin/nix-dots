@@ -40,6 +40,8 @@
         adw-gtk3
         jdk
         ffmpeg
+
+        inputs.kimi-code.packages.x86_64-linux.default
     ];
 
     home.sessionVariables = {
