@@ -7,6 +7,8 @@
 
 {
     imports = [
+        ./themes/stylix.nix
+
         ./applications/zsh/zsh.nix
         ./applications/tmux/tmux.nix
         ./applications/nixvim/nvim.nix
@@ -30,7 +32,7 @@
 
         localsend
         nautilus
-        fractal
+        # fractal
         proton-vpn
         fastfetch
         btop
@@ -50,12 +52,7 @@
         XDG_CONFIG_HOME = "${config.home.homeDirectory}/.config";
     };
 
-    home.pointerCursor = {
-        name = "everforest-cursors";
-        package = pkgs.everforest-cursors;
-        size = 16;
-        gtk.enable = true;
-    };
+    home.pointerCursor.enable = true;
 
     programs.home-manager.enable = true;
 }

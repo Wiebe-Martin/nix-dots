@@ -10,6 +10,8 @@
     imports = [
         ../../home/common.nix
 
+        ../../home/themes/theme/gruvbox.nix
+
         ../../home/applications/hyprland/hyprland.nix
 
         ../../home/applications/dms/dms.nix
