@@ -6,7 +6,7 @@
 
         polarity = "dark";
 
-        image = ../../../walls/aphex_twin_gruvbox.jpg;
+        image = ../../../walls/glt_gruvbox.png;
 
         cursor = {
             name = "everforest-cursors";
