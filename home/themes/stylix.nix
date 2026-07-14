@@ -20,7 +20,7 @@
             firefox.profileNames = [ "default" ];
         };
 
-        polarity = "dark";
+        polarity = lib.mkDefault "dark";
 
         base16Scheme = lib.mkDefault {
             base00 = "202020";
@@ -41,9 +41,9 @@
             base0F = "bd6f3e";
         };
 
-        image = ../../walls/glt_gruvbox.png;
+        # image = lib.mkDefault ../../walls/glt_gruvbox.png;
 
-        cursor = {
+        cursor = lib.mkDefault {
             name = "everforest-cursors";
             package = pkgs.everforest-cursors;
             size = 16;
@@ -75,10 +75,10 @@
         };
 
         opacity = {
-            applications = 0.8;
+            # applications = 0.8;
             terminal = 0.8;
-            desktop = 0.6;
-            popups = 0.6;
+            # desktop = 0.6;
+            # popups = 0.6;
         };
     };
 }

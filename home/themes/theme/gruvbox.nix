@@ -1,15 +1,17 @@
 { pkgs, ... }:
 
 {
-    stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    stylix = {
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
 
-    polarity = "dark";
+        polarity = "dark";
 
-    image = ../../walls/glt_gruvbox.png;
+        image = ../../../walls/aphex_twin_gruvbox.jpg;
 
-    cursor = {
-        name = "everforest-cursors";
-        package = pkgs.everforest-cursors;
-        size = 16;
+        cursor = {
+            name = "everforest-cursors";
+            package = pkgs.everforest-cursors;
+            size = 16;
+        };
     };
 }
