@@ -15,6 +15,7 @@ in
         slurp
         swappy
         cliphist
+        grimblast
     ];
 
     xdg.configFile."hypr" = {
