@@ -10,7 +10,7 @@
     imports = [
         ../../home/common.nix
 
-        ../../home/themes/theme/dracula.nix
+        ../../home/themes/theme/tokyonight.nix
 
         ../../home/applications/hyprland/hyprland.nix
 
