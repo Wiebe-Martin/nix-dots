@@ -2,7 +2,7 @@
 
 {
     stylix = {
-        base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
 
         polarity = "dark";
 
@@ -19,7 +19,11 @@
         enable = true;
 
         settings = {
-            flavour = "mocha";
+            flavour = "macchiato";
+
+            float = {
+                transparent = true;
+            };
 
             integrations = {
                 cmp = true;
