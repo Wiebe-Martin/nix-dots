@@ -2,7 +2,7 @@
 
 {
     stylix = {
-        base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyonight.yaml";
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
 
         polarity = "dark";
 
@@ -19,6 +19,8 @@
         enable = true;
 
         settings = {
+            style = "night";
+
             transparent = true;
         };
     };
