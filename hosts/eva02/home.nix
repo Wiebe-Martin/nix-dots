@@ -31,6 +31,7 @@
         jellyfin-desktop
         mpv
         eden
+        qbittorrent
     ];
 
     programs.vesktop.enable = true;
