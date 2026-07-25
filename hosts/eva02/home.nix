@@ -30,6 +30,7 @@
         heroic
         jellyfin-desktop
         mpv
+        eden
     ];
 
     programs.vesktop.enable = true;
