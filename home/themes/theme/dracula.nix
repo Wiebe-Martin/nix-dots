@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
     stylix = {
@@ -12,6 +12,15 @@
             name = "everforest-cursors";
             package = pkgs.everforest-cursors;
             size = 16;
+        };
+    };
+
+    programs.nixvim.colorschemes.dracula = {
+        enable = true;
+
+        settings = {
+            bold = true;
+            italic = true;
         };
     };
 }

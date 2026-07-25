@@ -1,4 +1,9 @@
-{ pkgs, config, inputs, ... }:
+{
+    pkgs,
+    config,
+    inputs,
+    ...
+}:
 
 {
     imports = [
@@ -20,7 +25,7 @@
         ./plugins/dap.nix
         ./plugins/gitsigns.nix
 
-        ./colorshemes/gruvbox.nix
+        # ./colorshemes/gruvbox.nix
     ];
 
     enable = true;
