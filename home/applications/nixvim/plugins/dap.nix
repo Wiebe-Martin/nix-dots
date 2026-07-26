@@ -30,8 +30,7 @@
 
             adapters = {
                 executables.gdb = {
-                    # TODO: Set executable to zephyr's sdk GDB Version
-                    command = "";
+                    command = "${pkgs.gdb}/bin/gdb";
                     args = [
                         "--eval-command"
                         "set print pretty on"

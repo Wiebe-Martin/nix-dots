@@ -21,50 +21,16 @@
 
         ../../modules/misc/smb.nix
     ];
-    hardware = {
-        bluetooth = {
-            enable = true;
-            powerOnBoot = true;
-        };
-
-        graphics = {
-            enable = true;
-            enable32Bit = true;
-        };
-    };
 
     networking.hostName = "eva02";
 
-    services.xserver.xkb = {
-        layout = "eu";
-        variant = "";
-    };
-
-    users.users.martin = {
-        isNormalUser = true;
-        description = "Martin Wiebe";
-        extraGroups = [
-            "networkmanager"
-            "wheel"
-        ];
-    };
-
-    services.displayManager = {
-        defaultSession = "hyprland";
-        ly = {
-            enable = true;
+    services.openssh = {
+        enable = true;
+        settings = {
+            PermitRootLogin = "no";
+            PasswordAuthentication = false;
         };
     };
-
-    nixpkgs.config.allowUnfree = true;
-
-    environment.systemPackages = with pkgs; [
-        wget
-        git
-        vim
-    ];
-
-    services.openssh.enable = true;
 
     programs.steam = {
         enable = true;
@@ -77,20 +43,4 @@
         };
         steam.gamescopeSession.enable = true;
     };
-
-    networking.firewall = {
-        enable = true;
-        allowedTCPPorts = [
-            80
-            443
-            53317
-        ];
-    };
-
-    nix.settings.experimental-features = [
-        "nix-command"
-        "flakes"
-    ];
-
-    system.stateVersion = "25.11";
 }

@@ -1,4 +1,9 @@
-{ pkgs, config, ... }:
+{
+    pkgs,
+    config,
+    inputs,
+    ...
+}:
 
 {
     imports = [
@@ -13,7 +18,6 @@
         ./plugins/tmux.nix
         ./plugins/treesitter-context.nix
         ./plugins/blink.nix
-        ./plugins/tmux.nix
         ./plugins/harpoon.nix
         ./plugins/lsp.nix
         ./plugins/conform.nix
@@ -21,8 +25,10 @@
         ./plugins/dap.nix
         ./plugins/gitsigns.nix
 
-        ./colorshemes/gruvbox.nix
+        # ./colorshemes/gruvbox.nix
     ];
 
     enable = true;
+
+    nixpkgs.useGlobalPackages = true;
 }

@@ -1,5 +1,5 @@
 {
-    description = "Home Manager configuration of martin";
+    description = "NixOS configurations of martin";
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
         home-manager = {
@@ -16,14 +16,22 @@
         };
         nixvim = {
             url = "github:nix-community/nixvim";
+            inputs.nixpkgs.follows = "nixpkgs";
         };
         noctalia = {
             url = "github:noctalia-dev/noctalia";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        stylix = {
+            url = "github:danth/stylix";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
         lanzaboote = {
             url = "github:nix-community/lanzaboote/v1.1.0";
             inputs.nixpkgs.follows = "nixpkgs";
+        };
+        kimi-code = {
+            url = "github:MoonshotAI/kimi-code";
         };
     };
     outputs =
@@ -33,6 +41,9 @@
             home-manager,
             ...
         }:
+        let
+            forAllSystems = nixpkgs.lib.genAttrs [ "x86_64-linux" ];
+        in
         {
             nixosConfigurations."thinkpadt14" = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";

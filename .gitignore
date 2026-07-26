@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Backup files
+*.backup
+*.swp
+*~
+
+# Generated state
+home/applications/qutebrowser/config/qsettings/QtProject.conf
+home/applications/qutebrowser/config/theme.py
+*.logs
+
+# Nix
+result
+result-*

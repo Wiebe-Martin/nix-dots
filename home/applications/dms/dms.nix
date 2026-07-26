@@ -31,32 +31,24 @@
         };
 
         settings = {
-            fontFamily = "CaskaydiaCove Nerd Font";
-            monoFontFamily = "CaskaydiaCove Nerd Font Mono";
             fontWeight = 700;
             fontScale = 1;
 
             launcherLogoMode = "os";
             launcherLogoColorOverride = "primary";
 
-            currentThemeName = "custom";
-            currentThemeCategory = "registry";
-            customThemeFile = "/home/martin/.config/DankMaterialShell/themes/gruvboxMaterial/theme.json";
-            registryThemeVariants = {
-                gruvboxMaterial = "hard";
-            };
-            iconTheme = "Yaru-olive-dark";
+            # iconTheme = "Yaru-olive-dark";
 
             useAutoLocation = true;
 
             showWorkspaceIndex = true;
 
-            matugenTemplateGtk = true;
+            matugenTemplateGtk = false;
             matugenTemplateNiri = false;
             matugenTemplateHyprland = false;
-            matugenTemplateMangowc = true;
-            matugenTemplateQt5ct = true;
-            matugenTemplateQt6ct = true;
+            matugenTemplateMangowc = false;
+            matugenTemplateQt5ct = false;
+            matugenTemplateQt6ct = false;
             matugenTemplateFirefox = false;
             matugenTemplatePywalfox = false;
             matugenTemplateZenBrowser = false;

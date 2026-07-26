@@ -1,0 +1,27 @@
+{ pkgs, ... }:
+
+{
+    stylix = {
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
+
+        polarity = "dark";
+
+        image = ../../../walls/glt_gruvbox.png;
+
+        cursor = {
+            name = "everforest-cursors";
+            package = pkgs.everforest-cursors;
+            size = 16;
+        };
+    };
+
+    programs.nixvim.colorschemes.gruvbox-material = {
+        enable = true;
+
+        settings = {
+            enable_bold = 1;
+            enable_italic = 1;
+            transparent_background = 2;
+        };
+    };
+}

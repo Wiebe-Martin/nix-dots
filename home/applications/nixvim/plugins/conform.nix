@@ -52,14 +52,6 @@
             "4"
           ];
         };
-        ruff = {
-          append_args = [
-            "--extend-select"
-            "I"
-            "--ignore"
-            "F401"
-          ];
-        };
         nixfmt = {
           append_args = [
             "--indent"
