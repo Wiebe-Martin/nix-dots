@@ -4,7 +4,7 @@
     home.sessionVariables = {
         DESKTOP_SHELL_COMMAND = "noctalia";
         APP_LAUNCHER = "noctalia msg panel-toggle launcher";
-        LOCK_SCREEN = "noctalia msg screen-lock";
+        LOCK_SCREEN = "noctalia msg session lock";
         POWER_MENU = "noctalia msg panel-toggle session";
     };
 

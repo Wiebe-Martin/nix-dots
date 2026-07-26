@@ -88,6 +88,10 @@
         };
     };
 
+    programs.steam = {
+        enable = true;
+    };
+
     # services.power-profiles-daemon.enable = true;
     services.tlp.enable = true;
     services.tlp.pd.enable = true;
