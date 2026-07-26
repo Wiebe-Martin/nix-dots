@@ -11,7 +11,8 @@
         ../../home/common.nix
 
         ../../home/applications/mango/mango.nix
-        ../../home/applications/noctalia-shell/noctalia.nix
+        # ../../home/applications/noctalia-shell/noctalia.nix
+        ../../home/applications/dms/dms.nix
 
         ../../home/applications/kitty/kitty.nix
         ../../home/applications/zathura/zathura.nix
