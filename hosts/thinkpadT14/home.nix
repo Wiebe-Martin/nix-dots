@@ -10,6 +10,8 @@
     imports = [
         ../../home/common.nix
 
+        ../../home/themes/theme/gruvbox.nix
+
         ../../home/applications/mango/mango.nix
         # ../../home/applications/noctalia-shell/noctalia.nix
         ../../home/applications/dms/dms.nix
