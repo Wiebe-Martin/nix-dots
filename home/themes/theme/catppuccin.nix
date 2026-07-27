@@ -9,7 +9,7 @@
         image = ../../../walls/wallhaven-mpzlq1_1920x1080.png;
 
         cursor = {
-            name = "catppuccin-cursors";
+            name = "macchiatoDark";
             package = pkgs.catppuccin-cursors;
             size = 16;
         };
