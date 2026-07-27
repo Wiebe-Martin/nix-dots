@@ -10,7 +10,7 @@
 
         cursor = {
             name = "macchiatoDark";
-            package = pkgs.catppuccin-cursors;
+            package = pkgs.catppuccin-cursors.mochaMauve;
             size = 16;
         };
     };
