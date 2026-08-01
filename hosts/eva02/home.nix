@@ -34,6 +34,8 @@
         qbittorrent
         lunar-client
         prismlauncher
+
+        unzip
     ];
 
     programs.vesktop.enable = true;
