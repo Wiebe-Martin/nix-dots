@@ -33,6 +33,7 @@
         eden
         qbittorrent
         lunar-client
+        prismlauncher
     ];
 
     programs.vesktop.enable = true;
