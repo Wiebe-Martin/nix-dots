@@ -32,6 +32,7 @@
         mpv
         eden
         qbittorrent
+        lunar-client
     ];
 
     programs.vesktop.enable = true;
