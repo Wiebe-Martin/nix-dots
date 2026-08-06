@@ -24,6 +24,12 @@
 
     networking.hostName = "eva02";
 
+    networking.firewall = {
+        allowedTCPPorts = [
+            25565
+        ];
+    };
+
     services.openssh = {
         enable = true;
         settings = {
@@ -31,6 +37,8 @@
             PasswordAuthentication = false;
         };
     };
+
+    virtualisation.docker.enable = true;
 
     programs.steam = {
         enable = true;

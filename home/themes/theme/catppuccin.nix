@@ -9,9 +9,9 @@
         image = ../../../walls/wallhaven-mpzlq1_1920x1080.png;
 
         cursor = {
-            name = "catppuccin-cursors";
-            package = pkgs.catppuccin-cursors;
-            size = 16;
+            name = "mochaDark";
+            package = pkgs.catppuccin-cursors.mochaDark;
+            size = 24;
         };
     };
 
