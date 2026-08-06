@@ -30,6 +30,7 @@
         freerdp
         qbz
         rpi-imager
+        spotify
 
         lazygit
         lazydocker
