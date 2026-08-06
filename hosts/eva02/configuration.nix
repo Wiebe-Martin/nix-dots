@@ -24,6 +24,12 @@
 
     networking.hostName = "eva02";
 
+    networking.firewall = {
+        allowedTCPPorts = [
+            25565
+        ];
+    };
+
     services.openssh = {
         enable = true;
         settings = {
