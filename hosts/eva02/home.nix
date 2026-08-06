@@ -32,6 +32,7 @@
         mpv
         eden
         qbittorrent
+        spotify
     ];
 
     programs.vesktop.enable = true;
