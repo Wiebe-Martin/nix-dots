@@ -31,6 +31,7 @@
         qbz
         rpi-imager
         spotify
+        osu-lazer-bin
 
         lazygit
         lazydocker
