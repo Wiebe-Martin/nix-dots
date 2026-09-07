@@ -30,6 +30,10 @@
             url = "github:nix-community/lanzaboote/v1.1.0";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        nixos-wsl = {
+            url = "github:nix-community/NixOS-WSL/main";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
         kimi-code = {
             url = "github:MoonshotAI/kimi-code";
         };
@@ -95,6 +99,34 @@
                                     ./hosts/eva02/home.nix
                                     ./home/options.nix
                                     ./hosts/eva02/options.nix
+                                ];
+                            };
+                        };
+                    }
+                ];
+            };
+            nixosConfigurations."wsl" = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                specialArgs = {
+                    inherit inputs;
+                };
+                modules = [
+                    ./hosts/wsl/configuration.nix
+
+                    home-manager.nixosModules.home-manager
+                    {
+                        home-manager = {
+                            useGlobalPkgs = true;
+                            useUserPackages = true;
+                            extraSpecialArgs = {
+                                inherit inputs;
+                            };
+                            backupFileExtension = "backup";
+                            users.martin = {
+                                imports = [
+                                    ./hosts/wsl/home.nix
+                                    ./home/options.nix
+                                    ./hosts/wsl/options.nix
                                 ];
                             };
                         };
