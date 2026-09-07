@@ -22,6 +22,8 @@
         ../../modules/misc/smb.nix
     ];
 
+    boot.kernelPackages = pkgs.linuxPackages_latest;
+
     networking.hostName = "eva02";
 
     networking.firewall = {

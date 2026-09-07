@@ -62,6 +62,7 @@ Some apps are configured with `mkOutOfStoreSymlink` so their runtime configs are
 - `home/applications/hyprland/config` → `~/.config/hypr`
 - `home/applications/qutebrowser/config` → `~/.config/qutebrowser`
 - `home/applications/tmux-sessionizer/config` → `~/.config/tmux-sessionizer`
+- `home/applications/herdr/config.toml` → `~/.config/herdr/config.toml` (file-only symlink; herdr writes logs/session files to `~/.config/herdr`, which must stay out of the repo)
 
 Most other apps (kitty, zsh, tmux, nixvim, git, firefox, etc.) are configured through Nix options and need a rebuild after changes.
 

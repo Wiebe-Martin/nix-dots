@@ -17,6 +17,7 @@
         ./applications/tmux-sessionizer/tmux-sessionizer.nix
 
         ./applications/hyprland/hyprland.nix
+        ./applications/herdr/herdr.nix
         ./applications/kitty/kitty.nix
         ./applications/opencode/opencode.nix
         ./applications/qutebrowser/qutebrowser.nix
