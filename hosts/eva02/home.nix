@@ -35,6 +35,7 @@
         lunar-client
         prismlauncher
         unzip
+        herdr
     ];
 
     programs.vesktop.enable = true;
