@@ -45,9 +45,9 @@
                         mccabe = {
                             enabled = true;
                         };
-                        pylsp_mypy = {
-                            enabled = true;
-                        };
+                        # pylsp_mypy = {
+                        #     enabled = true;
+                        # };
                         pylsp_black = {
                             enabled = true;
                         };
