@@ -1,6 +1,13 @@
-local primary = "rgb(a8b665)"
-local outline = "rgb(a89984)"
-local error = "rgb(e96962)"
+-- Colors come from the active stylix scheme via the generated colors.lua
+-- (see home/applications/hyprland/hyprland.nix). Mapping mirrors stylix's
+-- own Hyprland target.
+local colors = require("hyprland/colors")
+
+local primary = "rgb(" .. colors.base0D .. ")"
+local outline = "rgb(" .. colors.base03 .. ")"
+local locked = "rgb(" .. colors.base0C .. ")"
+local error = "rgb(" .. colors.base08 .. ")"
+local text = "rgb(" .. colors.base05 .. ")"
 
 hl.config({
     general = {
@@ -32,7 +39,7 @@ hl.config({
             enabled = true,
             range = 4,
             render_power = 3,
-            color = 0xee1a1a1a,
+            color = "rgba(" .. colors.base00 .. "99)",
         },
 
         blur = {
@@ -53,11 +60,13 @@ hl.config({
         col = {
             border_active = primary,
             border_inactive = outline,
-            border_locked_active = error,
+            border_locked_active = locked,
             border_locked_inactive = outline,
         },
 
         groupbar = {
+            text_color = text,
+
             col = {
                 active = primary,
                 inactive = outline,
@@ -88,6 +97,7 @@ hl.config({
 
 hl.config({
     misc = {
+        background_color = "rgb(" .. colors.base00 .. ")",
         force_default_wallpaper = 1,
         disable_hyprland_logo = true,
     },

@@ -17,7 +17,11 @@
         targets = {
             nixvim.enable = false;
             tmux.enable = false;
-            firefox.profileNames = [ "default" ];
+            firefox = {
+                profileNames = [ "default" ];
+                # Without this the firefox target only sets fonts, no colors.
+                colorTheme.enable = true;
+            };
         };
 
         polarity = lib.mkDefault "dark";
