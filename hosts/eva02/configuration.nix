@@ -16,6 +16,7 @@
         ../../modules/shell/zsh.nix
 
         ../../modules/net/networkmanager.nix
+        ../../modules/net/tailscale.nix
 
         ../../modules/windowmanager/hyprland.nix
 
