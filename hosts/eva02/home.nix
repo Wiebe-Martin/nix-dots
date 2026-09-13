@@ -29,6 +29,7 @@
     home.packages = with pkgs; [
         heroic
         jellyfin-desktop
+        spotify
         mpv
         eden
         qbittorrent
