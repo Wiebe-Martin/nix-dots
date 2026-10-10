@@ -25,7 +25,7 @@
         enableSystemMonitoring = true;
 
         plugins = {
-            tailscale.enable = true;
+            dankscale.enable = true;
             tlpControl.enable = true;
             tlpPowerProfile.enable = true;
         };
@@ -98,7 +98,7 @@
                     ]
                     ++ [
                         "notificationButton"
-                        "tailscale"
+                        "dankscale"
                         {
                             id = "controlCenterButton";
                             enabled = true;
