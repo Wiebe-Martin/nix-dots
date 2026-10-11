@@ -13,10 +13,14 @@
 
     stylix = {
         enable = true;
+        overlays.enable = false;
 
         targets = {
             nixvim.enable = false;
             tmux.enable = false;
+            rofi.enable = false;
+            nixos-icons.enable = false;
+            gtksourceview.enable = false;
             firefox = {
                 profileNames = [ "default" ];
                 # Without this the firefox target only sets fonts, no colors.

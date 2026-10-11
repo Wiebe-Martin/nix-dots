@@ -28,7 +28,6 @@
 
     home.packages = with pkgs; [
         freerdp
-        qbz
         rpi-imager
         spotify
         osu-lazer-bin

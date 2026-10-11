@@ -19,6 +19,18 @@
       path = "pvwqj0j4.default";
       # stylix.targets.firefox.colorTheme writes extensions.settings
       extensions.force = true;
+
+      settings = {
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "widget.gtk.rounded-bottom-corners.enabled" = false;
+        "sidebar.revamp.round-content-area" = false;
+      };
+
+      userChrome = ''
+        * {
+          border-radius: 0 !important;
+        }
+      '';
     };
 
     policies = {
