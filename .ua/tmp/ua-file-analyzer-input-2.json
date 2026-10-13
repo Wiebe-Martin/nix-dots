@@ -1,0 +1,182 @@
+{
+  "projectRoot": "/home/martin/nix-dots",
+  "batchFiles": [
+    {
+      "path": "home/applications/hyprland/overrides/eva02/workspaces.lua",
+      "language": "lua",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/overrides/thinkpadt14/monitor.lua",
+      "language": "lua",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/overrides/thinkpadt14/workspaces.lua",
+      "language": "lua",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/kitty/kitty.nix",
+      "language": "nix",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/mango/config/animations.conf",
+      "language": "conf",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/mango/config/appearance.conf",
+      "language": "conf",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/mango/config/autostart.conf",
+      "language": "conf",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/mango/config/config.conf",
+      "language": "conf",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/mango/config/devices.conf",
+      "language": "conf",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/mango/config/dms/colors.conf",
+      "language": "conf",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/mango/config/env.conf",
+      "language": "conf",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/mango/config/keybind.conf",
+      "language": "conf",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/mango/config/layouts.conf",
+      "language": "conf",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/mango/config/misc.conf",
+      "language": "conf",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/mango/mango.nix",
+      "language": "nix",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/colorshemes/gruvbox.nix",
+      "language": "nix",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/core/keymaps.nix",
+      "language": "nix",
+      "sizeLines": 319,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/core/options.nix",
+      "language": "nix",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/nixvim.nix",
+      "language": "nix",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/nvim.nix",
+      "language": "nix",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/blink.nix",
+      "language": "nix",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/conform.nix",
+      "language": "nix",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/dap.nix",
+      "language": "nix",
+      "sizeLines": 227,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/gitsigns.nix",
+      "language": "nix",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/harpoon.nix",
+      "language": "nix",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "home/applications/hyprland/overrides/eva02/workspaces.lua": [],
+    "home/applications/hyprland/overrides/thinkpadt14/monitor.lua": [],
+    "home/applications/hyprland/overrides/thinkpadt14/workspaces.lua": [],
+    "home/applications/kitty/kitty.nix": [],
+    "home/applications/mango/config/animations.conf": [],
+    "home/applications/mango/config/appearance.conf": [],
+    "home/applications/mango/config/autostart.conf": [],
+    "home/applications/mango/config/config.conf": [],
+    "home/applications/mango/config/devices.conf": [],
+    "home/applications/mango/config/dms/colors.conf": [],
+    "home/applications/mango/config/env.conf": [],
+    "home/applications/mango/config/keybind.conf": [],
+    "home/applications/mango/config/layouts.conf": [],
+    "home/applications/mango/config/misc.conf": [],
+    "home/applications/mango/mango.nix": [],
+    "home/applications/nixvim/colorshemes/gruvbox.nix": [],
+    "home/applications/nixvim/core/keymaps.nix": [],
+    "home/applications/nixvim/core/options.nix": [],
+    "home/applications/nixvim/nixvim.nix": [],
+    "home/applications/nixvim/nvim.nix": [],
+    "home/applications/nixvim/plugins/blink.nix": [],
+    "home/applications/nixvim/plugins/conform.nix": [],
+    "home/applications/nixvim/plugins/dap.nix": [],
+    "home/applications/nixvim/plugins/gitsigns.nix": [],
+    "home/applications/nixvim/plugins/harpoon.nix": []
+  }
+}

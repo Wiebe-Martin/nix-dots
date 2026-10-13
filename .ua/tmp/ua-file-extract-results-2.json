@@ -1,0 +1,44 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 0,
+  "filesSkipped": [
+    "home/applications/hyprland/overrides/eva02/workspaces.lua",
+    "home/applications/hyprland/overrides/thinkpadt14/monitor.lua",
+    "home/applications/hyprland/overrides/thinkpadt14/workspaces.lua",
+    "home/applications/kitty/kitty.nix",
+    "home/applications/mango/config/animations.conf",
+    "home/applications/mango/config/appearance.conf",
+    "home/applications/mango/config/autostart.conf",
+    "home/applications/mango/config/config.conf",
+    "home/applications/mango/config/devices.conf",
+    "home/applications/mango/config/dms/colors.conf",
+    "home/applications/mango/config/env.conf",
+    "home/applications/mango/config/keybind.conf",
+    "home/applications/mango/config/layouts.conf",
+    "home/applications/mango/config/misc.conf",
+    "home/applications/mango/mango.nix",
+    "home/applications/nixvim/colorshemes/gruvbox.nix",
+    "home/applications/nixvim/core/keymaps.nix",
+    "home/applications/nixvim/core/options.nix",
+    "home/applications/nixvim/nixvim.nix",
+    "home/applications/nixvim/nvim.nix",
+    "home/applications/nixvim/plugins/blink.nix",
+    "home/applications/nixvim/plugins/conform.nix",
+    "home/applications/nixvim/plugins/dap.nix",
+    "home/applications/nixvim/plugins/gitsigns.nix",
+    "home/applications/nixvim/plugins/harpoon.nix"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 0,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": []
+}

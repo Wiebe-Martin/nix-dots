@@ -1,0 +1,420 @@
+{
+  "nodes": [
+    {
+      "id": "file:home/applications/nixvim/plugins/indent-blankline.nix",
+      "type": "file",
+      "name": "indent-blankline.nix",
+      "filePath": "home/applications/nixvim/plugins/indent-blankline.nix",
+      "summary": "nixvim configuration for the indent-blankline plugin, setting the indent guide character and excluding dashboard/help filetypes.",
+      "tags": ["nixvim", "neovim-plugin", "indent-guides", "configuration"],
+      "complexity": "simple",
+      "languageNotes": "Nix module; tree-sitter has no Nix parser so structure was read manually."
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/lsp.nix",
+      "type": "file",
+      "name": "lsp.nix",
+      "filePath": "home/applications/nixvim/plugins/lsp.nix",
+      "summary": "nixvim LSP configuration enabling servers (lua_ls, nil_ls, gopls, pylsp, jdtls, tinymist, copilot) with a Lua onAttach block defining keymaps, document-highlight autocmds, and inlay-hint/inline-completion toggles.",
+      "tags": ["nixvim", "lsp", "neovim-plugin", "keymaps", "configuration"],
+      "complexity": "moderate",
+      "languageNotes": "Embeds a large Lua onAttach string inside the Nix attrset via nixvim's raw-Lua escape hatch."
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/lualine.nix",
+      "type": "file",
+      "name": "lualine.nix",
+      "filePath": "home/applications/nixvim/plugins/lualine.nix",
+      "summary": "nixvim lualine statusline setup with custom separators, diagnostics/diff/encoding sections, a width-based hide condition, and inactive-section fallback.",
+      "tags": ["nixvim", "statusline", "neovim-plugin", "configuration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/misc.nix",
+      "type": "file",
+      "name": "misc.nix",
+      "filePath": "home/applications/nixvim/plugins/misc.nix",
+      "summary": "Catch-all nixvim plugin module enabling which-key, nvim-autopairs, render-markdown, todo-comments, colorizer, rainbow-delimiters, noice (with presets), and undotree with a toggle keymap.",
+      "tags": ["nixvim", "neovim-plugin", "configuration", "misc"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/oil.nix",
+      "type": "file",
+      "name": "oil.nix",
+      "filePath": "home/applications/nixvim/plugins/oil.nix",
+      "summary": "nixvim config for oil.nvim file explorer with icon column and hidden files shown, plus mini-icons and a <leader>mo keymap to open Oil with preview.",
+      "tags": ["nixvim", "file-explorer", "neovim-plugin", "keymaps"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/snacks.nix",
+      "type": "file",
+      "name": "snacks.nix",
+      "filePath": "home/applications/nixvim/plugins/snacks.nix",
+      "summary": "Large nixvim module enabling the snacks.nvim picker and explorer, declaring ~45 keymaps for file finding, git pickers, grep/search, and LSP navigation (definitions, references, symbols).",
+      "tags": ["nixvim", "picker", "keymaps", "neovim-plugin", "fuzzy-finder"],
+      "complexity": "complex",
+      "languageNotes": "Repetitive keymap attrsets each wrapping a small raw-Lua closure calling Snacks.picker functions."
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/tmux.nix",
+      "type": "file",
+      "name": "tmux.nix",
+      "filePath": "home/applications/nixvim/plugins/tmux.nix",
+      "summary": "nixvim config for tmux-navigator with Alt-h/j/k/l pane navigation keymaps shared between Neovim and tmux.",
+      "tags": ["nixvim", "tmux", "navigation", "keymaps"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/treesitter-context.nix",
+      "type": "file",
+      "name": "treesitter-context.nix",
+      "filePath": "home/applications/nixvim/plugins/treesitter-context.nix",
+      "summary": "Minimal nixvim module enabling treesitter-context, which pins the current code context at the top of the window.",
+      "tags": ["nixvim", "treesitter", "neovim-plugin"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/treesitter.nix",
+      "type": "file",
+      "name": "treesitter.nix",
+      "filePath": "home/applications/nixvim/plugins/treesitter.nix",
+      "summary": "nixvim treesitter setup installing ~25 grammar packages (lua, python, go, nix, markdown, etc.) and enabling highlight and indent.",
+      "tags": ["nixvim", "treesitter", "syntax-highlighting", "neovim-plugin"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/noctalia-shell/noctalia.nix",
+      "type": "file",
+      "name": "noctalia.nix",
+      "filePath": "home/applications/noctalia-shell/noctalia.nix",
+      "summary": "Home-manager module enabling the noctalia desktop shell and exporting session variables (DESKTOP_SHELL_COMMAND, APP_LAUNCHER, LOCK_SCREEN, POWER_MENU) that other configs use to invoke it.",
+      "tags": ["home-manager", "noctalia", "desktop-shell", "session-variables"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/opencode/opencode.nix",
+      "type": "file",
+      "name": "opencode.nix",
+      "filePath": "home/applications/opencode/opencode.nix",
+      "summary": "Home-manager module enabling the opencode CLI with the stylix TUI theme, space leader key, and the vimcode plugin from GitHub.",
+      "tags": ["home-manager", "opencode", "cli", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:home/applications/opencode/themes/gruvbox-transparent.json",
+      "type": "config",
+      "name": "gruvbox-transparent.json",
+      "filePath": "home/applications/opencode/themes/gruvbox-transparent.json",
+      "summary": "opencode TUI theme defining a gruvbox palette with transparent backgrounds, split into defs and theme sections per the opencode theme schema.",
+      "tags": ["configuration", "theme", "opencode", "gruvbox"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:home/applications/qutebrowser/config/autoconfig.yml",
+      "type": "config",
+      "name": "autoconfig.yml",
+      "filePath": "home/applications/qutebrowser/config/autoconfig.yml",
+      "summary": "qutebrowser autoconfig (loaded explicitly via config.load_autoconfig) holding GUI-set key bindings, dark-mode preference, per-site clipboard and user-agent overrides.",
+      "tags": ["configuration", "qutebrowser", "browser", "yaml"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/qutebrowser/config/bookmarks/urls",
+      "type": "file",
+      "name": "urls",
+      "filePath": "home/applications/qutebrowser/config/bookmarks/urls",
+      "summary": "qutebrowser bookmarks file with three URL/title entries (qBittorrent WebUI, Nordleaf, university PANDA login).",
+      "tags": ["qutebrowser", "bookmarks", "data"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/qutebrowser/config/config.py",
+      "type": "file",
+      "name": "config.py",
+      "filePath": "home/applications/qutebrowser/config/config.py",
+      "summary": "Main qutebrowser Python config: loads autoconfig, sets search-engine bangs, dark mode, privacy toggles, adblock filter lists, mpv hint binding, and applies the Stylix-generated theme.",
+      "tags": ["qutebrowser", "browser", "configuration", "entry-point", "privacy"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/applications/qutebrowser/config/greasemonkey/yt-ads.js",
+      "type": "file",
+      "name": "yt-ads.js",
+      "filePath": "home/applications/qutebrowser/config/greasemonkey/yt-ads.js",
+      "summary": "Greasemonkey userscript for qutebrowser that auto-clicks YouTube skip-ad buttons and fast-forwards ad videos by seeking to the end.",
+      "tags": ["userscript", "greasemonkey", "youtube", "ad-skip"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/qutebrowser/config/quickmarks",
+      "type": "file",
+      "name": "quickmarks",
+      "filePath": "home/applications/qutebrowser/config/quickmarks",
+      "summary": "qutebrowser quickmarks file mapping short names (ChatGPT, Homarr) to URLs.",
+      "tags": ["qutebrowser", "quickmarks", "data"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/qutebrowser/config/rosepine/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "home/applications/qutebrowser/config/rosepine/__init__.py",
+      "summary": "Python package barrel for the rosepine qutebrowser theme, re-exporting setup from setup.py.",
+      "tags": ["barrel", "entry-point", "qutebrowser", "theme"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:home/applications/qutebrowser/config/rosepine/readme.md",
+      "type": "document",
+      "name": "readme.md",
+      "filePath": "home/applications/qutebrowser/config/rosepine/readme.md",
+      "summary": "README for the rose-pine qutebrowser theme package with usage instructions, gallery, and credits.",
+      "tags": ["documentation", "qutebrowser", "theme", "rose-pine"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/qutebrowser/config/rosepine/setup.py",
+      "type": "file",
+      "name": "setup.py",
+      "filePath": "home/applications/qutebrowser/config/rosepine/setup.py",
+      "summary": "rose-pine qutebrowser theme implementation defining the full palette and a setup(c, variant, samecolorrows) function that paints every qutebrowser color option.",
+      "tags": ["qutebrowser", "theme", "rose-pine", "configuration"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:home/applications/qutebrowser/config/rosepine/setup.py:setup",
+      "type": "function",
+      "name": "setup",
+      "filePath": "home/applications/qutebrowser/config/rosepine/setup.py",
+      "lineRange": [4, 268],
+      "summary": "Applies the rose-pine palette to a qutebrowser config object, selecting a variant (main/moon/dawn) and setting all completion, tab, statusbar, hint, and message colors.",
+      "tags": ["theme", "qutebrowser", "rose-pine", "setup"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:home/applications/qutebrowser/config/styles/youtube-tweaks.css",
+      "type": "file",
+      "name": "youtube-tweaks.css",
+      "filePath": "home/applications/qutebrowser/config/styles/youtube-tweaks.css",
+      "summary": "User stylesheet hiding YouTube Shorts, recommendations, sidebar, and masthead, widening the player and reshaping thumbnails/avatars.",
+      "tags": ["css", "userstyle", "youtube", "qutebrowser"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/applications/qutebrowser/config/theme.py",
+      "type": "file",
+      "name": "theme.py",
+      "filePath": "home/applications/qutebrowser/config/theme.py",
+      "summary": "Stylix-generated qutebrowser theme (live copy in the symlinked config dir): declares the base16 palette and a setup(c) applying transparent tab/statusbar backgrounds and accent colors.",
+      "tags": ["qutebrowser", "theme", "stylix", "generated", "configuration"],
+      "complexity": "moderate",
+      "languageNotes": "Generated by Stylix and gitignored per repo convention; home/applications/qutebrowser/theme.py is a palette-variant duplicate."
+    },
+    {
+      "id": "function:home/applications/qutebrowser/config/theme.py:setup",
+      "type": "function",
+      "name": "setup",
+      "filePath": "home/applications/qutebrowser/config/theme.py",
+      "lineRange": [22, 78],
+      "summary": "Sets qutebrowser colors from the module-level Stylix palette, using transparent backgrounds for tabs, tab bar, and statusbar.",
+      "tags": ["theme", "qutebrowser", "stylix", "setup"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/applications/qutebrowser/qutebrowser.nix",
+      "type": "file",
+      "name": "qutebrowser.nix",
+      "filePath": "home/applications/qutebrowser/qutebrowser.nix",
+      "summary": "Home-manager module installing qutebrowser and symlinking the repo's live-editable config directory to ~/.config/qutebrowser via mkOutOfStoreSymlink.",
+      "tags": ["home-manager", "qutebrowser", "browser", "symlink", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/qutebrowser/theme.py",
+      "type": "file",
+      "name": "theme.py",
+      "filePath": "home/applications/qutebrowser/theme.py",
+      "summary": "Stylix-generated qutebrowser theme source in the repo (gruvbox-ish palette variant); structural duplicate of the live config/theme.py with identical setup(c) logic.",
+      "tags": ["qutebrowser", "theme", "stylix", "generated", "configuration"],
+      "complexity": "moderate",
+      "languageNotes": "Same setup() body as config/theme.py; only the color constants differ (palette variant)."
+    },
+    {
+      "id": "function:home/applications/qutebrowser/theme.py:setup",
+      "type": "function",
+      "name": "setup",
+      "filePath": "home/applications/qutebrowser/theme.py",
+      "lineRange": [22, 78],
+      "summary": "Sets qutebrowser colors from the module-level Stylix palette, using transparent backgrounds for tabs, tab bar, and statusbar.",
+      "tags": ["theme", "qutebrowser", "stylix", "setup"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/applications/st/st.nix",
+      "type": "file",
+      "name": "st.nix",
+      "filePath": "home/applications/st/st.nix",
+      "summary": "Home-manager module installing the st terminal, overriding its source with the local ./st directory (suckless-style custom build).",
+      "tags": ["home-manager", "st", "terminal", "suckless"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:home/applications/qutebrowser/config/config.py",
+      "target": "file:home/applications/qutebrowser/config/theme.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/qutebrowser/config/rosepine/__init__.py",
+      "target": "file:home/applications/qutebrowser/config/rosepine/setup.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/qutebrowser/config/rosepine/setup.py",
+      "target": "function:home/applications/qutebrowser/config/rosepine/setup.py:setup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:home/applications/qutebrowser/config/rosepine/setup.py",
+      "target": "function:home/applications/qutebrowser/config/rosepine/setup.py:setup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:home/applications/qutebrowser/config/theme.py",
+      "target": "function:home/applications/qutebrowser/config/theme.py:setup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:home/applications/qutebrowser/config/theme.py",
+      "target": "function:home/applications/qutebrowser/config/theme.py:setup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:home/applications/qutebrowser/theme.py",
+      "target": "function:home/applications/qutebrowser/theme.py:setup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:home/applications/qutebrowser/theme.py",
+      "target": "function:home/applications/qutebrowser/theme.py:setup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:home/applications/qutebrowser/config/config.py",
+      "target": "function:home/applications/qutebrowser/config/theme.py:setup",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:home/applications/qutebrowser/config/config.py",
+      "target": "config:home/applications/qutebrowser/config/autoconfig.yml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/qutebrowser/qutebrowser.nix",
+      "target": "file:home/applications/qutebrowser/config/config.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/qutebrowser/qutebrowser.nix",
+      "target": "config:home/applications/qutebrowser/config/autoconfig.yml",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/qutebrowser/qutebrowser.nix",
+      "target": "file:home/applications/qutebrowser/config/theme.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/qutebrowser/qutebrowser.nix",
+      "target": "file:home/applications/qutebrowser/config/quickmarks",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/qutebrowser/qutebrowser.nix",
+      "target": "file:home/applications/qutebrowser/config/bookmarks/urls",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/qutebrowser/qutebrowser.nix",
+      "target": "file:home/applications/qutebrowser/config/greasemonkey/yt-ads.js",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/qutebrowser/qutebrowser.nix",
+      "target": "file:home/applications/qutebrowser/config/styles/youtube-tweaks.css",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:home/applications/qutebrowser/config/rosepine/readme.md",
+      "target": "file:home/applications/qutebrowser/config/rosepine/setup.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/qutebrowser/theme.py",
+      "target": "file:home/applications/qutebrowser/config/theme.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:home/applications/opencode/themes/gruvbox-transparent.json",
+      "target": "file:home/applications/opencode/opencode.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/nixvim/plugins/snacks.nix",
+      "target": "file:home/applications/nixvim/plugins/lsp.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/nixvim/plugins/treesitter-context.nix",
+      "target": "file:home/applications/nixvim/plugins/treesitter.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

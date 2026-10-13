@@ -1,0 +1,981 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 116,
+  "totalBatches": 5,
+  "exportsByPath": {
+    "flake.nix": [],
+    "home/applications/btop/btop.nix": [],
+    "home/applications/dms/dms.nix": [],
+    "home/applications/dwmblocks/dwmblocks.nix": [],
+    "home/applications/firefox/firefox.nix": [],
+    "home/applications/git/gh.nix": [],
+    "home/applications/git/git.nix": [],
+    "home/applications/go/go.nix": [],
+    "home/applications/herdr/herdr.nix": [],
+    "home/applications/hyprland/config/dms/layout.lua": [],
+    "home/applications/hyprland/config/dms/windowrules.lua": [],
+    "home/applications/hyprland/config/hl.meta.lua": [],
+    "home/applications/hyprland/config/hyprland.lua": [],
+    "home/applications/hyprland/config/hyprland/animations.lua": [],
+    "home/applications/hyprland/config/hyprland/appearance.lua": [],
+    "home/applications/hyprland/config/hyprland/autostart.lua": [],
+    "home/applications/hyprland/config/hyprland/env.lua": [],
+    "home/applications/hyprland/config/hyprland/input.lua": [],
+    "home/applications/hyprland/config/hyprland/keybind.lua": [],
+    "home/applications/hyprland/config/hyprland/rules.lua": [],
+    "home/applications/hyprland/hyprland.nix": [],
+    "home/applications/hyprland/overrides/eva02/monitor.lua": [],
+    "home/applications/hyprland/overrides/eva02/workspaces.lua": [],
+    "home/applications/hyprland/overrides/thinkpadt14/monitor.lua": [],
+    "home/applications/hyprland/overrides/thinkpadt14/workspaces.lua": [],
+    "home/applications/kitty/kitty.nix": [],
+    "home/applications/mango/config/animations.conf": [],
+    "home/applications/mango/config/appearance.conf": [],
+    "home/applications/mango/config/autostart.conf": [],
+    "home/applications/mango/config/config.conf": [],
+    "home/applications/mango/config/devices.conf": [],
+    "home/applications/mango/config/dms/colors.conf": [],
+    "home/applications/mango/config/env.conf": [],
+    "home/applications/mango/config/keybind.conf": [],
+    "home/applications/mango/config/layouts.conf": [],
+    "home/applications/mango/config/misc.conf": [],
+    "home/applications/mango/mango.nix": [],
+    "home/applications/nixvim/colorshemes/gruvbox.nix": [],
+    "home/applications/nixvim/core/keymaps.nix": [],
+    "home/applications/nixvim/core/options.nix": [],
+    "home/applications/nixvim/nixvim.nix": [],
+    "home/applications/nixvim/nvim.nix": [],
+    "home/applications/nixvim/plugins/blink.nix": [],
+    "home/applications/nixvim/plugins/conform.nix": [],
+    "home/applications/nixvim/plugins/dap.nix": [],
+    "home/applications/nixvim/plugins/gitsigns.nix": [],
+    "home/applications/nixvim/plugins/harpoon.nix": [],
+    "home/applications/nixvim/plugins/indent-blankline.nix": [],
+    "home/applications/nixvim/plugins/lsp.nix": [],
+    "home/applications/nixvim/plugins/lualine.nix": [],
+    "home/applications/nixvim/plugins/misc.nix": [],
+    "home/applications/nixvim/plugins/oil.nix": [],
+    "home/applications/nixvim/plugins/snacks.nix": [],
+    "home/applications/nixvim/plugins/tmux.nix": [],
+    "home/applications/nixvim/plugins/treesitter-context.nix": [],
+    "home/applications/nixvim/plugins/treesitter.nix": [],
+    "home/applications/noctalia-shell/noctalia.nix": [],
+    "home/applications/opencode/opencode.nix": [],
+    "home/applications/qutebrowser/config/bookmarks/urls": [],
+    "home/applications/qutebrowser/config/config.py": [],
+    "home/applications/qutebrowser/config/greasemonkey/yt-ads.js": [],
+    "home/applications/qutebrowser/config/quickmarks": [],
+    "home/applications/qutebrowser/config/rosepine/__init__.py": [],
+    "home/applications/qutebrowser/config/rosepine/setup.py": [
+      "setup"
+    ],
+    "home/applications/qutebrowser/config/theme.py": [
+      "setup"
+    ],
+    "home/applications/qutebrowser/qutebrowser.nix": [],
+    "home/applications/qutebrowser/theme.py": [
+      "setup"
+    ],
+    "home/applications/st/st.nix": [],
+    "home/applications/tmux-sessionizer/config/tmux-sessionizer.conf": [],
+    "home/applications/tmux-sessionizer/tmux-sessionizer.nix": [],
+    "home/applications/tmux/tmux.nix": [],
+    "home/applications/zathura/zathura.nix": [],
+    "home/applications/zsh/zsh.nix": [],
+    "home/common.nix": [],
+    "home/options.nix": [],
+    "home/themes/stylix.nix": [],
+    "home/themes/theme/catppuccin.nix": [],
+    "home/themes/theme/dracula.nix": [],
+    "home/themes/theme/everforest.nix": [],
+    "home/themes/theme/gruvbox.nix": [],
+    "home/themes/theme/tokyonight.nix": [],
+    "hosts/common.nix": [],
+    "hosts/eva02/configuration.nix": [],
+    "hosts/eva02/drives.nix": [],
+    "hosts/eva02/hardware-configuration.nix": [],
+    "hosts/eva02/home.nix": [],
+    "hosts/eva02/options.nix": [],
+    "hosts/thinkpadT14/configuration.nix": [],
+    "hosts/thinkpadT14/hardware-configuration.nix": [],
+    "hosts/thinkpadT14/home.nix": [],
+    "hosts/thinkpadT14/options.nix": [],
+    "hosts/workbox/configuration.nix": [],
+    "hosts/workbox/home.nix": [],
+    "hosts/workbox/options.nix": [],
+    "modules/audio/pipewire.nix": [],
+    "modules/misc/smb.nix": [],
+    "modules/misc/zram.nix": [],
+    "modules/net/networkmanager.nix": [],
+    "modules/net/tailscale.nix": [],
+    "modules/shell/zsh.nix": [],
+    "modules/system/lanzaboote.nix": [],
+    "modules/system/locals.nix": [],
+    "modules/system/systemd-boot.nix": [],
+    "modules/virtualization/virtmanager.nix": [],
+    "modules/windowmanager/dwm.nix": [],
+    "modules/windowmanager/hyprland.nix": [],
+    "modules/windowmanager/mango.nix": [],
+    "scripts/tmux-sessionizer": [],
+    "scripts/update": []
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "language": "markdown",
+          "sizeLines": 88,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "flake.nix",
+          "language": "nix",
+          "sizeLines": 105,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/btop/btop.nix",
+          "language": "nix",
+          "sizeLines": 9,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/dms/dms.nix",
+          "language": "nix",
+          "sizeLines": 135,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/dwmblocks/dwmblocks.nix",
+          "language": "nix",
+          "sizeLines": 9,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/firefox/firefox.nix",
+          "language": "nix",
+          "sizeLines": 84,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/git/gh.nix",
+          "language": "nix",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/git/git.nix",
+          "language": "nix",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/go/go.nix",
+          "language": "nix",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/herdr/config.toml",
+          "language": "toml",
+          "sizeLines": 9,
+          "fileCategory": "config"
+        },
+        {
+          "path": "home/applications/herdr/herdr.nix",
+          "language": "nix",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/config/.luarc.json",
+          "language": "json",
+          "sizeLines": 8,
+          "fileCategory": "config"
+        },
+        {
+          "path": "home/applications/hyprland/config/dms/layout.lua",
+          "language": "lua",
+          "sizeLines": 18,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/config/dms/windowrules.lua",
+          "language": "lua",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/config/hl.meta.lua",
+          "language": "lua",
+          "sizeLines": 1254,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/config/hyprland.lua",
+          "language": "lua",
+          "sizeLines": 9,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/config/hyprland/animations.lua",
+          "language": "lua",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/config/hyprland/appearance.lua",
+          "language": "lua",
+          "sizeLines": 104,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/config/hyprland/autostart.lua",
+          "language": "lua",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/config/hyprland/env.lua",
+          "language": "lua",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/config/hyprland/input.lua",
+          "language": "lua",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/config/hyprland/keybind.lua",
+          "language": "lua",
+          "sizeLines": 87,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/config/hyprland/rules.lua",
+          "language": "lua",
+          "sizeLines": 62,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/hyprland.nix",
+          "language": "nix",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/overrides/eva02/monitor.lua",
+          "language": "lua",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "AGENTS.md": [],
+        "flake.nix": [],
+        "home/applications/btop/btop.nix": [],
+        "home/applications/dms/dms.nix": [],
+        "home/applications/dwmblocks/dwmblocks.nix": [],
+        "home/applications/firefox/firefox.nix": [],
+        "home/applications/git/gh.nix": [],
+        "home/applications/git/git.nix": [],
+        "home/applications/go/go.nix": [],
+        "home/applications/herdr/config.toml": [],
+        "home/applications/herdr/herdr.nix": [],
+        "home/applications/hyprland/config/.luarc.json": [],
+        "home/applications/hyprland/config/dms/layout.lua": [],
+        "home/applications/hyprland/config/dms/windowrules.lua": [],
+        "home/applications/hyprland/config/hl.meta.lua": [],
+        "home/applications/hyprland/config/hyprland.lua": [],
+        "home/applications/hyprland/config/hyprland/animations.lua": [],
+        "home/applications/hyprland/config/hyprland/appearance.lua": [],
+        "home/applications/hyprland/config/hyprland/autostart.lua": [],
+        "home/applications/hyprland/config/hyprland/env.lua": [],
+        "home/applications/hyprland/config/hyprland/input.lua": [],
+        "home/applications/hyprland/config/hyprland/keybind.lua": [],
+        "home/applications/hyprland/config/hyprland/rules.lua": [],
+        "home/applications/hyprland/hyprland.nix": [],
+        "home/applications/hyprland/overrides/eva02/monitor.lua": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "home/applications/hyprland/overrides/eva02/workspaces.lua",
+          "language": "lua",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/overrides/thinkpadt14/monitor.lua",
+          "language": "lua",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/hyprland/overrides/thinkpadt14/workspaces.lua",
+          "language": "lua",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/kitty/kitty.nix",
+          "language": "nix",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/mango/config/animations.conf",
+          "language": "conf",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/mango/config/appearance.conf",
+          "language": "conf",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/mango/config/autostart.conf",
+          "language": "conf",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/mango/config/config.conf",
+          "language": "conf",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/mango/config/devices.conf",
+          "language": "conf",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/mango/config/dms/colors.conf",
+          "language": "conf",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/mango/config/env.conf",
+          "language": "conf",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/mango/config/keybind.conf",
+          "language": "conf",
+          "sizeLines": 111,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/mango/config/layouts.conf",
+          "language": "conf",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/mango/config/misc.conf",
+          "language": "conf",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/mango/mango.nix",
+          "language": "nix",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/colorshemes/gruvbox.nix",
+          "language": "nix",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/core/keymaps.nix",
+          "language": "nix",
+          "sizeLines": 319,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/core/options.nix",
+          "language": "nix",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/nixvim.nix",
+          "language": "nix",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/nvim.nix",
+          "language": "nix",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/blink.nix",
+          "language": "nix",
+          "sizeLines": 90,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/conform.nix",
+          "language": "nix",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/dap.nix",
+          "language": "nix",
+          "sizeLines": 227,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/gitsigns.nix",
+          "language": "nix",
+          "sizeLines": 42,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/harpoon.nix",
+          "language": "nix",
+          "sizeLines": 66,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "home/applications/hyprland/overrides/eva02/workspaces.lua": [],
+        "home/applications/hyprland/overrides/thinkpadt14/monitor.lua": [],
+        "home/applications/hyprland/overrides/thinkpadt14/workspaces.lua": [],
+        "home/applications/kitty/kitty.nix": [],
+        "home/applications/mango/config/animations.conf": [],
+        "home/applications/mango/config/appearance.conf": [],
+        "home/applications/mango/config/autostart.conf": [],
+        "home/applications/mango/config/config.conf": [],
+        "home/applications/mango/config/devices.conf": [],
+        "home/applications/mango/config/dms/colors.conf": [],
+        "home/applications/mango/config/env.conf": [],
+        "home/applications/mango/config/keybind.conf": [],
+        "home/applications/mango/config/layouts.conf": [],
+        "home/applications/mango/config/misc.conf": [],
+        "home/applications/mango/mango.nix": [],
+        "home/applications/nixvim/colorshemes/gruvbox.nix": [],
+        "home/applications/nixvim/core/keymaps.nix": [],
+        "home/applications/nixvim/core/options.nix": [],
+        "home/applications/nixvim/nixvim.nix": [],
+        "home/applications/nixvim/nvim.nix": [],
+        "home/applications/nixvim/plugins/blink.nix": [],
+        "home/applications/nixvim/plugins/conform.nix": [],
+        "home/applications/nixvim/plugins/dap.nix": [],
+        "home/applications/nixvim/plugins/gitsigns.nix": [],
+        "home/applications/nixvim/plugins/harpoon.nix": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "home/applications/nixvim/plugins/indent-blankline.nix",
+          "language": "nix",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/lsp.nix",
+          "language": "nix",
+          "sizeLines": 139,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/lualine.nix",
+          "language": "nix",
+          "sizeLines": 121,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/misc.nix",
+          "language": "nix",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/oil.nix",
+          "language": "nix",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/snacks.nix",
+          "language": "nix",
+          "sizeLines": 588,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/tmux.nix",
+          "language": "nix",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/treesitter-context.nix",
+          "language": "nix",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/nixvim/plugins/treesitter.nix",
+          "language": "nix",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/noctalia-shell/noctalia.nix",
+          "language": "nix",
+          "sizeLines": 18,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/opencode/opencode.nix",
+          "language": "nix",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/opencode/themes/gruvbox-transparent.json",
+          "language": "json",
+          "sizeLines": 73,
+          "fileCategory": "config"
+        },
+        {
+          "path": "home/applications/qutebrowser/config/autoconfig.yml",
+          "language": "yaml",
+          "sizeLines": 38,
+          "fileCategory": "config"
+        },
+        {
+          "path": "home/applications/qutebrowser/config/bookmarks/urls",
+          "language": "unknown",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/qutebrowser/config/config.py",
+          "language": "python",
+          "sizeLines": 90,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/qutebrowser/config/greasemonkey/yt-ads.js",
+          "language": "javascript",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/qutebrowser/config/quickmarks",
+          "language": "unknown",
+          "sizeLines": 2,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/qutebrowser/config/rosepine/__init__.py",
+          "language": "python",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/qutebrowser/config/rosepine/readme.md",
+          "language": "markdown",
+          "sizeLines": 51,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "home/applications/qutebrowser/config/rosepine/setup.py",
+          "language": "python",
+          "sizeLines": 268,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/qutebrowser/config/styles/youtube-tweaks.css",
+          "language": "css",
+          "sizeLines": 67,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "home/applications/qutebrowser/config/theme.py",
+          "language": "python",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/qutebrowser/qutebrowser.nix",
+          "language": "nix",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/qutebrowser/theme.py",
+          "language": "python",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/st/st.nix",
+          "language": "nix",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "home/applications/nixvim/plugins/indent-blankline.nix": [],
+        "home/applications/nixvim/plugins/lsp.nix": [],
+        "home/applications/nixvim/plugins/lualine.nix": [],
+        "home/applications/nixvim/plugins/misc.nix": [],
+        "home/applications/nixvim/plugins/oil.nix": [],
+        "home/applications/nixvim/plugins/snacks.nix": [],
+        "home/applications/nixvim/plugins/tmux.nix": [],
+        "home/applications/nixvim/plugins/treesitter-context.nix": [],
+        "home/applications/nixvim/plugins/treesitter.nix": [],
+        "home/applications/noctalia-shell/noctalia.nix": [],
+        "home/applications/opencode/opencode.nix": [],
+        "home/applications/opencode/themes/gruvbox-transparent.json": [],
+        "home/applications/qutebrowser/config/autoconfig.yml": [],
+        "home/applications/qutebrowser/config/bookmarks/urls": [],
+        "home/applications/qutebrowser/config/config.py": [
+          "home/applications/qutebrowser/config/theme.py"
+        ],
+        "home/applications/qutebrowser/config/greasemonkey/yt-ads.js": [],
+        "home/applications/qutebrowser/config/quickmarks": [],
+        "home/applications/qutebrowser/config/rosepine/__init__.py": [
+          "home/applications/qutebrowser/config/rosepine/setup.py"
+        ],
+        "home/applications/qutebrowser/config/rosepine/readme.md": [],
+        "home/applications/qutebrowser/config/rosepine/setup.py": [],
+        "home/applications/qutebrowser/config/styles/youtube-tweaks.css": [],
+        "home/applications/qutebrowser/config/theme.py": [],
+        "home/applications/qutebrowser/qutebrowser.nix": [],
+        "home/applications/qutebrowser/theme.py": [],
+        "home/applications/st/st.nix": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "home/applications/tmux-sessionizer/config/tmux-sessionizer.conf",
+          "language": "conf",
+          "sizeLines": 2,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/tmux-sessionizer/tmux-sessionizer.nix",
+          "language": "nix",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/tmux/tmux.nix",
+          "language": "nix",
+          "sizeLines": 91,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/zathura/zathura.nix",
+          "language": "nix",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/applications/zsh/zsh.nix",
+          "language": "nix",
+          "sizeLines": 133,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/common.nix",
+          "language": "nix",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/options.nix",
+          "language": "nix",
+          "sizeLines": 9,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/themes/stylix.nix",
+          "language": "nix",
+          "sizeLines": 92,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/themes/theme/catppuccin.nix",
+          "language": "nix",
+          "sizeLines": 42,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/themes/theme/dracula.nix",
+          "language": "nix",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/themes/theme/everforest.nix",
+          "language": "nix",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/themes/theme/gruvbox.nix",
+          "language": "nix",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "home/themes/theme/tokyonight.nix",
+          "language": "nix",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "hosts/common.nix",
+          "language": "nix",
+          "sizeLines": 85,
+          "fileCategory": "code"
+        },
+        {
+          "path": "hosts/eva02/configuration.nix",
+          "language": "nix",
+          "sizeLines": 57,
+          "fileCategory": "code"
+        },
+        {
+          "path": "hosts/eva02/drives.nix",
+          "language": "nix",
+          "sizeLines": 21,
+          "fileCategory": "code"
+        },
+        {
+          "path": "hosts/eva02/hardware-configuration.nix",
+          "language": "nix",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "hosts/eva02/home.nix",
+          "language": "nix",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "hosts/eva02/options.nix",
+          "language": "nix",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "hosts/thinkpadT14/configuration.nix",
+          "language": "nix",
+          "sizeLines": 53,
+          "fileCategory": "code"
+        },
+        {
+          "path": "hosts/thinkpadT14/hardware-configuration.nix",
+          "language": "nix",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "hosts/thinkpadT14/home.nix",
+          "language": "nix",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "hosts/thinkpadT14/options.nix",
+          "language": "nix",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "hosts/workbox/configuration.nix",
+          "language": "nix",
+          "sizeLines": 36,
+          "fileCategory": "code"
+        },
+        {
+          "path": "hosts/workbox/home.nix",
+          "language": "nix",
+          "sizeLines": 46,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "home/applications/tmux-sessionizer/config/tmux-sessionizer.conf": [],
+        "home/applications/tmux-sessionizer/tmux-sessionizer.nix": [],
+        "home/applications/tmux/tmux.nix": [],
+        "home/applications/zathura/zathura.nix": [],
+        "home/applications/zsh/zsh.nix": [],
+        "home/common.nix": [],
+        "home/options.nix": [],
+        "home/themes/stylix.nix": [],
+        "home/themes/theme/catppuccin.nix": [],
+        "home/themes/theme/dracula.nix": [],
+        "home/themes/theme/everforest.nix": [],
+        "home/themes/theme/gruvbox.nix": [],
+        "home/themes/theme/tokyonight.nix": [],
+        "hosts/common.nix": [],
+        "hosts/eva02/configuration.nix": [],
+        "hosts/eva02/drives.nix": [],
+        "hosts/eva02/hardware-configuration.nix": [],
+        "hosts/eva02/home.nix": [],
+        "hosts/eva02/options.nix": [],
+        "hosts/thinkpadT14/configuration.nix": [],
+        "hosts/thinkpadT14/hardware-configuration.nix": [],
+        "hosts/thinkpadT14/home.nix": [],
+        "hosts/thinkpadT14/options.nix": [],
+        "hosts/workbox/configuration.nix": [],
+        "hosts/workbox/home.nix": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "hosts/workbox/options.nix",
+          "language": "nix",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/audio/pipewire.nix",
+          "language": "nix",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/misc/smb.nix",
+          "language": "nix",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/misc/zram.nix",
+          "language": "nix",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/net/networkmanager.nix",
+          "language": "nix",
+          "sizeLines": 9,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/net/tailscale.nix",
+          "language": "nix",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/shell/zsh.nix",
+          "language": "nix",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/system/lanzaboote.nix",
+          "language": "nix",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/system/locals.nix",
+          "language": "nix",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/system/systemd-boot.nix",
+          "language": "nix",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/virtualization/virtmanager.nix",
+          "language": "nix",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/windowmanager/dwm.nix",
+          "language": "nix",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/windowmanager/hyprland.nix",
+          "language": "nix",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "modules/windowmanager/mango.nix",
+          "language": "nix",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/tmux-sessionizer",
+          "language": "unknown",
+          "sizeLines": 344,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/update",
+          "language": "unknown",
+          "sizeLines": 98,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "hosts/workbox/options.nix": [],
+        "modules/audio/pipewire.nix": [],
+        "modules/misc/smb.nix": [],
+        "modules/misc/zram.nix": [],
+        "modules/net/networkmanager.nix": [],
+        "modules/net/tailscale.nix": [],
+        "modules/shell/zsh.nix": [],
+        "modules/system/lanzaboote.nix": [],
+        "modules/system/locals.nix": [],
+        "modules/system/systemd-boot.nix": [],
+        "modules/virtualization/virtmanager.nix": [],
+        "modules/windowmanager/dwm.nix": [],
+        "modules/windowmanager/hyprland.nix": [],
+        "modules/windowmanager/mango.nix": [],
+        "scripts/tmux-sessionizer": [],
+        "scripts/update": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

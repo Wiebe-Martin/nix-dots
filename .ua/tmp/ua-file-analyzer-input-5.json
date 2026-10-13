@@ -1,0 +1,119 @@
+{
+  "projectRoot": "/home/martin/nix-dots",
+  "batchFiles": [
+    {
+      "path": "hosts/workbox/options.nix",
+      "language": "nix",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/audio/pipewire.nix",
+      "language": "nix",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/misc/smb.nix",
+      "language": "nix",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/misc/zram.nix",
+      "language": "nix",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/net/networkmanager.nix",
+      "language": "nix",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/net/tailscale.nix",
+      "language": "nix",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/shell/zsh.nix",
+      "language": "nix",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/system/lanzaboote.nix",
+      "language": "nix",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/system/locals.nix",
+      "language": "nix",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/system/systemd-boot.nix",
+      "language": "nix",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/virtualization/virtmanager.nix",
+      "language": "nix",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/windowmanager/dwm.nix",
+      "language": "nix",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/windowmanager/hyprland.nix",
+      "language": "nix",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "modules/windowmanager/mango.nix",
+      "language": "nix",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/tmux-sessionizer",
+      "language": "unknown",
+      "sizeLines": 344,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/update",
+      "language": "unknown",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "hosts/workbox/options.nix": [],
+    "modules/audio/pipewire.nix": [],
+    "modules/misc/smb.nix": [],
+    "modules/misc/zram.nix": [],
+    "modules/net/networkmanager.nix": [],
+    "modules/net/tailscale.nix": [],
+    "modules/shell/zsh.nix": [],
+    "modules/system/lanzaboote.nix": [],
+    "modules/system/locals.nix": [],
+    "modules/system/systemd-boot.nix": [],
+    "modules/virtualization/virtmanager.nix": [],
+    "modules/windowmanager/dwm.nix": [],
+    "modules/windowmanager/hyprland.nix": [],
+    "modules/windowmanager/mango.nix": [],
+    "scripts/tmux-sessionizer": [],
+    "scripts/update": []
+  }
+}

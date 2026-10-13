@@ -1,0 +1,160 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [
+    "flake.nix",
+    "home/applications/btop/btop.nix",
+    "home/applications/dms/dms.nix",
+    "home/applications/dwmblocks/dwmblocks.nix",
+    "home/applications/firefox/firefox.nix",
+    "home/applications/git/gh.nix",
+    "home/applications/git/git.nix",
+    "home/applications/go/go.nix",
+    "home/applications/herdr/herdr.nix",
+    "home/applications/hyprland/config/dms/layout.lua",
+    "home/applications/hyprland/config/dms/windowrules.lua",
+    "home/applications/hyprland/config/hl.meta.lua",
+    "home/applications/hyprland/config/hyprland.lua",
+    "home/applications/hyprland/config/hyprland/animations.lua",
+    "home/applications/hyprland/config/hyprland/appearance.lua",
+    "home/applications/hyprland/config/hyprland/autostart.lua",
+    "home/applications/hyprland/config/hyprland/env.lua",
+    "home/applications/hyprland/config/hyprland/input.lua",
+    "home/applications/hyprland/config/hyprland/keybind.lua",
+    "home/applications/hyprland/config/hyprland/rules.lua",
+    "home/applications/hyprland/hyprland.nix",
+    "home/applications/hyprland/overrides/eva02/monitor.lua"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 3
+    }
+  },
+  "results": [
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 88,
+      "nonEmptyLines": 57,
+      "sections": [
+        {
+          "heading": "AGENTS.md — nix-dots",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Hosts",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Rebuild / switch",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "Validation",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "Code layout",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "Live-config vs Nix-managed",
+          "level": 2,
+          "line": 58
+        },
+        {
+          "heading": "Hyprland config is Lua, not `.conf`",
+          "level": 2,
+          "line": 71
+        },
+        {
+          "heading": "External flake inputs",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "Backup behavior",
+          "level": 2,
+          "line": 79
+        },
+        {
+          "heading": "Things to avoid",
+          "level": 2,
+          "line": 83
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "home/applications/herdr/config.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 9,
+      "nonEmptyLines": 7,
+      "sections": [
+        {
+          "heading": "theme",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "keys",
+          "level": 1,
+          "line": 6
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "home/applications/hyprland/config/.luarc.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 8,
+      "nonEmptyLines": 8,
+      "sections": [
+        {
+          "heading": "workspace",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "diagnostics",
+          "level": 1,
+          "line": 5
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    }
+  ]
+}

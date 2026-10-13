@@ -1,0 +1,44 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 0,
+  "filesSkipped": [
+    "home/applications/tmux-sessionizer/config/tmux-sessionizer.conf",
+    "home/applications/tmux-sessionizer/tmux-sessionizer.nix",
+    "home/applications/tmux/tmux.nix",
+    "home/applications/zathura/zathura.nix",
+    "home/applications/zsh/zsh.nix",
+    "home/common.nix",
+    "home/options.nix",
+    "home/themes/stylix.nix",
+    "home/themes/theme/catppuccin.nix",
+    "home/themes/theme/dracula.nix",
+    "home/themes/theme/everforest.nix",
+    "home/themes/theme/gruvbox.nix",
+    "home/themes/theme/tokyonight.nix",
+    "hosts/common.nix",
+    "hosts/eva02/configuration.nix",
+    "hosts/eva02/drives.nix",
+    "hosts/eva02/hardware-configuration.nix",
+    "hosts/eva02/home.nix",
+    "hosts/eva02/options.nix",
+    "hosts/thinkpadT14/configuration.nix",
+    "hosts/thinkpadT14/hardware-configuration.nix",
+    "hosts/thinkpadT14/home.nix",
+    "hosts/thinkpadT14/options.nix",
+    "hosts/workbox/configuration.nix",
+    "hosts/workbox/home.nix"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 0,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": []
+}

@@ -1,0 +1,508 @@
+{
+  "nodes": [
+    {
+      "id": "file:home/applications/hyprland/overrides/eva02/workspaces.lua",
+      "type": "file",
+      "name": "workspaces.lua",
+      "filePath": "home/applications/hyprland/overrides/eva02/workspaces.lua",
+      "summary": "Host-specific Hyprland workspace rules for the eva02 desktop: persistent workspaces 1-5 on DP-1 and 6-10 on HDMI-A-2, via the custom hl global.",
+      "tags": ["hyprland", "workspace-rules", "host-override", "eva02", "lua-config"],
+      "complexity": "simple",
+      "languageNotes": "Uses the custom `hl.workspace_rule` Lua helper rather than standard Hyprland .conf syntax."
+    },
+    {
+      "id": "file:home/applications/hyprland/overrides/thinkpadt14/monitor.lua",
+      "type": "file",
+      "name": "monitor.lua",
+      "filePath": "home/applications/hyprland/overrides/thinkpadt14/monitor.lua",
+      "summary": "Host-specific Hyprland monitor declaration for the thinkpadt14 laptop panel eDP-1 (1920x1080@60, scale 1) via the custom hl global.",
+      "tags": ["hyprland", "monitor", "host-override", "thinkpadt14", "lua-config"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/hyprland/overrides/thinkpadt14/workspaces.lua",
+      "type": "file",
+      "name": "workspaces.lua",
+      "filePath": "home/applications/hyprland/overrides/thinkpadt14/workspaces.lua",
+      "summary": "Host-specific Hyprland workspace rules for the thinkpadt14 laptop: persistent workspaces 1-5 bound to the internal eDP-1 panel.",
+      "tags": ["hyprland", "workspace-rules", "host-override", "thinkpadt14", "lua-config"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/kitty/kitty.nix",
+      "type": "file",
+      "name": "kitty.nix",
+      "filePath": "home/applications/kitty/kitty.nix",
+      "summary": "Home-manager module enabling the kitty terminal with extraConfig disabling the audio bell and setting a 5px window margin.",
+      "tags": ["kitty", "terminal", "home-manager", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/mango/config/animations.conf",
+      "type": "file",
+      "name": "animations.conf",
+      "filePath": "home/applications/mango/config/animations.conf",
+      "summary": "Mango compositor animation settings: slide open/close animations, fade in/out, tag animation direction, durations, and cubic-bezier curves.",
+      "tags": ["mango", "compositor", "animations", "wayland", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/mango/config/appearance.conf",
+      "type": "file",
+      "name": "appearance.conf",
+      "filePath": "home/applications/mango/config/appearance.conf",
+      "summary": "Mango compositor appearance settings: blur, shadows, gaps, borders, overview layout, and window/layer rules (quickshell float, dms no-blur/no-anim).",
+      "tags": ["mango", "compositor", "appearance", "wayland", "configuration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/applications/mango/config/autostart.conf",
+      "type": "file",
+      "name": "autostart.conf",
+      "filePath": "home/applications/mango/config/autostart.conf",
+      "summary": "Mango compositor autostart entries: desktop shell command, cliphist clipboard watcher via wl-paste, and spotify_player daemon.",
+      "tags": ["mango", "compositor", "autostart", "wayland", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/mango/config/config.conf",
+      "type": "file",
+      "name": "config.conf",
+      "filePath": "home/applications/mango/config/config.conf",
+      "summary": "Mango compositor main config entry point that sources all other config fragments (animations, appearance, env, devices, layouts, keybind, misc, autostart, dms colors).",
+      "tags": ["mango", "compositor", "entry-point", "wayland", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/mango/config/devices.conf",
+      "type": "file",
+      "name": "devices.conf",
+      "filePath": "home/applications/mango/config/devices.conf",
+      "summary": "Mango compositor input device settings: keyboard repeat rate, eu xkb layout with caps:escape, trackpad tap-to-click and natural scrolling, mouse natural scrolling.",
+      "tags": ["mango", "compositor", "input-devices", "wayland", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/mango/config/dms/colors.conf",
+      "type": "file",
+      "name": "colors.conf",
+      "filePath": "home/applications/mango/config/dms/colors.conf",
+      "summary": "Auto-generated mango border/focus/urgent colors written by the DMS shell; sourced by config.conf and not meant to be edited directly.",
+      "tags": ["mango", "dms", "colors", "generated", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/mango/config/env.conf",
+      "type": "file",
+      "name": "env.conf",
+      "filePath": "home/applications/mango/config/env.conf",
+      "summary": "Mango compositor session environment variables: Wayland-first Qt/GDK/SDL/Mozilla/Electron (Ozone) backends, cursor sizes, and screenshots directory.",
+      "tags": ["mango", "compositor", "environment", "wayland", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/mango/config/keybind.conf",
+      "type": "file",
+      "name": "keybind.conf",
+      "filePath": "home/applications/mango/config/keybind.conf",
+      "summary": "Mango compositor keybindings: app launchers (kitty, qutebrowser, tmux-sessionizer), window/tag management, focus/resize, media and brightness keys, mouse and axis bindings.",
+      "tags": ["mango", "compositor", "keybindings", "wayland", "configuration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/applications/mango/config/layouts.conf",
+      "type": "file",
+      "name": "layouts.conf",
+      "filePath": "home/applications/mango/config/layouts.conf",
+      "summary": "Mango compositor layout settings: scroller and master-stack parameters plus tagrules assigning the tile layout to tags 1-9.",
+      "tags": ["mango", "compositor", "layouts", "wayland", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/mango/config/misc.conf",
+      "type": "file",
+      "name": "misc.conf",
+      "filePath": "home/applications/mango/config/misc.conf",
+      "summary": "Mango compositor miscellaneous behavior: focus-follows-mouse, cursor warping, snapping, and a fallback Virtual-1 monitor rule (1920x1080@60).",
+      "tags": ["mango", "compositor", "focus", "wayland", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/mango/mango.nix",
+      "type": "file",
+      "name": "mango.nix",
+      "filePath": "home/applications/mango/mango.nix",
+      "summary": "Home-manager module that live-symlinks the mango compositor config directory into ~/.config/mango via mkOutOfStoreSymlink so the .conf files stay editable without a rebuild.",
+      "tags": ["mango", "home-manager", "symlink", "live-config", "compositor"],
+      "complexity": "simple",
+      "languageNotes": "Uses config.lib.file.mkOutOfStoreSymlink for out-of-store live-editable config."
+    },
+    {
+      "id": "file:home/applications/nixvim/colorshemes/gruvbox.nix",
+      "type": "file",
+      "name": "gruvbox.nix",
+      "filePath": "home/applications/nixvim/colorshemes/gruvbox.nix",
+      "summary": "Nixvim module enabling the gruvbox-material colorscheme with bold, italic, and transparent background; currently commented out of the nixvim.nix imports.",
+      "tags": ["nixvim", "neovim", "colorscheme", "gruvbox", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/nixvim/core/keymaps.nix",
+      "type": "file",
+      "name": "keymaps.nix",
+      "filePath": "home/applications/nixvim/core/keymaps.nix",
+      "summary": "Nixvim core keymaps and leader-key globals: save/quit, scrolling with centering, buffer/window management, split navigation, diagnostics, jq JSON formatting, and tmux-sessionizer binding.",
+      "tags": ["nixvim", "neovim", "keymaps", "core", "configuration"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:home/applications/nixvim/core/options.nix",
+      "type": "file",
+      "name": "options.nix",
+      "filePath": "home/applications/nixvim/core/options.nix",
+      "summary": "Nixvim core editor options (line numbers, clipboard, indentation, splits, search, undo, spell en/de), relativenumber toggle autocmds, and diagnostic float settings.",
+      "tags": ["nixvim", "neovim", "options", "core", "configuration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/applications/nixvim/nixvim.nix",
+      "type": "file",
+      "name": "nixvim.nix",
+      "filePath": "home/applications/nixvim/nixvim.nix",
+      "summary": "Nixvim root module aggregating the Neovim configuration: imports core keymaps/options and all plugin modules (treesitter, oil, blink, harpoon, lsp, conform, dap, gitsigns, etc.).",
+      "tags": ["nixvim", "neovim", "entry-point", "imports", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/nixvim/nvim.nix",
+      "type": "file",
+      "name": "nvim.nix",
+      "filePath": "home/applications/nixvim/nvim.nix",
+      "summary": "Home-manager module wiring nixvim into the user environment: imports the nixvim home module, sets programs.nixvim from nixvim.nix, and installs formatter tools (stylua, black, prettier, shfmt, clang-tools, nixfmt).",
+      "tags": ["nixvim", "neovim", "home-manager", "formatters", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/blink.nix",
+      "type": "file",
+      "name": "blink.nix",
+      "filePath": "home/applications/nixvim/plugins/blink.nix",
+      "summary": "Nixvim module configuring blink-cmp completion with luasnip snippets, lsp/path/snippets/buffer sources, rust fuzzy matcher, and bordered signature help.",
+      "tags": ["nixvim", "neovim", "completion", "blink-cmp", "plugin"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/conform.nix",
+      "type": "file",
+      "name": "conform.nix",
+      "filePath": "home/applications/nixvim/plugins/conform.nix",
+      "summary": "Nixvim module configuring conform.nvim format-on-save with per-filetype formatters (prettier, black, stylua, shfmt, nixfmt, clang_format) and a <leader>fm manual format keymap.",
+      "tags": ["nixvim", "neovim", "formatting", "conform", "plugin"],
+      "complexity": "moderate",
+      "languageNotes": "Embeds Lua functions via nixvim raw strings for format_on_save logic."
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/dap.nix",
+      "type": "file",
+      "name": "dap.nix",
+      "filePath": "home/applications/nixvim/plugins/dap.nix",
+      "filePath_ignored": null,
+      "summary": "Nixvim module configuring nvim-dap debugging: dap-ui, virtual text, dap-python, gdb adapter, breakpoint signs, an extensive <leader>d keymap set, and Lua listeners auto-opening dap-ui.",
+      "tags": ["nixvim", "neovim", "debugging", "dap", "plugin"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/gitsigns.nix",
+      "type": "file",
+      "name": "gitsigns.nix",
+      "filePath": "home/applications/nixvim/plugins/gitsigns.nix",
+      "summary": "Nixvim module enabling gitsigns with custom sign characters for staged and unstaged git add/change/delete indicators.",
+      "tags": ["nixvim", "neovim", "git", "gitsigns", "plugin"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/nixvim/plugins/harpoon.nix",
+      "type": "file",
+      "name": "harpoon.nix",
+      "filePath": "home/applications/nixvim/plugins/harpoon.nix",
+      "summary": "Nixvim module enabling harpoon for quick file marks with keymaps to add files, toggle the quick menu, and jump to marks 1-4 via Ctrl-j/k/l/h.",
+      "tags": ["nixvim", "neovim", "navigation", "harpoon", "plugin"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/core/keymaps.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/core/options.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/treesitter.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/oil.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/indent-blankline.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/snacks.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/lualine.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/tmux.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/treesitter-context.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/blink.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/harpoon.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/lsp.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/conform.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/misc.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/dap.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nixvim.nix",
+      "target": "file:home/applications/nixvim/plugins/gitsigns.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/nixvim/nvim.nix",
+      "target": "file:home/applications/nixvim/nixvim.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/mango/config/config.conf",
+      "target": "file:home/applications/mango/config/animations.conf",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/mango/config/config.conf",
+      "target": "file:home/applications/mango/config/appearance.conf",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/mango/config/config.conf",
+      "target": "file:home/applications/mango/config/env.conf",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/mango/config/config.conf",
+      "target": "file:home/applications/mango/config/devices.conf",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/mango/config/config.conf",
+      "target": "file:home/applications/mango/config/layouts.conf",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/mango/config/config.conf",
+      "target": "file:home/applications/mango/config/keybind.conf",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/mango/config/config.conf",
+      "target": "file:home/applications/mango/config/misc.conf",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/mango/config/config.conf",
+      "target": "file:home/applications/mango/config/autostart.conf",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/mango/config/config.conf",
+      "target": "file:home/applications/mango/config/dms/colors.conf",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/mango/mango.nix",
+      "target": "file:home/applications/mango/config/config.conf",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/mango/mango.nix",
+      "target": "file:home/applications/mango/config/animations.conf",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/mango/mango.nix",
+      "target": "file:home/applications/mango/config/appearance.conf",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/mango/mango.nix",
+      "target": "file:home/applications/mango/config/autostart.conf",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/mango/mango.nix",
+      "target": "file:home/applications/mango/config/devices.conf",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/mango/mango.nix",
+      "target": "file:home/applications/mango/config/dms/colors.conf",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/mango/mango.nix",
+      "target": "file:home/applications/mango/config/env.conf",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/mango/mango.nix",
+      "target": "file:home/applications/mango/config/keybind.conf",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/mango/mango.nix",
+      "target": "file:home/applications/mango/config/layouts.conf",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/mango/mango.nix",
+      "target": "file:home/applications/mango/config/misc.conf",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/hyprland/overrides/eva02/workspaces.lua",
+      "target": "file:home/applications/hyprland/hyprland.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/overrides/thinkpadt14/monitor.lua",
+      "target": "file:home/applications/hyprland/hyprland.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/overrides/thinkpadt14/workspaces.lua",
+      "target": "file:home/applications/hyprland/hyprland.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

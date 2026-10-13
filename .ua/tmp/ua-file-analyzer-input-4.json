@@ -1,0 +1,182 @@
+{
+  "projectRoot": "/home/martin/nix-dots",
+  "batchFiles": [
+    {
+      "path": "home/applications/tmux-sessionizer/config/tmux-sessionizer.conf",
+      "language": "conf",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/tmux-sessionizer/tmux-sessionizer.nix",
+      "language": "nix",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/tmux/tmux.nix",
+      "language": "nix",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/zathura/zathura.nix",
+      "language": "nix",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/zsh/zsh.nix",
+      "language": "nix",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/common.nix",
+      "language": "nix",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/options.nix",
+      "language": "nix",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/themes/stylix.nix",
+      "language": "nix",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/themes/theme/catppuccin.nix",
+      "language": "nix",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/themes/theme/dracula.nix",
+      "language": "nix",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/themes/theme/everforest.nix",
+      "language": "nix",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/themes/theme/gruvbox.nix",
+      "language": "nix",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/themes/theme/tokyonight.nix",
+      "language": "nix",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "hosts/common.nix",
+      "language": "nix",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "hosts/eva02/configuration.nix",
+      "language": "nix",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "hosts/eva02/drives.nix",
+      "language": "nix",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "hosts/eva02/hardware-configuration.nix",
+      "language": "nix",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "hosts/eva02/home.nix",
+      "language": "nix",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "hosts/eva02/options.nix",
+      "language": "nix",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "hosts/thinkpadT14/configuration.nix",
+      "language": "nix",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "hosts/thinkpadT14/hardware-configuration.nix",
+      "language": "nix",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "hosts/thinkpadT14/home.nix",
+      "language": "nix",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "hosts/thinkpadT14/options.nix",
+      "language": "nix",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "hosts/workbox/configuration.nix",
+      "language": "nix",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "hosts/workbox/home.nix",
+      "language": "nix",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "home/applications/tmux-sessionizer/config/tmux-sessionizer.conf": [],
+    "home/applications/tmux-sessionizer/tmux-sessionizer.nix": [],
+    "home/applications/tmux/tmux.nix": [],
+    "home/applications/zathura/zathura.nix": [],
+    "home/applications/zsh/zsh.nix": [],
+    "home/common.nix": [],
+    "home/options.nix": [],
+    "home/themes/stylix.nix": [],
+    "home/themes/theme/catppuccin.nix": [],
+    "home/themes/theme/dracula.nix": [],
+    "home/themes/theme/everforest.nix": [],
+    "home/themes/theme/gruvbox.nix": [],
+    "home/themes/theme/tokyonight.nix": [],
+    "hosts/common.nix": [],
+    "hosts/eva02/configuration.nix": [],
+    "hosts/eva02/drives.nix": [],
+    "hosts/eva02/hardware-configuration.nix": [],
+    "hosts/eva02/home.nix": [],
+    "hosts/eva02/options.nix": [],
+    "hosts/thinkpadT14/configuration.nix": [],
+    "hosts/thinkpadT14/hardware-configuration.nix": [],
+    "hosts/thinkpadT14/home.nix": [],
+    "hosts/thinkpadT14/options.nix": [],
+    "hosts/workbox/configuration.nix": [],
+    "hosts/workbox/home.nix": []
+  }
+}

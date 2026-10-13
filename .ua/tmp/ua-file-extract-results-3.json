@@ -1,0 +1,255 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [
+    "home/applications/nixvim/plugins/indent-blankline.nix",
+    "home/applications/nixvim/plugins/lsp.nix",
+    "home/applications/nixvim/plugins/lualine.nix",
+    "home/applications/nixvim/plugins/misc.nix",
+    "home/applications/nixvim/plugins/oil.nix",
+    "home/applications/nixvim/plugins/snacks.nix",
+    "home/applications/nixvim/plugins/tmux.nix",
+    "home/applications/nixvim/plugins/treesitter-context.nix",
+    "home/applications/nixvim/plugins/treesitter.nix",
+    "home/applications/noctalia-shell/noctalia.nix",
+    "home/applications/opencode/opencode.nix",
+    "home/applications/qutebrowser/config/bookmarks/urls",
+    "home/applications/qutebrowser/config/quickmarks",
+    "home/applications/qutebrowser/config/styles/youtube-tweaks.css",
+    "home/applications/qutebrowser/qutebrowser.nix",
+    "home/applications/st/st.nix"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 9,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 6,
+      "failed": 0,
+      "skipped": 3
+    }
+  },
+  "results": [
+    {
+      "path": "home/applications/opencode/themes/gruvbox-transparent.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 73,
+      "nonEmptyLines": 73,
+      "sections": [
+        {
+          "heading": "$schema",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "defs",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "theme",
+          "level": 1,
+          "line": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "home/applications/qutebrowser/config/autoconfig.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 38,
+      "nonEmptyLines": 37,
+      "sections": [
+        {
+          "heading": "config_version",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "settings",
+          "level": 1,
+          "line": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "home/applications/qutebrowser/config/config.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 90,
+      "nonEmptyLines": 74,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "home/applications/qutebrowser/config/greasemonkey/yt-ads.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 18,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "home/applications/qutebrowser/config/rosepine/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "home/applications/qutebrowser/config/rosepine/readme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 51,
+      "nonEmptyLines": 38,
+      "sections": [
+        {
+          "heading": "Usage",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "Gallery",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "Thanks to",
+          "level": 2,
+          "line": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "home/applications/qutebrowser/config/rosepine/setup.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 268,
+      "nonEmptyLines": 228,
+      "functions": [
+        {
+          "name": "setup",
+          "startLine": 4,
+          "endLine": 268,
+          "params": [
+            "c",
+            "variant",
+            "samecolorrows"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "setup",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "home/applications/qutebrowser/config/theme.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 78,
+      "nonEmptyLines": 70,
+      "functions": [
+        {
+          "name": "setup",
+          "startLine": 22,
+          "endLine": 78,
+          "params": [
+            "c"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "setup",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "home/applications/qutebrowser/theme.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 78,
+      "nonEmptyLines": 70,
+      "functions": [
+        {
+          "name": "setup",
+          "startLine": 22,
+          "endLine": 78,
+          "params": [
+            "c"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "setup",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

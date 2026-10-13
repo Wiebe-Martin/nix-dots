@@ -1,0 +1,508 @@
+{
+  "nodes": [
+    {
+      "id": "document:AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "AGENTS.md",
+      "summary": "Agent-facing documentation for the nix-dots flake: host layout, nh rebuild workflow, live-config vs Nix-managed files, and contribution rules.",
+      "tags": ["documentation", "entry-point", "nixos", "home-manager"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:flake.nix",
+      "type": "file",
+      "name": "flake.nix",
+      "filePath": "flake.nix",
+      "summary": "Flake entry point declaring inputs (nixpkgs, home-manager, dms, noctalia, stylix, lanzaboote, kimi-code) and two nixosConfigurations for hosts thinkpadT14 and eva02.",
+      "tags": ["entry-point", "flake", "nixos", "configuration"],
+      "complexity": "moderate",
+      "languageNotes": "Nix flake outputs via nixpkgs.lib.nixosSystem with home-manager as a NixOS module and backupFileExtension set to 'backup'."
+    },
+    {
+      "id": "file:home/applications/btop/btop.nix",
+      "type": "file",
+      "name": "btop.nix",
+      "filePath": "home/applications/btop/btop.nix",
+      "summary": "Home-manager module enabling btop with vim keys and transparent background.",
+      "tags": ["home-manager", "btop", "module", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/dms/dms.nix",
+      "type": "file",
+      "name": "dms.nix",
+      "filePath": "home/applications/dms/dms.nix",
+      "summary": "Home-manager module importing the DankMaterialShell and plugin-registry home modules; configures the DMS desktop shell, plugins, session variables, and bar layout with laptop-conditional battery widget.",
+      "tags": ["home-manager", "dms", "desktop-shell", "module", "configuration"],
+      "complexity": "moderate",
+      "languageNotes": "Uses lib.optionals config.my.host.isLaptop to conditionally include the battery bar widget."
+    },
+    {
+      "id": "file:home/applications/dwmblocks/dwmblocks.nix",
+      "type": "file",
+      "name": "dwmblocks.nix",
+      "filePath": "home/applications/dwmblocks/dwmblocks.nix",
+      "summary": "Home-manager module installing dwmblocks rebuilt from a local source override in ./dwmblocks.",
+      "tags": ["home-manager", "dwmblocks", "package-override", "module"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/firefox/firefox.nix",
+      "type": "file",
+      "name": "firefox.nix",
+      "filePath": "home/applications/firefox/firefox.nix",
+      "summary": "Home-manager module configuring Firefox: adopts the legacy ~/.mozilla/firefox profile for Stylix theming, sets enterprise policies, and force-installs uBlock Origin and Firefox Color extensions.",
+      "tags": ["home-manager", "firefox", "browser", "policies", "stylix"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/applications/git/gh.nix",
+      "type": "file",
+      "name": "gh.nix",
+      "filePath": "home/applications/git/gh.nix",
+      "summary": "Home-manager module enabling the GitHub CLI with nvim as editor and the git credential helper.",
+      "tags": ["home-manager", "gh", "github", "git", "module"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/git/git.nix",
+      "type": "file",
+      "name": "git.nix",
+      "filePath": "home/applications/git/git.nix",
+      "summary": "Home-manager module configuring git user identity, main as default branch, autoSetupRemote push, and rebase-on-pull.",
+      "tags": ["home-manager", "git", "vcs", "module"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/go/go.nix",
+      "type": "file",
+      "name": "go.nix",
+      "filePath": "home/applications/go/go.nix",
+      "summary": "Home-manager module enabling Go and installing the Go toolchain companions gcc, air, and templ.",
+      "tags": ["home-manager", "go", "toolchain", "module"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:home/applications/herdr/config.toml",
+      "type": "config",
+      "name": "config.toml",
+      "filePath": "home/applications/herdr/config.toml",
+      "summary": "Runtime configuration for the herdr session manager: terminal theme and tmux-like key bindings with ctrl+space prefix.",
+      "tags": ["configuration", "herdr", "keybindings", "theme"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/herdr/herdr.nix",
+      "type": "file",
+      "name": "herdr.nix",
+      "filePath": "home/applications/herdr/herdr.nix",
+      "summary": "Home-manager module installing herdr and live-symlinking the repo's config.toml to ~/.config/herdr/config.toml via mkOutOfStoreSymlink.",
+      "tags": ["home-manager", "herdr", "symlink", "module"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:home/applications/hyprland/config/.luarc.json",
+      "type": "config",
+      "name": ".luarc.json",
+      "filePath": "home/applications/hyprland/config/.luarc.json",
+      "summary": "Lua language-server config declaring the custom global 'hl' and a workspace library path for the Hyprland Lua config.",
+      "tags": ["configuration", "lua", "lsp", "hyprland"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/hyprland/config/dms/layout.lua",
+      "type": "file",
+      "name": "layout.lua",
+      "filePath": "home/applications/hyprland/config/dms/layout.lua",
+      "summary": "DMS-managed Hyprland Lua snippet setting gaps, border size, zero rounding, and an xray layer rule for the dms bar namespace.",
+      "tags": ["hyprland", "dms", "layout", "auto-generated"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/hyprland/config/dms/windowrules.lua",
+      "type": "file",
+      "name": "windowrules.lua",
+      "filePath": "home/applications/hyprland/config/dms/windowrules.lua",
+      "summary": "DMS-managed Hyprland Lua snippet floating windows of class com.danklinux.dms.",
+      "tags": ["hyprland", "dms", "window-rules", "auto-generated"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/hyprland/config/hl.meta.lua",
+      "type": "file",
+      "name": "hl.meta.lua",
+      "filePath": "home/applications/hyprland/config/hl.meta.lua",
+      "summary": "Autogenerated LuaCATS annotation stub describing the entire custom 'hl' Hyprland Lua API (events, config keys, binders, dispatchers) for editor diagnostics; not executed at runtime.",
+      "tags": ["hyprland", "luacats", "type-definition", "api-schema", "auto-generated"],
+      "complexity": "complex",
+      "languageNotes": "1254 lines of ---@alias/---@meta annotations generated by scripts/generateLuaStubs.py."
+    },
+    {
+      "id": "file:home/applications/hyprland/config/hyprland.lua",
+      "type": "file",
+      "name": "hyprland.lua",
+      "filePath": "home/applications/hyprland/config/hyprland.lua",
+      "summary": "Entry point of the live Lua Hyprland configuration; requires the hyprland/* submodules (animations, appearance, autostart, env, input, keybind, monitor, rules, workspaces).",
+      "tags": ["entry-point", "hyprland", "lua", "barrel"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/hyprland/config/hyprland/animations.lua",
+      "type": "file",
+      "name": "animations.lua",
+      "filePath": "home/applications/hyprland/config/hyprland/animations.lua",
+      "summary": "Defines bezier and spring curves and per-leaf Hyprland animation settings (windows, fade, layers, workspaces) via hl.curve and hl.animation.",
+      "tags": ["hyprland", "animations", "lua", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/hyprland/config/hyprland/appearance.lua",
+      "type": "file",
+      "name": "appearance.lua",
+      "filePath": "home/applications/hyprland/config/hyprland/appearance.lua",
+      "summary": "Sets Hyprland general/decoration/group/dwindle/master/scrolling/misc appearance, deriving all colors from the Stylix-generated hyprland/colors module.",
+      "tags": ["hyprland", "appearance", "stylix", "theming", "lua"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/applications/hyprland/config/hyprland/autostart.lua",
+      "type": "file",
+      "name": "autostart.lua",
+      "filePath": "home/applications/hyprland/config/hyprland/autostart.lua",
+      "summary": "Runs on hyprland.start: launches the desktop shell from DESKTOP_SHELL_COMMAND and starts wl-paste/cliphist clipboard watchers.",
+      "tags": ["hyprland", "autostart", "clipboard", "lua"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/hyprland/config/hyprland/env.lua",
+      "type": "file",
+      "name": "env.lua",
+      "filePath": "home/applications/hyprland/config/hyprland/env.lua",
+      "summary": "Sets Wayland-oriented environment variables (Qt, GTK, SDL, Firefox, cursor sizes, screenshots dir) via hl.env.",
+      "tags": ["hyprland", "environment", "wayland", "lua"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/hyprland/config/hyprland/input.lua",
+      "type": "file",
+      "name": "input.lua",
+      "filePath": "home/applications/hyprland/config/hyprland/input.lua",
+      "summary": "Configures keyboard layout (eu, caps:escape), mouse sensitivity, key repeat, natural-scroll touchpad, and a three-finger workspace swipe gesture.",
+      "tags": ["hyprland", "input", "keyboard", "touchpad", "lua"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/hyprland/config/hyprland/keybind.lua",
+      "type": "file",
+      "name": "keybind.lua",
+      "filePath": "home/applications/hyprland/config/hyprland/keybind.lua",
+      "summary": "Defines all Hyprland keybindings with the SUPER modifier: app launchers, window management, focus/workspace movement, resizing, media and brightness keys, and screenshots; shell commands come from APP_LAUNCHER/LOCK_SCREEN/POWER_MENU env vars.",
+      "tags": ["hyprland", "keybindings", "lua", "configuration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/applications/hyprland/config/hyprland/rules.lua",
+      "type": "file",
+      "name": "rules.lua",
+      "filePath": "home/applications/hyprland/config/hyprland/rules.lua",
+      "summary": "Window and layer rules: suppress maximize events, fix XWayland drags, disable animations for dms/noctalia layers, allow tearing, and an immediate rule for cs2.",
+      "tags": ["hyprland", "window-rules", "layer-rules", "lua"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/hyprland/hyprland.nix",
+      "type": "file",
+      "name": "hyprland.nix",
+      "filePath": "home/applications/hyprland/hyprland.nix",
+      "summary": "Home-manager module wiring the live Hyprland setup: installs screenshot/clipboard tools, symlinks config/ to ~/.config/hypr, generates hyprland/colors.lua from the Stylix base16 scheme, and symlinks per-host monitor/workspaces overrides.",
+      "tags": ["home-manager", "hyprland", "stylix", "symlink", "module"],
+      "complexity": "moderate",
+      "languageNotes": "Uses osConfig.networking.hostName to select per-host override files at build time."
+    },
+    {
+      "id": "file:home/applications/hyprland/overrides/eva02/monitor.lua",
+      "type": "file",
+      "name": "monitor.lua",
+      "filePath": "home/applications/hyprland/overrides/eva02/monitor.lua",
+      "summary": "Per-host monitor layout for the eva02 desktop: HDMI-A-2 at 1080p60 left of DP-1 at 1080p144.",
+      "tags": ["hyprland", "monitor", "host-override", "lua"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:flake.nix",
+      "target": "file:hosts/thinkpadT14/configuration.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:flake.nix",
+      "target": "file:hosts/thinkpadT14/home.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:flake.nix",
+      "target": "file:home/options.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:flake.nix",
+      "target": "file:hosts/thinkpadT14/options.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:flake.nix",
+      "target": "file:hosts/eva02/configuration.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:flake.nix",
+      "target": "file:hosts/eva02/home.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:flake.nix",
+      "target": "file:hosts/eva02/options.nix",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hyprland.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/animations.lua",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hyprland.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/appearance.lua",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hyprland.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/autostart.lua",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hyprland.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/env.lua",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hyprland.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/input.lua",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hyprland.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/keybind.lua",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hyprland.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/rules.lua",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:home/applications/hyprland/hyprland.nix",
+      "target": "file:home/applications/hyprland/config/hyprland.lua",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/hyprland/hyprland.nix",
+      "target": "file:home/applications/hyprland/config/hyprland/appearance.lua",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/hyprland/hyprland.nix",
+      "target": "file:home/applications/hyprland/overrides/eva02/monitor.lua",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:home/applications/herdr/herdr.nix",
+      "target": "config:home/applications/herdr/config.toml",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:home/applications/hyprland/config/.luarc.json",
+      "target": "file:home/applications/hyprland/config/hyprland.lua",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:AGENTS.md",
+      "target": "file:flake.nix",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:AGENTS.md",
+      "target": "file:scripts/update",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:AGENTS.md",
+      "target": "file:hosts/common.nix",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:AGENTS.md",
+      "target": "file:home/common.nix",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:AGENTS.md",
+      "target": "file:home/options.nix",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:AGENTS.md",
+      "target": "file:home/applications/hyprland/hyprland.nix",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hl.meta.lua",
+      "target": "file:home/applications/hyprland/config/hyprland.lua",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hl.meta.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/animations.lua",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hl.meta.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/appearance.lua",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hl.meta.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/autostart.lua",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hl.meta.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/env.lua",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hl.meta.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/input.lua",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hl.meta.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/keybind.lua",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hl.meta.lua",
+      "target": "file:home/applications/hyprland/config/hyprland/rules.lua",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hl.meta.lua",
+      "target": "file:home/applications/hyprland/config/dms/layout.lua",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hl.meta.lua",
+      "target": "file:home/applications/hyprland/config/dms/windowrules.lua",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/hl.meta.lua",
+      "target": "file:home/applications/hyprland/overrides/eva02/monitor.lua",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/git/gh.nix",
+      "target": "file:home/applications/git/git.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/dms/layout.lua",
+      "target": "file:home/applications/dms/dms.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:home/applications/hyprland/config/dms/windowrules.lua",
+      "target": "file:home/applications/dms/dms.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

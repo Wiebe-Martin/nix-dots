@@ -1,0 +1,348 @@
+{
+  "nodes": [
+    {
+      "id": "file:hosts/workbox/options.nix",
+      "type": "file",
+      "name": "options.nix",
+      "filePath": "hosts/workbox/options.nix",
+      "summary": "Host options file for the 'workbox' machine; sets the custom my.host.isLaptop flag to true.",
+      "tags": ["config", "host-options", "nixos", "nix"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:modules/audio/pipewire.nix",
+      "type": "file",
+      "name": "pipewire.nix",
+      "filePath": "modules/audio/pipewire.nix",
+      "summary": "Reusable NixOS module enabling PipeWire audio with ALSA (including 32-bit) and PulseAudio compatibility layers.",
+      "tags": ["audio", "pipewire", "nixos-module", "nix"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:modules/misc/smb.nix",
+      "type": "file",
+      "name": "smb.nix",
+      "filePath": "modules/misc/smb.nix",
+      "summary": "NixOS module mounting a CIFS/SMB share from an OpenMediaVault server to ~/Tank with systemd automount and credential-file options.",
+      "tags": ["smb", "cifs", "mount", "nixos-module", "network-filesystem"],
+      "complexity": "simple",
+      "languageNotes": "Uses a let-binding to compose systemd automount mount options for a lazy-mounted network share."
+    },
+    {
+      "id": "file:modules/misc/zram.nix",
+      "type": "file",
+      "name": "zram.nix",
+      "filePath": "modules/misc/zram.nix",
+      "summary": "NixOS module enabling zram swap with lz4 compression, high priority, and a 50% memory cap.",
+      "tags": ["zram", "swap", "memory", "nixos-module", "nix"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:modules/net/networkmanager.nix",
+      "type": "file",
+      "name": "networkmanager.nix",
+      "filePath": "modules/net/networkmanager.nix",
+      "summary": "NixOS module enabling NetworkManager and installing the networkmanagerapplet tray utility.",
+      "tags": ["networking", "networkmanager", "nixos-module", "nix"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:modules/net/tailscale.nix",
+      "type": "file",
+      "name": "tailscale.nix",
+      "filePath": "modules/net/tailscale.nix",
+      "summary": "NixOS module configuring Tailscale VPN: trusts the tailscale0 interface, forces nftables firewall mode, and disables systemd network wait-online for faster boot.",
+      "tags": ["tailscale", "vpn", "firewall", "nftables", "nixos-module"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:modules/shell/zsh.nix",
+      "type": "file",
+      "name": "zsh.nix",
+      "filePath": "modules/shell/zsh.nix",
+      "summary": "NixOS module enabling zsh system-wide and setting it as the default user shell.",
+      "tags": ["shell", "zsh", "nixos-module", "nix"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:modules/system/lanzaboote.nix",
+      "type": "file",
+      "name": "lanzaboote.nix",
+      "filePath": "modules/system/lanzaboote.nix",
+      "summary": "NixOS module enabling Secure Boot via the lanzaboote flake input, using /var/lib/sbctl as the PKI bundle and force-disabling systemd-boot.",
+      "tags": ["secure-boot", "lanzaboote", "bootloader", "security", "nixos-module"],
+      "complexity": "simple",
+      "languageNotes": "Imports a NixOS module from a flake input and uses lib.mkForce to override systemd-boot."
+    },
+    {
+      "id": "file:modules/system/locals.nix",
+      "type": "file",
+      "name": "locals.nix",
+      "filePath": "modules/system/locals.nix",
+      "summary": "NixOS module setting the Europe/Berlin timezone, en_US default locale, and de_DE formats for all LC_* locale categories.",
+      "tags": ["locale", "timezone", "i18n", "nixos-module", "nix"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:modules/system/systemd-boot.nix",
+      "type": "file",
+      "name": "systemd-boot.nix",
+      "filePath": "modules/system/systemd-boot.nix",
+      "summary": "NixOS module enabling the systemd-boot bootloader with a 3-generation configuration limit and EFI variable access.",
+      "tags": ["bootloader", "systemd-boot", "efi", "nixos-module", "nix"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:modules/virtualization/virtmanager.nix",
+      "type": "file",
+      "name": "virtmanager.nix",
+      "filePath": "modules/virtualization/virtmanager.nix",
+      "summary": "NixOS module enabling libvirtd and virt-manager, with dnsmasq installed for VM NAT networking.",
+      "tags": ["virtualization", "libvirt", "virt-manager", "nixos-module", "nix"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:modules/windowmanager/dwm.nix",
+      "type": "file",
+      "name": "dwm.nix",
+      "filePath": "modules/windowmanager/dwm.nix",
+      "summary": "Empty placeholder NixOS module reserved for future dwm window manager configuration.",
+      "tags": ["window-manager", "dwm", "placeholder", "nixos-module"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:modules/windowmanager/hyprland.nix",
+      "type": "file",
+      "name": "hyprland.nix",
+      "filePath": "modules/windowmanager/hyprland.nix",
+      "summary": "NixOS module enabling the Hyprland Wayland compositor system-wide with XWayland support.",
+      "tags": ["hyprland", "wayland", "window-manager", "nixos-module", "nix"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:modules/windowmanager/mango.nix",
+      "type": "file",
+      "name": "mango.nix",
+      "filePath": "modules/windowmanager/mango.nix",
+      "summary": "NixOS module enabling the Mango (mangowc) Wayland compositor using the pkgs.mango package.",
+      "tags": ["mango", "wayland", "window-manager", "nixos-module", "nix"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/tmux-sessionizer",
+      "type": "file",
+      "name": "tmux-sessionizer",
+      "filePath": "scripts/tmux-sessionizer",
+      "summary": "fzf-based tmux session switcher (fork of ThePrimeagen's script) that searches configurable directory paths, creates/attaches sessions, and supports scripted session commands in numbered windows or persistent splits.",
+      "tags": ["tmux", "fzf", "session-switcher", "shell-script", "utility"],
+      "complexity": "complex",
+      "languageNotes": "Bash script with no file extension; supports XDG config overrides, per-path search depth suffixes, and a pane-ID cache for split session commands."
+    },
+    {
+      "id": "file:scripts/update",
+      "type": "file",
+      "name": "update",
+      "filePath": "scripts/update",
+      "summary": "Bash wrapper around 'nh os switch' that fetches origin/main, refuses to switch when the local repo is behind, and prompts to commit and push post-switch changes such as flake.lock updates.",
+      "tags": ["nixos", "nh", "git", "automation", "shell-script"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/tmux-sessionizer:sanity_check",
+      "type": "function",
+      "name": "sanity_check",
+      "filePath": "scripts/tmux-sessionizer",
+      "lineRange": [123, 133],
+      "summary": "Verifies that tmux and fzf are installed, exiting with an error message if either is missing.",
+      "tags": ["validation", "dependency-check", "shell"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/tmux-sessionizer:hydrate",
+      "type": "function",
+      "name": "hydrate",
+      "filePath": "scripts/tmux-sessionizer",
+      "lineRange": [149, 160],
+      "summary": "Sends a source command into a newly created tmux session, preferring a per-directory .tmux-sessionizer file over the global one in $HOME.",
+      "tags": ["tmux", "initialization", "shell"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/tmux-sessionizer:set_pane_id",
+      "type": "function",
+      "name": "set_pane_id",
+      "filePath": "scripts/tmux-sessionizer",
+      "lineRange": [183, 195],
+      "summary": "Records a session-index/split-type to tmux pane-ID mapping in the pane cache file, replacing any existing entry.",
+      "tags": ["cache", "tmux", "pane-management", "shell"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/tmux-sessionizer:cleanup_dead_panes",
+      "type": "function",
+      "name": "cleanup_dead_panes",
+      "filePath": "scripts/tmux-sessionizer",
+      "lineRange": [197, 208],
+      "summary": "Prunes pane-cache entries whose tmux pane IDs no longer exist by cross-checking against tmux list-panes.",
+      "tags": ["cache", "cleanup", "tmux", "shell"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/tmux-sessionizer:find_dirs",
+      "type": "function",
+      "name": "find_dirs",
+      "filePath": "scripts/tmux-sessionizer",
+      "lineRange": [224, 247],
+      "summary": "Builds the fzf candidate list: existing tmux sessions (excluding the current one) plus directories found under TS_SEARCH_PATHS with per-path or default max depth.",
+      "tags": ["fzf", "directory-search", "tmux", "shell"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/tmux-sessionizer:handle_session_cmd",
+      "type": "function",
+      "name": "handle_session_cmd",
+      "filePath": "scripts/tmux-sessionizer",
+      "lineRange": [249, 264],
+      "summary": "Dispatches a configured TS_SESSION_COMMANDS entry to either a split-pane or numbered-window handler, requiring a running tmux server.",
+      "tags": ["tmux", "dispatch", "session-command", "shell"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/tmux-sessionizer:handle_window_session_cmd",
+      "type": "function",
+      "name": "handle_window_session_cmd",
+      "filePath": "scripts/tmux-sessionizer",
+      "lineRange": [266, 280],
+      "summary": "Runs a session command in a dedicated tmux window at index 69+N, creating and hydrating the window if it does not already exist.",
+      "tags": ["tmux", "window-management", "session-command", "shell"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/tmux-sessionizer:handle_split_session_cmd",
+      "type": "function",
+      "name": "handle_split_session_cmd",
+      "filePath": "scripts/tmux-sessionizer",
+      "lineRange": [282, 314],
+      "summary": "Runs a session command in a persistent vertical or horizontal tmux split, reusing a cached pane when one still exists and caching new pane IDs otherwise.",
+      "tags": ["tmux", "split-pane", "pane-management", "shell"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/update:show_help",
+      "type": "function",
+      "name": "show_help",
+      "filePath": "scripts/update",
+      "lineRange": [11, 29],
+      "summary": "Prints usage, options, environment variables, and examples for the update script.",
+      "tags": ["help", "cli", "documentation", "shell"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:scripts/tmux-sessionizer",
+      "target": "function:scripts/tmux-sessionizer:sanity_check",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/tmux-sessionizer",
+      "target": "function:scripts/tmux-sessionizer:hydrate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/tmux-sessionizer",
+      "target": "function:scripts/tmux-sessionizer:set_pane_id",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/tmux-sessionizer",
+      "target": "function:scripts/tmux-sessionizer:cleanup_dead_panes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/tmux-sessionizer",
+      "target": "function:scripts/tmux-sessionizer:find_dirs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/tmux-sessionizer",
+      "target": "function:scripts/tmux-sessionizer:handle_session_cmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/tmux-sessionizer",
+      "target": "function:scripts/tmux-sessionizer:handle_window_session_cmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/tmux-sessionizer",
+      "target": "function:scripts/tmux-sessionizer:handle_split_session_cmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/update",
+      "target": "function:scripts/update:show_help",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:modules/system/lanzaboote.nix",
+      "target": "file:modules/system/systemd-boot.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:modules/net/tailscale.nix",
+      "target": "file:modules/net/networkmanager.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:modules/windowmanager/hyprland.nix",
+      "target": "file:home/applications/hyprland/hyprland.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:hosts/workbox/options.nix",
+      "target": "file:home/options.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:scripts/update",
+      "target": "file:hosts/common.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:scripts/tmux-sessionizer",
+      "target": "file:home/applications/tmux-sessionizer/tmux-sessionizer.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

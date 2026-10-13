@@ -1,0 +1,334 @@
+{
+  "nodes": [
+    {
+      "id": "file:home/applications/tmux-sessionizer/config/tmux-sessionizer.conf",
+      "type": "file",
+      "name": "tmux-sessionizer.conf",
+      "filePath": "home/applications/tmux-sessionizer/config/tmux-sessionizer.conf",
+      "summary": "tmux-sessionizer runtime config declaring extra search paths (Notes, ~/.config, ~/Dev, ~/nix-dots) with depth limits for fuzzy session picking.",
+      "tags": ["configuration", "tmux", "sessionizer", "live-config"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/tmux-sessionizer/tmux-sessionizer.nix",
+      "type": "file",
+      "name": "tmux-sessionizer.nix",
+      "filePath": "home/applications/tmux-sessionizer/tmux-sessionizer.nix",
+      "summary": "Home-manager module symlinking the live-editable tmux-sessionizer config directory into ~/.config via mkOutOfStoreSymlink.",
+      "tags": ["home-manager", "tmux", "symlink", "live-config"],
+      "complexity": "simple",
+      "languageNotes": "Uses config.lib.file.mkOutOfStoreSymlink so the runtime config stays editable without a rebuild."
+    },
+    {
+      "id": "file:home/applications/tmux/tmux.nix",
+      "type": "file",
+      "name": "tmux.nix",
+      "filePath": "home/applications/tmux/tmux.nix",
+      "summary": "Home-manager tmux configuration with vi keys, C-Space prefix, vim-tmux-navigator/resurrect/yank plugins, a custom gruvbox plugin fetched from GitLab, and a keybinding launching tmux-sessionizer.",
+      "tags": ["home-manager", "tmux", "terminal", "keybindings", "plugins"],
+      "complexity": "moderate",
+      "languageNotes": "Defines a custom tmux plugin inline via pkgs.tmuxPlugins.mkTmuxPlugin with a fetchFromGitLab source."
+    },
+    {
+      "id": "file:home/applications/zathura/zathura.nix",
+      "type": "file",
+      "name": "zathura.nix",
+      "filePath": "home/applications/zathura/zathura.nix",
+      "summary": "Home-manager module enabling the zathura PDF viewer with clipboard selection and recolor settings.",
+      "tags": ["home-manager", "pdf-viewer", "zathura", "application"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/applications/zsh/zsh.nix",
+      "type": "file",
+      "name": "zsh.nix",
+      "filePath": "home/applications/zsh/zsh.nix",
+      "summary": "Home-manager zsh setup with oh-my-zsh, syntax-highlighting and fzf-tab plugins, history tuning, a tmux-sessionizer Ctrl-F binding, and symlinking of the repo's scripts/ directory into ~/.local/bin.",
+      "tags": ["home-manager", "shell", "zsh", "oh-my-zsh", "scripts"],
+      "complexity": "moderate",
+      "languageNotes": "Shell plugins are pinned via fetchFromGitHub with sha256 hashes; scripts/ is exposed by home.file symlink."
+    },
+    {
+      "id": "file:home/common.nix",
+      "type": "file",
+      "name": "common.nix",
+      "filePath": "home/common.nix",
+      "summary": "Shared home-manager import root for all hosts: pulls in stylix theming and every per-application module, sets user/session variables, and installs base packages including fonts and the kimi-code flake package.",
+      "tags": ["home-manager", "entry-point", "imports", "shared-config"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:home/options.nix",
+      "type": "file",
+      "name": "options.nix",
+      "filePath": "home/options.nix",
+      "summary": "Defines the custom home-manager option my.host.isLaptop (bool, default false) used to drive laptop-only widgets such as the DMS battery indicator.",
+      "tags": ["home-manager", "option-definition", "type-definition", "host-flags"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/themes/stylix.nix",
+      "type": "file",
+      "name": "stylix.nix",
+      "filePath": "home/themes/stylix.nix",
+      "summary": "Stylix home-manager integration: imports the stylix module, sets a gruvbox-flavored base16 fallback scheme, cursor, fonts, terminal opacity, and per-target overrides (firefox colorTheme on the default profile).",
+      "tags": ["home-manager", "stylix", "theming", "fonts", "base16"],
+      "complexity": "moderate",
+      "languageNotes": "Defaults are set with lib.mkDefault so per-host theme modules can override scheme, wallpaper, and cursor."
+    },
+    {
+      "id": "file:home/themes/theme/catppuccin.nix",
+      "type": "file",
+      "name": "catppuccin.nix",
+      "filePath": "home/themes/theme/catppuccin.nix",
+      "summary": "Catppuccin Macchiato theme module setting the stylix base16 scheme, wallpaper, mochaDark cursor, and the matching nixvim colorscheme with transparency.",
+      "tags": ["theming", "stylix", "catppuccin", "nixvim"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/themes/theme/dracula.nix",
+      "type": "file",
+      "name": "dracula.nix",
+      "filePath": "home/themes/theme/dracula.nix",
+      "summary": "Dracula theme module setting the stylix base16 scheme, wallpaper, everforest cursor, and the nixvim dracula colorscheme.",
+      "tags": ["theming", "stylix", "dracula", "nixvim"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/themes/theme/everforest.nix",
+      "type": "file",
+      "name": "everforest.nix",
+      "filePath": "home/themes/theme/everforest.nix",
+      "summary": "Everforest dark-hard theme module setting the stylix base16 scheme, gruvbox wallpaper, and everforest cursor.",
+      "tags": ["theming", "stylix", "everforest"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/themes/theme/gruvbox.nix",
+      "type": "file",
+      "name": "gruvbox.nix",
+      "filePath": "home/themes/theme/gruvbox.nix",
+      "summary": "Gruvbox material dark-hard theme module setting the stylix base16 scheme, wallpaper, everforest cursor, and the nixvim gruvbox-material colorscheme; used by thinkpadT14 and workbox.",
+      "tags": ["theming", "stylix", "gruvbox", "nixvim"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:home/themes/theme/tokyonight.nix",
+      "type": "file",
+      "name": "tokyonight.nix",
+      "filePath": "home/themes/theme/tokyonight.nix",
+      "summary": "Tokyo Night theme module setting the stylix base16 scheme, wallpaper, everforest cursor, and the nixvim tokyonight colorscheme with transparency.",
+      "tags": ["theming", "stylix", "tokyonight", "nixvim"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:hosts/common.nix",
+      "type": "file",
+      "name": "common.nix",
+      "filePath": "hosts/common.nix",
+      "summary": "Shared NixOS configuration for all hosts: hyprland cachix substituter, nh helper pinned to ~/nix-dots, firewall ports, bluetooth/graphics, ly display manager, keyboard layout, and the martin user account.",
+      "tags": ["nixos", "shared-config", "nh", "firewall", "display-manager"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hosts/eva02/configuration.nix",
+      "type": "file",
+      "name": "configuration.nix",
+      "filePath": "hosts/eva02/configuration.nix",
+      "summary": "NixOS configuration for the eva02 desktop: lanzaboote Secure Boot, Hyprland, openssh, docker, and a gaming stack (steam, gamemode, gamescope).",
+      "tags": ["nixos", "host-config", "eva02", "gaming", "secure-boot"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hosts/eva02/drives.nix",
+      "type": "file",
+      "name": "drives.nix",
+      "filePath": "hosts/eva02/drives.nix",
+      "summary": "Extra filesystem mounts for eva02: a btrfs /home subvolume mounted by disk label, with a commented-out /games mount.",
+      "tags": ["nixos", "filesystems", "btrfs", "eva02"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:hosts/eva02/hardware-configuration.nix",
+      "type": "file",
+      "name": "hardware-configuration.nix",
+      "filePath": "hosts/eva02/hardware-configuration.nix",
+      "summary": "Generated hardware scan for eva02: kernel modules, btrfs root and vfat /boot mounts by UUID, and AMD microcode settings.",
+      "tags": ["nixos", "hardware", "generated", "eva02"],
+      "complexity": "simple",
+      "languageNotes": "Generated by nixos-generate-config; do not edit manually."
+    },
+    {
+      "id": "file:hosts/eva02/home.nix",
+      "type": "file",
+      "name": "home.nix",
+      "filePath": "hosts/eva02/home.nix",
+      "summary": "Home-manager entry for eva02: imports shared home config with the catppuccin theme, DMS shell, Hyprland, and desktop apps; installs gaming/media packages.",
+      "tags": ["home-manager", "host-config", "eva02", "catppuccin", "dms"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:hosts/eva02/options.nix",
+      "type": "file",
+      "name": "options.nix",
+      "filePath": "hosts/eva02/options.nix",
+      "summary": "Host flag module for eva02 setting my.host.isLaptop = false.",
+      "tags": ["home-manager", "host-flags", "eva02", "option-value"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:hosts/thinkpadT14/configuration.nix",
+      "type": "file",
+      "name": "configuration.nix",
+      "filePath": "hosts/thinkpadT14/configuration.nix",
+      "summary": "NixOS configuration for the thinkpadT14 laptop: systemd-boot, mango and Hyprland window managers, ly with a custom dur animation, TLP power management, and zram.",
+      "tags": ["nixos", "host-config", "thinkpadt14", "laptop", "power-management"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:hosts/thinkpadT14/hardware-configuration.nix",
+      "type": "file",
+      "name": "hardware-configuration.nix",
+      "filePath": "hosts/thinkpadT14/hardware-configuration.nix",
+      "summary": "Generated hardware scan for thinkpadT14: kernel modules, ext4 root and vfat /boot mounts by UUID, swap device, and AMD microcode settings.",
+      "tags": ["nixos", "hardware", "generated", "thinkpadt14"],
+      "complexity": "simple",
+      "languageNotes": "Generated by nixos-generate-config; do not edit manually."
+    },
+    {
+      "id": "file:hosts/thinkpadT14/home.nix",
+      "type": "file",
+      "name": "home.nix",
+      "filePath": "hosts/thinkpadT14/home.nix",
+      "summary": "Home-manager entry for thinkpadT14: imports shared home config with the gruvbox theme, mango + DMS shells, zathura as default PDF viewer, and laptop-oriented packages.",
+      "tags": ["home-manager", "host-config", "thinkpadt14", "gruvbox", "mango"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:hosts/thinkpadT14/options.nix",
+      "type": "file",
+      "name": "options.nix",
+      "filePath": "hosts/thinkpadT14/options.nix",
+      "summary": "Host flag module for thinkpadT14 setting my.host.isLaptop = true, enabling laptop-only widgets such as the DMS battery indicator.",
+      "tags": ["home-manager", "host-flags", "thinkpadt14", "option-value"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:hosts/workbox/configuration.nix",
+      "type": "file",
+      "name": "configuration.nix",
+      "filePath": "hosts/workbox/configuration.nix",
+      "summary": "NixOS configuration for the workbox machine: systemd-boot, dwm window manager, ly display manager with the dur animation, and shared base modules.",
+      "tags": ["nixos", "host-config", "workbox", "dwm"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:hosts/workbox/home.nix",
+      "type": "file",
+      "name": "home.nix",
+      "filePath": "hosts/workbox/home.nix",
+      "summary": "Home-manager entry for workbox: imports shared home config with the gruvbox theme, dwmblocks, st terminal, zathura, and work-oriented CLI packages.",
+      "tags": ["home-manager", "host-config", "workbox", "gruvbox", "dwm"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    { "source": "file:home/common.nix", "target": "file:home/themes/stylix.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:home/common.nix", "target": "file:home/applications/zsh/zsh.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:home/common.nix", "target": "file:home/applications/tmux/tmux.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:home/common.nix", "target": "file:home/applications/nixvim/nvim.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:home/common.nix", "target": "file:home/applications/git/git.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:home/common.nix", "target": "file:home/applications/git/gh.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:home/common.nix", "target": "file:home/applications/tmux-sessionizer/tmux-sessionizer.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:home/common.nix", "target": "file:home/applications/hyprland/hyprland.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:home/common.nix", "target": "file:home/applications/herdr/herdr.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:home/common.nix", "target": "file:home/applications/kitty/kitty.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:home/common.nix", "target": "file:home/applications/opencode/opencode.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:home/common.nix", "target": "file:home/applications/qutebrowser/qutebrowser.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:home/common.nix", "target": "file:home/applications/firefox/firefox.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:hosts/eva02/configuration.nix", "target": "file:hosts/eva02/hardware-configuration.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/configuration.nix", "target": "file:hosts/eva02/drives.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/configuration.nix", "target": "file:hosts/common.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/configuration.nix", "target": "file:modules/system/lanzaboote.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/configuration.nix", "target": "file:modules/system/locals.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/configuration.nix", "target": "file:modules/audio/pipewire.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/configuration.nix", "target": "file:modules/shell/zsh.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/configuration.nix", "target": "file:modules/net/networkmanager.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/configuration.nix", "target": "file:modules/net/tailscale.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/configuration.nix", "target": "file:modules/windowmanager/hyprland.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/configuration.nix", "target": "file:modules/misc/smb.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:hosts/eva02/home.nix", "target": "file:home/common.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/home.nix", "target": "file:home/themes/theme/catppuccin.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/home.nix", "target": "file:home/applications/hyprland/hyprland.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/home.nix", "target": "file:home/applications/dms/dms.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/home.nix", "target": "file:home/applications/kitty/kitty.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/home.nix", "target": "file:home/applications/opencode/opencode.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/home.nix", "target": "file:home/applications/qutebrowser/qutebrowser.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/home.nix", "target": "file:home/applications/firefox/firefox.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/eva02/home.nix", "target": "file:home/applications/go/go.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:hosts/thinkpadT14/hardware-configuration.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:hosts/common.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:modules/system/systemd-boot.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:modules/system/locals.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:modules/windowmanager/mango.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:modules/windowmanager/hyprland.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:modules/shell/zsh.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:modules/net/networkmanager.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:modules/net/tailscale.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:modules/audio/pipewire.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:modules/misc/smb.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:modules/misc/zram.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:modules/virtualization/virtmanager.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:hosts/thinkpadT14/home.nix", "target": "file:home/common.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/home.nix", "target": "file:home/themes/theme/gruvbox.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/home.nix", "target": "file:home/applications/mango/mango.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/home.nix", "target": "file:home/applications/dms/dms.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/home.nix", "target": "file:home/applications/kitty/kitty.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/home.nix", "target": "file:home/applications/zathura/zathura.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/home.nix", "target": "file:home/applications/opencode/opencode.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/home.nix", "target": "file:home/applications/btop/btop.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/home.nix", "target": "file:home/applications/qutebrowser/qutebrowser.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/thinkpadT14/home.nix", "target": "file:home/applications/firefox/firefox.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:hosts/workbox/configuration.nix", "target": "file:hosts/common.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/configuration.nix", "target": "file:modules/system/systemd-boot.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/configuration.nix", "target": "file:modules/system/locals.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/configuration.nix", "target": "file:modules/windowmanager/dwm.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/configuration.nix", "target": "file:modules/shell/zsh.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/configuration.nix", "target": "file:modules/net/networkmanager.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/configuration.nix", "target": "file:modules/audio/pipewire.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:hosts/workbox/home.nix", "target": "file:home/common.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/home.nix", "target": "file:home/themes/theme/gruvbox.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/home.nix", "target": "file:home/applications/dwmblocks/dwmblocks.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/home.nix", "target": "file:home/applications/st/st.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/home.nix", "target": "file:home/applications/zathura/zathura.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/home.nix", "target": "file:home/applications/opencode/opencode.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/home.nix", "target": "file:home/applications/btop/btop.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/home.nix", "target": "file:home/applications/qutebrowser/qutebrowser.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:hosts/workbox/home.nix", "target": "file:home/applications/firefox/firefox.nix", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:home/themes/theme/catppuccin.nix", "target": "file:home/themes/stylix.nix", "type": "configures", "direction": "forward", "weight": 0.6 },
+    { "source": "file:home/themes/theme/dracula.nix", "target": "file:home/themes/stylix.nix", "type": "configures", "direction": "forward", "weight": 0.6 },
+    { "source": "file:home/themes/theme/everforest.nix", "target": "file:home/themes/stylix.nix", "type": "configures", "direction": "forward", "weight": 0.6 },
+    { "source": "file:home/themes/theme/gruvbox.nix", "target": "file:home/themes/stylix.nix", "type": "configures", "direction": "forward", "weight": 0.6 },
+    { "source": "file:home/themes/theme/tokyonight.nix", "target": "file:home/themes/stylix.nix", "type": "configures", "direction": "forward", "weight": 0.6 },
+
+    { "source": "file:hosts/eva02/configuration.nix", "target": "file:hosts/eva02/home.nix", "type": "configures", "direction": "forward", "weight": 0.6 },
+    { "source": "file:hosts/thinkpadT14/configuration.nix", "target": "file:hosts/thinkpadT14/home.nix", "type": "configures", "direction": "forward", "weight": 0.6 },
+    { "source": "file:hosts/workbox/configuration.nix", "target": "file:hosts/workbox/home.nix", "type": "configures", "direction": "forward", "weight": 0.6 },
+
+    { "source": "file:hosts/eva02/options.nix", "target": "file:home/options.nix", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "file:hosts/thinkpadT14/options.nix", "target": "file:home/options.nix", "type": "related", "direction": "forward", "weight": 0.5 },
+
+    { "source": "file:home/applications/tmux-sessionizer/tmux-sessionizer.nix", "target": "file:home/applications/tmux-sessionizer/config/tmux-sessionizer.conf", "type": "configures", "direction": "forward", "weight": 0.6 },
+    { "source": "file:home/applications/tmux/tmux.nix", "target": "file:home/applications/tmux-sessionizer/tmux-sessionizer.nix", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:home/applications/tmux/tmux.nix", "target": "file:scripts/tmux-sessionizer", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:home/applications/zsh/zsh.nix", "target": "file:scripts/update", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "file:home/applications/zsh/zsh.nix", "target": "file:scripts/tmux-sessionizer", "type": "related", "direction": "forward", "weight": 0.5 }
+  ]
+}

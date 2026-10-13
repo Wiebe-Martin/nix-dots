@@ -1,0 +1,186 @@
+{
+  "projectRoot": "/home/martin/nix-dots",
+  "batchFiles": [
+    {
+      "path": "home/applications/nixvim/plugins/indent-blankline.nix",
+      "language": "nix",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/lsp.nix",
+      "language": "nix",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/lualine.nix",
+      "language": "nix",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/misc.nix",
+      "language": "nix",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/oil.nix",
+      "language": "nix",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/snacks.nix",
+      "language": "nix",
+      "sizeLines": 588,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/tmux.nix",
+      "language": "nix",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/treesitter-context.nix",
+      "language": "nix",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/nixvim/plugins/treesitter.nix",
+      "language": "nix",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/noctalia-shell/noctalia.nix",
+      "language": "nix",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/opencode/opencode.nix",
+      "language": "nix",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/opencode/themes/gruvbox-transparent.json",
+      "language": "json",
+      "sizeLines": 73,
+      "fileCategory": "config"
+    },
+    {
+      "path": "home/applications/qutebrowser/config/autoconfig.yml",
+      "language": "yaml",
+      "sizeLines": 38,
+      "fileCategory": "config"
+    },
+    {
+      "path": "home/applications/qutebrowser/config/bookmarks/urls",
+      "language": "unknown",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/qutebrowser/config/config.py",
+      "language": "python",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/qutebrowser/config/greasemonkey/yt-ads.js",
+      "language": "javascript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/qutebrowser/config/quickmarks",
+      "language": "unknown",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/qutebrowser/config/rosepine/__init__.py",
+      "language": "python",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/qutebrowser/config/rosepine/readme.md",
+      "language": "markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "home/applications/qutebrowser/config/rosepine/setup.py",
+      "language": "python",
+      "sizeLines": 268,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/qutebrowser/config/styles/youtube-tweaks.css",
+      "language": "css",
+      "sizeLines": 67,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "home/applications/qutebrowser/config/theme.py",
+      "language": "python",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/qutebrowser/qutebrowser.nix",
+      "language": "nix",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/qutebrowser/theme.py",
+      "language": "python",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/st/st.nix",
+      "language": "nix",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "home/applications/nixvim/plugins/indent-blankline.nix": [],
+    "home/applications/nixvim/plugins/lsp.nix": [],
+    "home/applications/nixvim/plugins/lualine.nix": [],
+    "home/applications/nixvim/plugins/misc.nix": [],
+    "home/applications/nixvim/plugins/oil.nix": [],
+    "home/applications/nixvim/plugins/snacks.nix": [],
+    "home/applications/nixvim/plugins/tmux.nix": [],
+    "home/applications/nixvim/plugins/treesitter-context.nix": [],
+    "home/applications/nixvim/plugins/treesitter.nix": [],
+    "home/applications/noctalia-shell/noctalia.nix": [],
+    "home/applications/opencode/opencode.nix": [],
+    "home/applications/opencode/themes/gruvbox-transparent.json": [],
+    "home/applications/qutebrowser/config/autoconfig.yml": [],
+    "home/applications/qutebrowser/config/bookmarks/urls": [],
+    "home/applications/qutebrowser/config/config.py": [
+      "home/applications/qutebrowser/config/theme.py"
+    ],
+    "home/applications/qutebrowser/config/greasemonkey/yt-ads.js": [],
+    "home/applications/qutebrowser/config/quickmarks": [],
+    "home/applications/qutebrowser/config/rosepine/__init__.py": [
+      "home/applications/qutebrowser/config/rosepine/setup.py"
+    ],
+    "home/applications/qutebrowser/config/rosepine/readme.md": [],
+    "home/applications/qutebrowser/config/rosepine/setup.py": [],
+    "home/applications/qutebrowser/config/styles/youtube-tweaks.css": [],
+    "home/applications/qutebrowser/config/theme.py": [],
+    "home/applications/qutebrowser/qutebrowser.nix": [],
+    "home/applications/qutebrowser/theme.py": [],
+    "home/applications/st/st.nix": []
+  }
+}

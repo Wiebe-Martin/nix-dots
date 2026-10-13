@@ -1,0 +1,182 @@
+{
+  "projectRoot": "/home/martin/nix-dots",
+  "batchFiles": [
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "sizeLines": 88,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "flake.nix",
+      "language": "nix",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/btop/btop.nix",
+      "language": "nix",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/dms/dms.nix",
+      "language": "nix",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/dwmblocks/dwmblocks.nix",
+      "language": "nix",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/firefox/firefox.nix",
+      "language": "nix",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/git/gh.nix",
+      "language": "nix",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/git/git.nix",
+      "language": "nix",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/go/go.nix",
+      "language": "nix",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/herdr/config.toml",
+      "language": "toml",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "home/applications/herdr/herdr.nix",
+      "language": "nix",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/config/.luarc.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "home/applications/hyprland/config/dms/layout.lua",
+      "language": "lua",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/config/dms/windowrules.lua",
+      "language": "lua",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/config/hl.meta.lua",
+      "language": "lua",
+      "sizeLines": 1254,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/config/hyprland.lua",
+      "language": "lua",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/config/hyprland/animations.lua",
+      "language": "lua",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/config/hyprland/appearance.lua",
+      "language": "lua",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/config/hyprland/autostart.lua",
+      "language": "lua",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/config/hyprland/env.lua",
+      "language": "lua",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/config/hyprland/input.lua",
+      "language": "lua",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/config/hyprland/keybind.lua",
+      "language": "lua",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/config/hyprland/rules.lua",
+      "language": "lua",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/hyprland.nix",
+      "language": "nix",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "home/applications/hyprland/overrides/eva02/monitor.lua",
+      "language": "lua",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "AGENTS.md": [],
+    "flake.nix": [],
+    "home/applications/btop/btop.nix": [],
+    "home/applications/dms/dms.nix": [],
+    "home/applications/dwmblocks/dwmblocks.nix": [],
+    "home/applications/firefox/firefox.nix": [],
+    "home/applications/git/gh.nix": [],
+    "home/applications/git/git.nix": [],
+    "home/applications/go/go.nix": [],
+    "home/applications/herdr/config.toml": [],
+    "home/applications/herdr/herdr.nix": [],
+    "home/applications/hyprland/config/.luarc.json": [],
+    "home/applications/hyprland/config/dms/layout.lua": [],
+    "home/applications/hyprland/config/dms/windowrules.lua": [],
+    "home/applications/hyprland/config/hl.meta.lua": [],
+    "home/applications/hyprland/config/hyprland.lua": [],
+    "home/applications/hyprland/config/hyprland/animations.lua": [],
+    "home/applications/hyprland/config/hyprland/appearance.lua": [],
+    "home/applications/hyprland/config/hyprland/autostart.lua": [],
+    "home/applications/hyprland/config/hyprland/env.lua": [],
+    "home/applications/hyprland/config/hyprland/input.lua": [],
+    "home/applications/hyprland/config/hyprland/keybind.lua": [],
+    "home/applications/hyprland/config/hyprland/rules.lua": [],
+    "home/applications/hyprland/hyprland.nix": [],
+    "home/applications/hyprland/overrides/eva02/monitor.lua": []
+  }
+}
