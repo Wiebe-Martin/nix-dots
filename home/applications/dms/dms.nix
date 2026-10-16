@@ -43,6 +43,7 @@
 
             showWorkspaceIndex = true;
             showWorkspaceApps = true;
+            groupWorkspaceApps = false;
 
             matugenTemplateGtk = false;
             matugenTemplateNiri = false;
