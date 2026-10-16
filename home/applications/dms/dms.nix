@@ -42,6 +42,7 @@
             useAutoLocation = true;
 
             showWorkspaceIndex = true;
+            showWorkspaceApps = true;
 
             matugenTemplateGtk = false;
             matugenTemplateNiri = false;
