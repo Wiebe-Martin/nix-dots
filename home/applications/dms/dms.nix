@@ -97,10 +97,10 @@
                     ]
                     ++ lib.optionals config.my.host.isLaptop [
                         "battery"
+                        "dankscale"
                     ]
                     ++ [
                         "notificationButton"
-                        "dankscale"
                         {
                             id = "controlCenterButton";
                             enabled = true;

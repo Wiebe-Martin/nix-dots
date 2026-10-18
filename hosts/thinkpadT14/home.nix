@@ -37,8 +37,6 @@
 
         libxau
         brightnessctl
-
-        unzip
     ];
 
     xdg.mimeApps = {

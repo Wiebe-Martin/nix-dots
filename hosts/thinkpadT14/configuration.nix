@@ -9,6 +9,8 @@
         ../../modules/system/systemd-boot.nix
         ../../modules/system/locals.nix
 
+        ../../modules/displaymanager/ly.nix
+
         ../../modules/windowmanager/mango.nix
         ../../modules/windowmanager/hyprland.nix
 
@@ -29,25 +31,15 @@
 
     networking.hostName = "thinkpadt14";
 
-    services.xserver.enable = true;
-
-    services.gnome.gnome-keyring.enable = true;
-
-    services.displayManager.ly.settings = {
-        animation = "dur_file";
-        dur_file_path = "/home/martin/nix-dots/walls/blackhole-smooth-240x67.dur";
-        colormix_col1 = "0x00FF0000";
-        colormix_col2 = "0x000000FF";
-        colormix_col3 = "0x20000000";
-    };
-
     programs.steam = {
         enable = true;
     };
 
-    # services.power-profiles-daemon.enable = true;
-    services.tlp.enable = true;
-    services.tlp.pd.enable = true;
-
-    services.upower.enable = true;
+    services = {
+        xserver.enable = true;
+        gnome.gnome-keyring.enable = true;
+        tlp.enable = true;
+        tlp.pd.enable = true;
+        upower.enable = true;
+    };
 }

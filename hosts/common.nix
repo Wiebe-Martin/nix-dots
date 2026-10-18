@@ -32,6 +32,9 @@
         git
         vim
         wget
+        curl
+        unzip
+        gzip
     ];
 
     hardware = {

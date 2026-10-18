@@ -32,12 +32,12 @@
         spotify
         mpv
         eden
-        qbittorrent
         lunar-client
         prismlauncher
-        unzip
+        vesktop
+
+        qbittorrent
+
         herdr
     ];
-
-    programs.vesktop.enable = true;
 }
