@@ -35,6 +35,7 @@
         lunar-client
         prismlauncher
         vesktop
+        teamviewer
 
         qbittorrent
 
