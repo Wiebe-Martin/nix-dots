@@ -40,6 +40,7 @@
             PasswordAuthentication = false;
         };
     };
+    services.teamviewer.enable = true;
 
     virtualisation.docker.enable = true;
 
