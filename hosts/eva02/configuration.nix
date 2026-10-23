@@ -7,6 +7,8 @@
 
         ../common.nix
 
+        ../../modules/displaymanager/ly.nix
+
         # ../../modules/system/grub.nix
         ../../modules/system/lanzaboote.nix
         ../../modules/system/locals.nix
@@ -19,6 +21,8 @@
         ../../modules/net/tailscale.nix
 
         ../../modules/windowmanager/hyprland.nix
+
+        ../../modules/programs/nautilus.nix
 
         ../../modules/misc/smb.nix
     ];

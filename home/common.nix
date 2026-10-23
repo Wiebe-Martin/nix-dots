@@ -32,7 +32,6 @@
         nerd-fonts.caskaydia-mono
 
         localsend
-        nautilus
         # fractal
         proton-vpn
         fastfetch

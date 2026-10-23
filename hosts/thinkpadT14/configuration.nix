@@ -24,6 +24,8 @@
         ../../modules/misc/smb.nix
         ../../modules/misc/zram.nix
 
+        ../../modules/programs/nautilus.nix
+
         ../../modules/virtualization/virtmanager.nix
     ];
 
