@@ -7,7 +7,7 @@
             };
 
             copilot = {
-                enable = true;
+                enable = false;
             };
 
             nil_ls = {
