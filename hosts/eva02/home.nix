@@ -17,6 +17,7 @@
         ../../home/applications/dms/dms.nix
 
         ../../home/applications/kitty/kitty.nix
+        ../../home/applications/zathura/zathura.nix
 
         ../../home/applications/opencode/opencode.nix
 
