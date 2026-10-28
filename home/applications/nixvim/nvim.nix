@@ -15,6 +15,8 @@
     home.packages = with pkgs; [
         ripgrep
 
+        ghostscript
+
         stylua
         black
         prettier
