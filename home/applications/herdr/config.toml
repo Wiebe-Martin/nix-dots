@@ -7,3 +7,10 @@ name = "terminal"
 prefix = "ctrl+space"
 navigate_workspace_up = "k"
 navigate_workspace_down = "j"
+
+[[keys.command]]
+key = "ctrl+h"
+type = "popup"
+command = "herdr-sessionizer"
+width = "80%"
+height = "80%"

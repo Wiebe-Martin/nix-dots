@@ -1,0 +1,195 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+show_help() {
+    cat <<'EOF'
+Usage: herdr-sessionizer [--session NAME] [DIRECTORY]
+
+Pick an existing Herdr workspace or a directory with fzf. A directory
+reuses a workspace with a pane in that directory, or creates one there.
+Outside Herdr, attach after switching; if no server is running, start
+Herdr in the selected directory. Escape/Ctrl-C cancels the picker.
+
+Options:
+  --session NAME  Target a named persistent Herdr session
+  -h, --help      Show this help
+
+Search paths default to your tmux-sessionizer configuration, including
+TS_SEARCH_PATHS, TS_EXTRA_SEARCH_PATHS and TS_MAX_DEPTH. Override them in
+~/.config/herdr-sessionizer/herdr-sessionizer.conf (Bash syntax):
+
+  HS_SEARCH_PATHS=(~/ ~/Dev:3 ~/Notes:1 ~/.config:1 ~/nix-dots:2)
+  HS_MAX_DEPTH=1
+
+Each path can have a :DEPTH suffix. XDG_CONFIG_HOME is respected.
+
+Examples:
+  herdr-sessionizer
+  herdr-sessionizer ~/nix-dots
+  herdr-sessionizer --session work ~/Dev/project
+EOF
+}
+
+die() {
+    printf 'herdr-sessionizer: %s\n' "$*" >&2
+    exit 1
+}
+
+session=""
+directory=""
+while (($#)); do
+    case "$1" in
+    -h | --help)
+        show_help
+        exit 0
+        ;;
+    --session)
+        (($# >= 2)) && [[ -n "$2" ]] || die '--session requires a name'
+        session="$2"
+        shift 2
+        ;;
+    --)
+        shift
+        (($# == 1)) || die 'expected one directory after --'
+        [[ -z "$directory" ]] || die 'expected only one directory'
+        directory="$1"
+        shift
+        ;;
+    -*) die "unknown option: $1" ;;
+    *)
+        [[ -z "$directory" ]] || die 'expected only one directory'
+        directory="$1"
+        shift
+        ;;
+    esac
+done
+
+for dependency in herdr jq; do
+    command -v "$dependency" >/dev/null || die "$dependency is required"
+done
+[[ -n "$directory" ]] || command -v fzf >/dev/null || die 'fzf is required'
+
+herdr_cmd=(herdr)
+if [[ -n "$session" ]]; then
+    # Switching servers inside Herdr would focus a workspace in another UI.
+    [[ "${HERDR_ENV:-}" != 1 || "$session" == "${HERDR_SESSION:-default}" ]] ||
+        die 'run from outside Herdr to attach to a different session'
+    herdr_cmd+=(--session "$session")
+fi
+
+config_home="${XDG_CONFIG_HOME:-$HOME/.config}"
+# Share the tmux picker paths until a Herdr-specific list is configured.
+# shellcheck source=/dev/null
+[[ ! -f "$config_home/tmux-sessionizer/tmux-sessionizer.conf" ]] ||
+    source "$config_home/tmux-sessionizer/tmux-sessionizer.conf"
+# shellcheck source=/dev/null
+[[ ! -f "$config_home/herdr-sessionizer/herdr-sessionizer.conf" ]] ||
+    source "$config_home/herdr-sessionizer/herdr-sessionizer.conf"
+if ! declare -p HS_SEARCH_PATHS &>/dev/null; then
+    if ! declare -p TS_SEARCH_PATHS &>/dev/null; then
+        TS_SEARCH_PATHS=("$HOME" "$HOME/personal" "$HOME/personal/dev/env/.config")
+    fi
+    HS_SEARCH_PATHS=("${TS_SEARCH_PATHS[@]}")
+    HS_SEARCH_PATHS+=("${TS_EXTRA_SEARCH_PATHS[@]}")
+fi
+max_depth="${HS_MAX_DEPTH:-${TS_MAX_DEPTH:-1}}"
+[[ "$max_depth" =~ ^[0-9]+$ ]] || die 'search depth must be a non-negative integer'
+
+temp_dir=$(mktemp -d)
+trap 'rm -rf -- "$temp_dir"' EXIT
+snapshot='{"workspaces":[],"panes":[]}'
+server_running=true
+if response=$("${herdr_cmd[@]}" api snapshot 2>"$temp_dir/error"); then
+    snapshot=$(jq -ce '.result.snapshot | select(
+        (.workspaces | type) == "array" and (.panes | type) == "array"
+    )' <<<"$response") || die 'unexpected Herdr snapshot response'
+else
+    # Only a missing server permits a cold start. Preserve other API errors.
+    if [[ "${HERDR_ENV:-}" != 1 ]] &&
+        jq -e '.error.code == "server_not_running"' "$temp_dir/error" >/dev/null 2>&1; then
+        server_running=false
+    else
+        cat "$temp_dir/error" >&2
+        die 'could not read Herdr workspaces'
+    fi
+fi
+
+find_dirs() {
+    local entry path depth
+    for entry in "${HS_SEARCH_PATHS[@]}"; do
+        path="$entry"
+        depth="$max_depth"
+        if [[ "$entry" =~ ^(.+):([0-9]+)$ ]]; then
+            path="${BASH_REMATCH[1]}"
+            depth="${BASH_REMATCH[2]}"
+        fi
+        [[ -d "$path" ]] || continue
+        # Resolve symlinks (notably ~/.config) before searching; prune Git internals.
+        IFS= read -r -d '' path < <(realpath -ze -- "$path") || continue
+        find "$path" -mindepth 1 -maxdepth "$depth" \
+            -name .git -prune -o -type d -print0
+    done
+}
+
+workspace_id=""
+if [[ -z "$directory" ]]; then
+    # NUL records keep paths with whitespace intact. Hide the machine-readable
+    # first field from fzf and dispatch by ID, never by a workspace's label.
+    jq -jr '.workspaces[] |
+        .workspace_id + "\t[HERDR] " + (.label | gsub("[\\t\\r\\n]"; " ")) +
+        " (" + .workspace_id + ")" + (if .focused then " *" else "" end) + "\u0000"
+    ' <<<"$snapshot" >"$temp_dir/candidates"
+    while IFS= read -r -d '' path; do
+        printf 'directory\t%s\0' "$path"
+    done < <(find_dirs | sort -zu) >>"$temp_dir/candidates"
+
+    if fzf --read0 --print0 --no-multi --delimiter=$'\t' --with-nth=2.. \
+        --prompt='Herdr > ' --header='Choose a workspace or directory' \
+        <"$temp_dir/candidates" >"$temp_dir/selected"; then
+        IFS= read -r -d '' selected <"$temp_dir/selected" || exit 0
+        [[ -n "$selected" ]] || exit 0
+    else
+        status=$?
+        [[ "$status" == 1 || "$status" == 130 ]] && exit 0
+        exit "$status"
+    fi
+    kind="${selected%%$'\t'*}"
+    if [[ "$kind" == directory ]]; then
+        directory="${selected#*$'\t'}"
+    else
+        workspace_id="$kind"
+    fi
+fi
+
+if [[ -n "$directory" ]]; then
+    [[ -d "$directory" ]] || die "not a directory: $directory"
+    IFS= read -r -d '' directory < <(realpath -ze -- "$directory") ||
+        die 'could not resolve directory'
+    # Workspace labels are not unique. Match physical directories instead.
+    while IFS= read -r -d '' candidate_id && IFS= read -r -d '' candidate_cwd; do
+        [[ -d "$candidate_cwd" ]] || continue
+        IFS= read -r -d '' candidate_cwd < <(realpath -ze -- "$candidate_cwd") || continue
+        if [[ "$candidate_cwd" == "$directory" ]]; then
+            workspace_id="$candidate_id"
+            break
+        fi
+    done < <(jq -jr '.panes[] | select(.cwd != null) |
+        .workspace_id + "\u0000" + .cwd + "\u0000"' <<<"$snapshot")
+fi
+
+if [[ "$server_running" == false ]]; then
+    cd -- "$directory"
+elif [[ -n "$workspace_id" ]]; then
+    "${herdr_cmd[@]}" workspace focus "$workspace_id" >/dev/null
+else
+    "${herdr_cmd[@]}" workspace create --cwd "$directory" \
+        --label "$(basename -- "$directory")" --focus >/dev/null
+fi
+
+# An in-pane invocation only changes focus; never nest Herdr clients.
+if [[ "${HERDR_ENV:-}" != 1 ]]; then
+    # Clean up before exec, since the EXIT trap does not run after exec.
+    rm -rf -- "$temp_dir"
+    trap - EXIT
+    exec "${herdr_cmd[@]}"
+fi

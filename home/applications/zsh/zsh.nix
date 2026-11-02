@@ -93,6 +93,7 @@
       bindkey '^Y' forward-char
       bindkey -r '^F'
       bindkey -s '^f' 'tmux-sessionizer\n'
+      bindkey -s '^h' 'herdr-sessionizer\n'
 
       eval "$(zoxide init --cmd cd zsh)"
 
