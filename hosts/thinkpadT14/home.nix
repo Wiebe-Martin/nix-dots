@@ -34,6 +34,7 @@
 
         lazygit
         lazydocker
+        codex
 
         libxau
         brightnessctl
