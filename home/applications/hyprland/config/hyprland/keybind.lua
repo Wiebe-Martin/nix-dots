@@ -2,7 +2,7 @@ local mainMod = "SUPER"
 
 local terminal = "kitty --single-instance"
 local fileManager = "nautilus"
-local browser = "qutebrowser"
+local browser = "firefox"
 
 local menu = os.getenv("APP_LAUNCHER")
 local lock_screen = os.getenv("LOCK_SCREEN")
