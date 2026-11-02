@@ -28,7 +28,6 @@
             dankscale.enable = true;
             tlpControl.enable = true;
             tlpPowerProfile.enable = true;
-            aiOverviewControl.enable = true;
         };
 
         settings = {
