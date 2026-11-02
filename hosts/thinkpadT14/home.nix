@@ -37,6 +37,8 @@
 
         libxau
         brightnessctl
+
+        nodejs_26
     ];
 
     xdg.mimeApps = {
