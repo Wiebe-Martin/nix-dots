@@ -28,7 +28,7 @@
             dankscale.enable = true;
             tlpControl.enable = true;
             tlpPowerProfile.enable = true;
-            aiQuotas.enable = true;
+            aiOverviewControl.enable = true;
         };
 
         settings = {
