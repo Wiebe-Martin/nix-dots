@@ -21,6 +21,7 @@
 
         ../../home/applications/opencode/opencode.nix
         ../../home/applications/btop/btop.nix
+        ../../home/applications/herdr/herdr.nix
 
         ../../home/applications/qutebrowser/qutebrowser.nix
         ../../home/applications/firefox/firefox.nix
