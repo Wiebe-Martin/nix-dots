@@ -3,7 +3,7 @@
 {
     programs.opencode = {
         enable = true;
-        tui = {
+        cli = {
             theme = "stylix";
             keybinds = {
                 leader = "space";
