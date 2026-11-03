@@ -6,8 +6,16 @@ NixOS + home-manager flake for personal machines. No tests, no CI, no formatter 
 
 - `thinkpadt14` — laptop, systemd-boot, uses `mango` + `noctalia` shells.
 - `eva02` — desktop, Secure Boot via `lanzaboote`, uses `dms` shell.
+- `wsl` — NixOS-WSL (via the `nixos-wsl` flake input), TUI-only. Does NOT import
+  `hosts/common.nix` (no bluetooth/graphics/display-manager). WSL manages the hostname itself,
+  so switch with `nh os switch -H wsl`.
 
-Both import `hosts/common.nix` and `home/common.nix`. Per-host settings live in `hosts/<host>/` (`configuration.nix`, `home.nix`, `options.nix`, `hardware-configuration.nix`).
+All hosts import `home/common.nix` (minimal base: stylix, username, session variables).
+Applications are NOT bundled anywhere — each `hosts/<host>/home.nix` imports the
+individual app modules from `home/applications/<app>/` it wants (repetition across hosts
+is intentional). `thinkpadt14` and `eva02` additionally import `hosts/common.nix` for
+shared NixOS settings. Per-host settings live in
+`hosts/<host>/` (`configuration.nix`, `home.nix`, `options.nix`, `hardware-configuration.nix`).
 
 Custom option `my.host.isLaptop` (`home/options.nix`) drives laptop-only widgets (e.g., battery in the DMS bar).
 
@@ -34,7 +42,7 @@ There's also a wrapper script at `scripts/update` that:
 ## Validation
 
 - `nix flake check` — type-checks the flake outputs and NixOS configurations.
-- `nix flake show` — lists the two `nixosConfigurations`.
+- `nix flake show` — lists the three `nixosConfigurations`.
 
 No formatter output is declared in `flake.nix`, so `nix fmt` does not work. Format Nix files manually with `nixfmt` (available in PATH):
 
@@ -46,11 +54,11 @@ find . -name '*.nix' -exec nixfmt {} +
 
 | Directory                  | Purpose                                                                                  |
 | -------------------------- | ---------------------------------------------------------------------------------------- |
-| `flake.nix`                | Entry point; defines `nixosConfigurations` for both hosts.                               |
+| `flake.nix`                | Entry point; defines `nixosConfigurations` for all three hosts.                          |
 | `hosts/<host>/`            | Host-specific NixOS + home-manager imports.                                              |
 | `hosts/common.nix`         | Shared NixOS config (`nh`, locale, firewall, experimental features).                     |
-| `home/common.nix`          | Shared home-manager imports; base packages.                                              |
-| `home/applications/<app>/` | Per-application home-manager modules.                                                    |
+| `home/common.nix`           | Minimal shared home-manager base (stylix, username, session vars); no app bundles.    |
+| `home/applications/<app>/` | Per-application home-manager modules; hosts pick and choose which to import.          |
 | `modules/<category>/`      | Reusable NixOS system modules imported by hosts.                                         |
 | `scripts/`                 | Custom scripts symlinked to `~/.local/bin` via `home/applications/zsh/zsh.nix`.          |
 | `walls/`                   | Wallpapers; `blackhole-smooth-240x67.dur` is used as the `ly` display-manager animation. |
@@ -74,7 +82,7 @@ The Hyprland config in `home/applications/hyprland/config/` is written in Lua us
 
 ## External flake inputs
 
-Key inputs: `nixpkgs`, `home-manager`, `nixvim`, `noctalia`, `dms` / `dms-plugin-registry`, `lanzaboote`, `kimi-code`, `stylix`. Run `nix flake lock --update-input <name>` to bump a single input, then `nh os switch` to test it.
+Key inputs: `nixpkgs`, `home-manager`, `nixvim`, `noctalia`, `dms` / `dms-plugin-registry`, `lanzaboote`, `nixos-wsl`, `stylix`. Run `nix flake lock --update-input <name>` to bump a single input, then `nh os switch` to test it.
 
 ## Backup behavior
 
