@@ -27,6 +27,7 @@
         ../../home/applications/kitty/kitty.nix
         ../../home/applications/zathura/zathura.nix
 
+        ../../home/applications/codex/codex.nix
         ../../home/applications/opencode/opencode.nix
         ../../home/applications/btop/btop.nix
         ../../home/applications/herdr/herdr.nix
@@ -58,7 +59,6 @@
 
         lazygit
         lazydocker
-        codex
 
         libxau
         brightnessctl
