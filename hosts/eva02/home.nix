@@ -64,7 +64,7 @@
         herdr
         codex
 
-        pnpm
+        pnpm_12
         nodejs_26
     ];
 
