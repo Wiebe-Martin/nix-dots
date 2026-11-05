@@ -63,6 +63,9 @@
 
         herdr
         codex
+
+        pnpm
+        nodejs_26
     ];
 
     home.sessionVariables = {
