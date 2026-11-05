@@ -56,6 +56,7 @@
         rpi-imager
         spotify
         osu-lazer-bin
+        ripes
 
         lazygit
         lazydocker
