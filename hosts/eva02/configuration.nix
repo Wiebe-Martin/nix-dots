@@ -48,6 +48,9 @@
 
     virtualisation.docker.enable = true;
 
+    # Support standalone binaries downloaded by pnpm for project-pinned versions.
+    programs.nix-ld.enable = true;
+
     programs.steam = {
         enable = true;
     };
