@@ -26,6 +26,7 @@
         ../../home/applications/zathura/zathura.nix
 
         ../../home/applications/opencode/opencode.nix
+        ../../home/applications/codex/codex.nix
         ../../home/applications/herdr/herdr.nix
 
         # ../../home/applications/qutebrowser/qutebrowser.nix
@@ -63,7 +64,6 @@
         qbittorrent
 
         herdr
-        codex
 
         pnpm_12
         nodejs_26
