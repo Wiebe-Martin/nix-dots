@@ -24,19 +24,24 @@ The laptop's flake name and hostname are lowercase `thinkpadt14`, but its direct
 
 `nh` uses `~/nix-dots` as its flake path, configured in `hosts/common.nix` and separately in `hosts/wsl/configuration.nix`.
 
-Prefer the wrapper for normal desktop switches:
+Prefer the maintenance script for normal desktop switches:
 
 ```bash
-scripts/update             # switch with current lock file
-scripts/update --upgrade   # update inputs, then switch
+scripts/nixos-maintain                    # switch with current lock file
+scripts/nixos-maintain --upgrade          # update inputs, then switch
+scripts/nixos-maintain --upgrade --clean  # also clean after switching
+scripts/nixos-maintain --clean-only       # cleanup without rebuilding or Git checks
+scripts/nixos-maintain --nixos-rebuild -H wsl  # use native nixos-rebuild on WSL
 ```
 
-Read `scripts/update` before changing its behavior:
+Read `scripts/nixos-maintain` before changing its behavior:
 
 1. It uses `NH_FLAKE` when set, otherwise the repository containing the script.
-2. It fetches `origin/main` and requires local `HEAD` to equal `origin/main` exactly. It refuses when local is ahead, behind, or diverged, even though its error message only mentions pulling.
-3. It runs `nh os switch`, adding `--update` only when the first argument is `--upgrade`. It does not forward arbitrary arguments or host selectors.
-4. After a successful switch, any tracked working-tree or index changes trigger a commit/push prompt, including changes that existed before the rebuild. If accepted, it runs `git add -A`, commits with `nixos: switch <timestamp>`, and pushes to `origin/main`.
+2. It requires the `main` branch, fetches `origin/main`, and requires local `HEAD` to equal `origin/main` exactly. It refuses when local is ahead, behind, or diverged.
+3. It lists new nonignored files and asks before registering them with `git add -N`. This makes them visible to Nix without staging their contents, committing, or pushing. Declining cancels the switch; intent-to-add entries remain local even if the rebuild fails.
+4. It runs `nh os switch` with an explicit repository path. `--upgrade` adds `--update`; `-H`/`--hostname` selects the flake host. With `--nixos-rebuild`, it instead runs native `nixos-rebuild switch --flake <repo>[#<host>]` with privilege elevation; `--upgrade` runs `nix flake update` first as the invoking user. Options can be combined in any order; unknown arguments are rejected.
+5. After a successful switch, it shows all tracked changes (including pre-existing edits) and asks whether the configuration is working and should be committed/pushed. If accepted, it runs `git add -u`, commits with `nixos: switch <timestamp>`, and pushes to `origin/main`. Intent-to-add files are included; new untracked build artifacts are excluded. A failed switch never commits, pushes, or cleans up.
+6. `--clean` runs native Nix garbage collection for user and system profiles after a successful switch and the optional publishing step. It deletes generations older than 30 days; those generations are no longer available for rollback. This does not change the separate automatic nh cleanup policy (`--keep-since 4d --keep 3`). `--clean-only` bypasses repository resolution and Git entirely, and cannot be combined with upgrade, backend, or host selection options.
 
 For an intentional switch without that remote check, or to select WSL explicitly:
 
@@ -47,7 +52,7 @@ nh os switch -H wsl
 nh os switch -H wsl --update
 ```
 
-WSL does not set `networking.hostName`; use `-H wsl` because its runtime hostname need not match the flake configuration name. The wrapper cannot pass this selector through. A switch activates the system; use evaluation checks below when only validating changes.
+WSL does not set `networking.hostName`; use `-H wsl` because its runtime hostname need not match the flake configuration name. With the maintenance script, use `scripts/nixos-maintain --nixos-rebuild -H wsl` to avoid nh. A switch activates the system; use evaluation checks below when only validating changes.
 
 ## Validation and formatting
 
@@ -58,7 +63,7 @@ nix flake show --no-update-lock-file
 
 `flake check` validates the flake outputs and evaluates all three NixOS configurations. It does not replace building or activating the target system. There are no custom test derivations in this flake.
 
-New files referenced by the flake must be added to Git before evaluation; Git-backed flakes omit untracked files.
+New files referenced by the flake must be added to Git before evaluation; Git-backed flakes omit untracked files. `git add -N -- <file>` is sufficient to make a new file visible without committing it. The maintenance script offers to do this before switching.
 
 No formatter output is declared, so `nix fmt` is unavailable. `nixfmt` is installed through the Nixvim module. Format only the Nix files you change and preserve the surrounding indentation (existing files use both two and four spaces):
 
@@ -85,7 +90,7 @@ Avoid formatting the entire repository for an unrelated change; it includes vend
 | `home/applications/nixvim/` | `nvim.nix` imports the flake module; `nixvim.nix` assembles `core/` and `plugins/`. The host-selected theme supplies the active colorscheme; the `colorshemes/gruvbox.nix` import is commented out. |
 | `home/themes/stylix.nix`, `home/themes/theme/` | Shared Stylix defaults and selectable theme modules. |
 | `modules/<category>/` | Reusable NixOS modules, enabled through host imports. |
-| `scripts/` | `update`, `tmux-sessionizer`, and `herdr-sessionizer`; exposed through `~/.local/bin` by the Zsh module. |
+| `scripts/` | `nixos-maintain`, `tmux-sessionizer`, and `herdr-sessionizer`; exposed through `~/.local/bin` by the Zsh module. |
 | `walls/` | Wallpapers and the Ly animation `blackhole-smooth-240x67.dur`. |
 
 ## Live config and generated files

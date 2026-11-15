@@ -1,0 +1,179 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REMOTE="origin"
+BRANCH="main"
+UPGRADE=false
+CLEAN=false
+CLEAN_ONLY=false
+NATIVE=false
+HOST=""
+
+show_help() {
+    cat <<EOF
+Usage: $(basename "$0") [OPTIONS]
+
+Switch NixOS configurations, optionally update inputs and clean old generations.
+Switches require the local main branch to match origin/main.
+
+Options:
+  --upgrade          Update all flake inputs before switching
+  --clean            Clean old generations after a successful switch
+  --clean-only       Clean without switching or checking Git
+  --nixos-rebuild    Use nixos-rebuild instead of nh (including on WSL)
+  -H, --hostname HOST
+                     Select a flake configuration (use wsl on WSL)
+  -h, --help         Show this help message and exit
+
+New nonignored files are listed before rebuilding. If you accept, git add -N
+makes them visible to Nix without committing or pushing. After a successful
+switch, review all tracked changes and optionally commit and push them.
+
+Cleanup uses native Nix tools for user and system profiles. It deletes
+generations older than 30 days and garbage-collects unused store paths.
+Deleted generations are no longer available for rollback. Existing automatic
+nh cleanup has its own retention policy and is unchanged.
+
+Environment:
+  NH_FLAKE    Repository path (defaults to the repo containing this script)
+
+Examples:
+  $(basename "$0")
+  $(basename "$0") --upgrade --clean
+  $(basename "$0") --clean-only
+  $(basename "$0") --nixos-rebuild -H wsl --upgrade
+EOF
+}
+
+die() {
+    echo "Error: $*" >&2
+    exit 1
+}
+
+confirm() {
+    local answer
+    read -r -p "$1 [y/N] " answer || return 1
+    [[ "$answer" =~ ^[Yy]([Ee][Ss])?$ ]]
+}
+
+run_as_root() {
+    if ((EUID == 0)); then
+        "$@"
+    else
+        sudo -- "$@"
+    fi
+}
+
+clean_generations() {
+    echo "==> Deleting generations older than 30 days and collecting unused packages."
+    echo "    Deleted generations will no longer be available for rollback."
+    # The user's XDG profiles may not be found by a collector running as root.
+    if ((EUID != 0)); then
+        nix-collect-garbage --delete-older-than 30d
+    fi
+    run_as_root nix-collect-garbage --delete-older-than 30d
+}
+
+while (($#)); do
+    case "$1" in
+    --upgrade) UPGRADE=true ;;
+    --clean) CLEAN=true ;;
+    --clean-only) CLEAN_ONLY=true ;;
+    --nixos-rebuild) NATIVE=true ;;
+    -H | --hostname)
+        [[ $# -ge 2 && -n "$2" && "$2" != -* ]] || die "$1 requires a hostname"
+        HOST="$2"
+        shift
+        ;;
+    -h | --help)
+        show_help
+        exit 0
+        ;;
+    *) die "Unknown argument: $1 (see --help)" ;;
+    esac
+    shift
+done
+
+if "$CLEAN_ONLY"; then
+    if "$UPGRADE" || "$NATIVE" || [[ -n "$HOST" ]]; then
+        die "--clean-only cannot be combined with --upgrade, --nixos-rebuild, or --hostname"
+    fi
+    clean_generations
+    echo "==> Cleanup completed."
+    exit 0
+fi
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_DIR="${NH_FLAKE:-"$SCRIPT_DIR/.."}"
+cd "$REPO_DIR"
+REPO_DIR="$(pwd -P)"
+
+[[ "$(git rev-parse --show-toplevel)" == "$REPO_DIR" ]] || die "NH_FLAKE must point to the repository root"
+[[ "$(git symbolic-ref --quiet --short HEAD)" == "$BRANCH" ]] || die "Switch from the $BRANCH branch"
+
+echo "==> Fetching remote updates..."
+git fetch "$REMOTE" "$BRANCH"
+if [[ "$(git rev-parse HEAD)" != "$(git rev-parse "$REMOTE/$BRANCH")" ]]; then
+    die "Local HEAD differs from $REMOTE/$BRANCH (ahead, behind, or diverged). Sync the branch before switching."
+fi
+
+echo "==> Repository is up to date."
+
+mapfile -d '' -t NEW_FILES < <(git ls-files --others --exclude-standard -z)
+if ((${#NEW_FILES[@]})); then
+    echo "==> New files to make visible to Nix (review this list):"
+    printf '    %q\n' "${NEW_FILES[@]}"
+    if confirm "Register these files locally with git add -N?"; then
+        git --literal-pathspecs add -N -- "${NEW_FILES[@]}"
+    else
+        die "Switch cancelled. Add the intended files with git add -N, or ignore unrelated files, then retry."
+    fi
+fi
+
+if "$NATIVE"; then
+    if "$UPGRADE"; then
+        echo "==> Updating flake inputs..."
+        nix flake update
+    fi
+    FLAKE="$REPO_DIR"
+    if [[ -n "$HOST" ]]; then
+        FLAKE+="#$HOST"
+    fi
+    echo "==> Switching with nixos-rebuild..."
+    run_as_root nixos-rebuild switch --flake "$FLAKE"
+else
+    NH_ARGS=(os switch "$REPO_DIR")
+    if "$UPGRADE"; then
+        NH_ARGS+=(--update)
+    fi
+    if [[ -n "$HOST" ]]; then
+        NH_ARGS+=(-H "$HOST")
+    fi
+    echo "==> Switching with nh..."
+    nh "${NH_ARGS[@]}"
+fi
+
+echo "==> Switch succeeded."
+
+if ! git diff --quiet || ! git diff --cached --quiet; then
+    echo "==> Review all tracked changes, including edits made before this run:"
+    git status --short
+    git --no-pager diff HEAD --
+    if confirm "Is the configuration working, and should these changes be committed and pushed?"; then
+        # Includes intent-to-add files, but excludes new untracked build artifacts.
+        git add -u
+        git commit -m "nixos: switch $(date -Iseconds)"
+        git push "$REMOTE" "$BRANCH"
+        echo "==> Changes pushed."
+    else
+        echo "==> Skipping commit and push. Local changes are kept."
+    fi
+else
+    echo "==> No changes to commit."
+fi
+
+if "$CLEAN"; then
+    clean_generations
+fi
+
+echo "==> Done."
