@@ -1,6 +1,19 @@
+{ pkgs, ... }:
+
 {
     programs.codex = {
         enable = true;
+
+        plugins = [
+            (pkgs.fetchFromGitHub {
+                name = "ponytail";
+                owner = "DietrichGebert";
+                repo = "ponytail";
+                # v5.3.3
+                rev = "7801d061243d7b753bad0e0b3c057cd250b11755";
+                hash = "sha256-CY0EifTY0UVc6/FPGVJjEfYEf/8QLsINQmoYYKZYh98=";
+            })
+        ];
 
         settings = {
             tui.vim_mode_default = true;
