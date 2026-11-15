@@ -6,6 +6,8 @@
 
         polarity = "dark";
 
+        icons.package = pkgs.papirus-icon-theme.override { color = "blue"; };
+
         image = ../../../walls/wallhaven-mpzlq1_1920x1080.png;
 
         cursor = {

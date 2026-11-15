@@ -7,5 +7,7 @@
 
     environment.systemPackages = with pkgs; [
         nautilus
+        # GTK falls back to Adwaita for missing GNOME symbolic icons.
+        adwaita-icon-theme
     ];
 }

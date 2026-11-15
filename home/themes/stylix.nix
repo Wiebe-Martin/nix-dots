@@ -30,6 +30,13 @@
 
         polarity = lib.mkDefault "dark";
 
+        icons = {
+            enable = true;
+            package = lib.mkDefault pkgs.papirus-icon-theme;
+            dark = "Papirus-Dark";
+            light = "Papirus-Light";
+        };
+
         base16Scheme = lib.mkDefault {
             base00 = "202020";
             base01 = "2a2827";

@@ -6,6 +6,11 @@
 
         polarity = "dark";
 
+        icons.package = pkgs.catppuccin-papirus-folders.override {
+            flavor = "macchiato";
+            accent = "mauve";
+        };
+
         image = ../../../walls/wallhaven-mpzlq1_1920x1080.png;
 
         cursor = {

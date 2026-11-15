@@ -37,7 +37,9 @@
             launcherLogoMode = "os";
             launcherLogoColorOverride = "primary";
 
-            # iconTheme = "Yaru-olive-dark";
+            iconThemeDark = config.stylix.icons.dark;
+            iconThemeLight = config.stylix.icons.light;
+            iconThemePerMode = true;
 
             useAutoLocation = true;
 

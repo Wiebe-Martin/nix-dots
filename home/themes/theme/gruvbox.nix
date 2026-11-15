@@ -6,6 +6,8 @@
 
         polarity = "dark";
 
+        icons.package = pkgs.papirus-icon-theme.override { color = "yellow"; };
+
         image = ../../../walls/glt_gruvbox.png;
 
         cursor = {
