@@ -43,10 +43,6 @@
 
             useAutoLocation = true;
 
-            showWorkspaceIndex = true;
-            showWorkspaceApps = true;
-            groupWorkspaceApps = false;
-
             matugenTemplateGtk = false;
             matugenTemplateNiri = false;
             matugenTemplateHyprland = false;
@@ -71,7 +67,7 @@
             matugenTemplateEmacs = false;
             matugenTemplateZed = false;
 
-            cornerRadius = 0;
+            radiusStrength = 0;
 
             barConfigs = [
                 {
@@ -80,7 +76,13 @@
                     position = 0;
                     leftWidgets = [
                         "launcherButton"
-                        "workspaceSwitcher"
+                        {
+                            id = "workspaceSwitcher";
+                            enabled = true;
+                            showWorkspaceName = true;
+                            showWorkspaceApps = true;
+                            groupWorkspaceApps = false;
+                        }
                         "layout"
                         "focusedWindow"
                     ];

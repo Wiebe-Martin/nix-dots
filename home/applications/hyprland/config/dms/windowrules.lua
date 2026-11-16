@@ -1,4 +1,4 @@
--- DMS Window Rules — managed by Dux Shell
+-- DMS Window Rules — managed by Dux Modular Shell
 -- Do not edit manually; changes may be overwritten
 
 -- DMS-RULE: id=dms-floating-windows, name=DMS Floating Windows
