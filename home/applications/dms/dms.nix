@@ -69,6 +69,8 @@
 
             radiusStrength = 0;
 
+            animationDuration = 150;
+
             barConfigs = [
                 {
                     id = "default";
