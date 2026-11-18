@@ -10,4 +10,4 @@ hl.env("SDL_VIDEODRIVER", "wayland")
 hl.env("MOZ_ENABLE_WAYLAND", "1")
 hl.env("OZONE_PLATFORM", "wayland")
 
-hl.env("XDG_SCREENSHOTS_DIR", "$HOME/Pictures/Screenshots")
+hl.env("XDG_SCREENSHOTS_DIR", "/home/martin/Pictures/Screenshots")
