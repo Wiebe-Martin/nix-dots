@@ -24,6 +24,8 @@
 
         enableSystemMonitoring = true;
 
+        managePluginSettings = true;
+
         plugins = {
             dankscale.enable = true;
             tlpControl.enable = true;
