@@ -31,7 +31,6 @@
             tlpControl.enable = true;
             tlpPowerProfile.enable = true;
             emojiLauncher.enable = true;
-            aiAssistant.enable = true;
         };
 
         settings = {
