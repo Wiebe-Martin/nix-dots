@@ -49,6 +49,7 @@
         adw-gtk3
         jdk
         ffmpeg
+        rclone
 
         heroic
         jellyfin-desktop
