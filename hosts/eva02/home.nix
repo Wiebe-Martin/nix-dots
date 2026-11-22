@@ -60,6 +60,7 @@
         vesktop
         gimp
         teamviewer
+        t3code
 
         qbittorrent
 

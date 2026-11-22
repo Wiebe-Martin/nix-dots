@@ -11,7 +11,7 @@
 
         ../../modules/displaymanager/ly.nix
 
-        ../../modules/windowmanager/mango.nix
+        # ../../modules/windowmanager/mango.nix
         ../../modules/windowmanager/hyprland.nix
 
         ../../modules/shell/zsh.nix

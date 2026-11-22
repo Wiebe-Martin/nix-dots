@@ -20,7 +20,7 @@
         ../../home/applications/tmux-sessionizer/tmux-sessionizer.nix
 
         ../../home/applications/hyprland/hyprland.nix
-        ../../home/applications/mango/mango.nix
+        # ../../home/applications/mango/mango.nix
         # ../../home/applications/noctalia-shell/noctalia.nix
         ../../home/applications/dms/dms.nix
 
@@ -57,6 +57,7 @@
         spotify
         osu-lazer-bin
         ripes
+        t3code
 
         lazygit
         lazydocker
