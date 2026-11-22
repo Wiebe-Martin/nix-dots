@@ -12,6 +12,8 @@
 
         ../../home/themes/theme/gruvbox.nix
 
+        ../../home/services/rclone-drive.nix
+
         ../../home/applications/zsh/zsh.nix
         ../../home/applications/tmux/tmux.nix
         ../../home/applications/nixvim/nvim.nix
