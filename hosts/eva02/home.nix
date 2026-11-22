@@ -65,6 +65,7 @@
         qbittorrent
 
         herdr
+        antigravity
 
         pnpm_12
         nodejs_26
