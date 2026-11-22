@@ -65,7 +65,7 @@
         qbittorrent
 
         herdr
-        antigravity
+        antigravity-cli
 
         pnpm_12
         nodejs_26
