@@ -65,6 +65,8 @@
         qbittorrent
 
         herdr
+        antigravity
+        antigravity-cli
         antigravity-acp
 
         pnpm_12
