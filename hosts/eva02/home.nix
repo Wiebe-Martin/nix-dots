@@ -68,7 +68,7 @@
         qbittorrent
 
         herdr
-        antigravity
+        antigravity-ide
         antigravity-cli
         antigravity-acp
 
