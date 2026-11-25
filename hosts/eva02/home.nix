@@ -64,11 +64,11 @@
         gimp
         teamviewer
         t3code
-
+        chatgpt
+        antigravity-ide
         qbittorrent
 
         herdr
-        antigravity-ide
         antigravity-cli
         antigravity-acp
 

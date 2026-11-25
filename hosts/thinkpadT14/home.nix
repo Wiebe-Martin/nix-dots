@@ -59,6 +59,7 @@
         ripes
         t3code
         antigravity-ide
+        chatgpt
 
         antigravity-cli
         antigravity-acp
