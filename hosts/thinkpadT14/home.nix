@@ -58,13 +58,17 @@
         osu-lazer-bin
         ripes
         t3code
+        antigravity-ide
 
+        antigravity-cli
+        antigravity-acp
         lazygit
         lazydocker
 
         libxau
         brightnessctl
 
+        pnpm_12
         nodejs_26
     ];
 
