@@ -37,14 +37,17 @@
         ];
     };
 
-    services.openssh = {
-        enable = true;
-        settings = {
-            PermitRootLogin = "no";
-            PasswordAuthentication = false;
+    services = {
+        openssh = {
+            enable = true;
+            settings = {
+                PermitRootLogin = "no";
+                PasswordAuthentication = false;
+            };
         };
+        teamviewer.enable = true;
+        gnome.gnome-keyring.enable = true;
     };
-    services.teamviewer.enable = true;
 
     virtualisation.docker.enable = true;
 
