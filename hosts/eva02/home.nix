@@ -67,6 +67,7 @@
         chatgpt
         antigravity-ide
         qbittorrent
+        chatgpt
 
         herdr
         antigravity-cli
