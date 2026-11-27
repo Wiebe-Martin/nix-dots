@@ -37,6 +37,8 @@
         enable = true;
     };
 
+    virtualisation.docker.enable = true;
+
     services = {
         xserver.enable = true;
         gnome.gnome-keyring.enable = true;
